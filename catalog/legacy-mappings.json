@@ -1,0 +1,648 @@
+{
+  "description": "Reviewed proposed migration mappings. Does not alter cloud records or recipes. Commodity/form substitutions are explicit.",
+  "mappings": {
+    "03bc0649-0e14-5a0c-913b-c93770ba3db9": {
+      "new_id": "81c8d074-68df-5269-a950-72bfbb636101",
+      "old_name": "Gladfield Malted Maize",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "0534e6d6-f20d-53d7-a2df-315976f2ad86": {
+      "new_id": "7a80d8d3-6e3b-5dee-831d-2e2018d3be94",
+      "old_name": "Pilsner Malt",
+      "reason": "Generic ingredient mapped to the corresponding generic malt/adjunct definition; source region or analytical values may differ.",
+      "status": "remapped"
+    },
+    "0a7f4f59-3635-5ddd-a709-a7849c5168c1": {
+      "new_id": "2e836f30-f948-5da4-a42c-9fefa9392704",
+      "old_name": "Banana Split",
+      "reason": "Same-brand liquid culture now independently covered by the reviewed manufacturer supplement; retains the original form.",
+      "status": "remapped"
+    },
+    "0caf17b0-f6d5-5269-b92a-8fe614830700": {
+      "new_id": "4961f5e9-52ee-50a0-bdbf-2e4f2ae1eee1",
+      "old_name": "LAX",
+      "reason": "Same-brand liquid culture now independently covered by the reviewed manufacturer supplement; retains the original form.",
+      "status": "remapped"
+    },
+    "0d0dc322-4064-5757-bbc1-640d130eed86": {
+      "new_id": "56cd57d1-51a1-52da-9f07-168c0d3770e0",
+      "old_name": "Crystal 60L",
+      "reason": "Generic ingredient mapped to the corresponding generic malt/adjunct definition; source region or analytical values may differ.",
+      "status": "remapped"
+    },
+    "10df0bf8-055e-58ef-abdd-85ad1f9dac2d": {
+      "new_id": "be15e94f-877d-5292-9b03-b824853b0319",
+      "old_name": "New York Ale",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "11c7bb88-69f5-5734-822f-cbfba2429bc1": {
+      "new_id": "6ea44d78-92f4-5e15-b13d-a951a77b7764",
+      "old_name": "Belgian Strong Ale-1",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "122e5c95-f599-5ff7-bcff-d3a11315f9ee": {
+      "new_id": "fcee6188-1a47-50d8-9d32-e3861431c07e",
+      "old_name": "Oats",
+      "reason": "Underspecified generic oat adjunct mapped to flaked oats as a reasonable brewing replacement; original processing is unknown.",
+      "status": "remapped"
+    },
+    "1664e225-6b3d-5d5c-a671-c081f92cf704": {
+      "new_id": "e7fe9508-30a2-5b10-82fd-94f274e13f14",
+      "old_name": "English Ale-3",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "1867d363-24ab-57e8-94de-694a1f6941fd": {
+      "new_id": "6d061d03-f1eb-5570-b871-765b5366317c",
+      "old_name": "Wheat Malt",
+      "reason": "Generic ingredient mapped to the corresponding generic malt/adjunct definition; source region or analytical values may differ.",
+      "status": "remapped"
+    },
+    "1aa652ca-1677-5bde-9d3d-0d8883e5e004": {
+      "new_id": null,
+      "old_name": "Ebbegarden Kveik (Valkyrie)",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "2028283e-2640-55a2-967b-1f222de7f301": {
+      "new_id": "388e1399-dda8-53f2-8562-e8e942429bf2",
+      "old_name": "Crystal 120L",
+      "reason": "Generic ingredient mapped to the corresponding generic malt/adjunct definition; source region or analytical values may differ.",
+      "status": "remapped"
+    },
+    "234af11d-a9b1-53a7-a3e0-932ceb4767bb": {
+      "new_id": "81cfc1a6-344f-5ac0-8154-a2558044a946",
+      "old_name": "Hornindal Kveik (Bjorn)",
+      "reason": "Reasonable same-brand named culture replacement using the available dry offering; legacy record is liquid. This is a proposed variant substitution, not proof that liquid and dry formulations are identical.",
+      "status": "remapped"
+    },
+    "24be6396-7430-5fae-b921-35fc4d9f1534": {
+      "new_id": null,
+      "old_name": "Ubbe Kveik",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "2cbb8c77-2e2e-5a99-8dc3-ded5f761f530": {
+      "new_id": null,
+      "old_name": "The Wall",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "3247dd7d-eac4-5621-958b-95ca424cabf4": {
+      "new_id": null,
+      "old_name": "Pintman",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "32680329-3d62-545d-b9b6-00532c00090c": {
+      "new_id": "43939933-e042-57fc-b0f4-9b7dd9da5104",
+      "old_name": "Gladfield Sour Grapes Malt Acid",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "3422d819-1631-5fa0-92f2-c2ebac35cb32": {
+      "new_id": "a40797b7-1586-5a02-bf00-89f6ac835b47",
+      "old_name": "Craft Beer USA",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "3458f909-de62-5601-885d-da96b519595a": {
+      "new_id": "605201f0-a8d2-502e-a68f-06b062b78d2b",
+      "old_name": "Craft Beer Bélgica",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "34671082-ffaf-5ce1-a032-753fd7144507": {
+      "new_id": "c9da2710-1c59-559b-ab2f-f2942440b444",
+      "old_name": "Gladfield Light Chocolate Malt",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "35bf67ad-f542-50bb-a367-320adee9ce5f": {
+      "new_id": null,
+      "old_name": "Pint of Plain",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "3842e96f-b418-53d0-8ad8-20c000a14f84": {
+      "new_id": "167569e4-198d-5bfb-8286-e819c5ce8631",
+      "old_name": "Trappist Ale High Gravity",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "3a9dae7e-cf38-57a6-9f2f-ab23c7d6d9bf": {
+      "new_id": "f91b7a1c-2429-5be7-a6a9-40ea1b27a70d",
+      "old_name": "American Hefeweizen",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "3d035f2d-e918-53c8-87c2-65c94d90a9d9": {
+      "new_id": "24f9456c-5499-5f79-bfaa-a796e6d41195",
+      "old_name": "Gladfield Organic Pilsner",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "4381c7f1-3cd1-5ad2-b461-66a1c0c37490": {
+      "new_id": "f12bfe6e-ae92-53b9-88bd-2161fa9dd212",
+      "old_name": "Australian Lager",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "486c0004-1a2f-5e37-b026-fa14bbf94fc4": {
+      "new_id": "3fa17f95-1299-5d1c-94fc-8a9d280b5824",
+      "old_name": "Gladfield Eclipse Wheat",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "4ba6e31c-a7c9-5ba3-993c-a161cb745c13": {
+      "new_id": "09c2a82c-18ba-5709-b7de-26ec3987514d",
+      "old_name": "Novalager",
+      "reason": "Same Lallemand NovaLager product, with branded name.",
+      "status": "remapped"
+    },
+    "4bff0b8b-4616-522c-81dc-6e875c31d841": {
+      "new_id": "46e10c2b-027b-5f64-8d1c-38df0ac85daf",
+      "old_name": "Lallemand Verdant IPA",
+      "reason": "Lallemand Verdant naming alias; the incomplete lowercase record also incorrectly says liquid. New record is dry.",
+      "status": "remapped"
+    },
+    "4c878521-1d54-5eaa-8c3a-090102f014dc": {
+      "new_id": "5bcdbe65-0d0f-5e65-8f8c-a2dca97ad5c9",
+      "old_name": "Kolsh",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "4d975e2a-a5f0-5dcd-bcdf-555b3a87f279": {
+      "new_id": "e85826ca-f6bf-5871-841a-6f671757bfa4",
+      "old_name": "Helles Fire Club",
+      "reason": "Same-brand liquid culture now independently covered by the reviewed manufacturer supplement; retains the original form.",
+      "status": "remapped"
+    },
+    "50d283f3-d870-575f-a411-9dffdee25838": {
+      "new_id": "f6d6714c-0fd7-5559-9caf-a03f42138e1c",
+      "old_name": "Weihens Wheat",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "5169fc6c-9cbd-5513-8e64-6d5733684209": {
+      "new_id": "1acccfa7-cc6f-5bb5-b607-da39262eb7b2",
+      "old_name": "Classic Witbier",
+      "reason": "Escarpment Classic Wit is the shortened current source name.",
+      "status": "remapped"
+    },
+    "530bbfac-de0f-59c5-bd6d-82e0ad6bfca8": {
+      "new_id": "7c2375ff-3641-5126-9de0-f8511604b96e",
+      "old_name": "Gladfield Roast Barley",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "53301e58-1a18-530d-a071-2effbcb44ef7": {
+      "new_id": "cf36b9c5-9b06-52e2-b54c-fe90bfe147e3",
+      "old_name": "Gladfield Chit Barley",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "557d70af-4403-5671-9279-9f95d289e84f": {
+      "new_id": "9680af33-9a63-50df-ac40-d525abbbce15",
+      "old_name": "English Ale-2",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "58abb5e5-b835-53fd-a7f4-5aa59ef3feeb": {
+      "new_id": null,
+      "old_name": "Czechmate",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "59081bfd-48ae-5e6d-b2ab-36553017a8e9": {
+      "new_id": "46e10c2b-027b-5f64-8d1c-38df0ac85daf",
+      "old_name": "lallemand verdant",
+      "reason": "Lallemand Verdant naming alias; the incomplete lowercase record also incorrectly says liquid. New record is dry.",
+      "status": "remapped"
+    },
+    "59b1b04e-15c7-507d-b27a-ec7b988ca091": {
+      "new_id": "31d5341f-289d-59b4-bd07-02fbd8665af4",
+      "old_name": "Pacific Coast Ale",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "5a94b20a-67bb-514c-bced-6572d571b17c": {
+      "new_id": null,
+      "old_name": "In Bruges",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "5bfcdeef-48cf-5ea3-8e19-41c8d6b7a402": {
+      "new_id": "8fe22057-9243-54c6-ae8f-e382d61d8f6e",
+      "old_name": "Gladfield Black Forrest Rye Malt",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "5d0f16b9-8d2d-5919-9681-03d5cec8575a": {
+      "new_id": "50e7f3bd-9d97-558a-8b0a-38445ba4c267",
+      "old_name": "CN36 - Angel ALE",
+      "reason": "Same Angel product code and form; newer pack supplies the fuller product name.",
+      "status": "remapped"
+    },
+    "5d2ad135-658a-5957-9f99-f10c036cf3c4": {
+      "new_id": "a3e70ae4-a640-5723-88c1-2a4e6cf66c02",
+      "old_name": "Magnum",
+      "reason": "German Magnum is labelled Hallertau Magnum in the source.",
+      "status": "remapped"
+    },
+    "609852e9-e24f-5087-af32-cfb7ba3495b1": {
+      "new_id": "90f8721c-b728-58c2-8a6d-8e514673467a",
+      "old_name": "Premium English Ale",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "621473dd-6eba-5746-910d-4b3f1a13e0ae": {
+      "new_id": "d5233f96-c1bd-5d4c-9f0c-1864226b4787",
+      "old_name": "Gladfield German Pilsener Malt",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "62cd9dff-7377-59a3-9397-0d7b3c7bfe49": {
+      "new_id": "0fede42a-8b48-547a-a521-e8a36969b3ea",
+      "old_name": "Texas Ale",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "6d2ffd51-e76c-52d5-861f-51a99662f8c7": {
+      "new_id": "b0adab57-bc46-55fe-b9af-0fc1ef779804",
+      "old_name": "Australian Ale",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "6f008a2b-a431-57d2-81af-e95fdfc20726": {
+      "new_id": "08c1b1a8-9a53-5f5e-9e77-0486a6620de3",
+      "old_name": "German Lager-1",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "7426f4d5-9d96-57e1-a114-3c8f652fea97": {
+      "new_id": "135a471b-30cc-5a15-a0c4-0336bc86aa32",
+      "old_name": "Gladfield Lager Light",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "7b439672-b571-59a4-bc40-ea6f351d5a6b": {
+      "new_id": null,
+      "old_name": "Lederhosen",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "7f36bde2-0b5f-5fdd-aed7-bc0d0523022f": {
+      "new_id": null,
+      "old_name": "Dutch cocoa",
+      "reason": "Manually added local ingredient, absent from the production catalogue. Owner approved omitting unused legacy ingredients.",
+      "status": "excluded"
+    },
+    "7f6720aa-0f38-5523-9179-fcdd43b90aff": {
+      "new_id": "c51be6e9-dc98-5787-8834-4a20cd13a07a",
+      "old_name": "Vienna Malt",
+      "reason": "Generic ingredient mapped to the corresponding generic malt/adjunct definition; source region or analytical values may differ.",
+      "status": "remapped"
+    },
+    "829c0854-8439-5ada-a150-d1cbcfca3d22": {
+      "new_id": "20d27963-357f-5f23-8757-95bfbe951e67",
+      "old_name": "Gladfield Maltodextrin",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "84b3614d-58f5-50bb-8718-da4eb46d978d": {
+      "new_id": "05968112-a298-5162-9eb0-06f3d8438f38",
+      "old_name": "Craft Beer Austria",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "866dc04a-abbf-5579-9a0e-02d53a09b3e8": {
+      "new_id": "bdddf532-5d3c-5c54-aae5-451ed41b601a",
+      "old_name": "BF16 - Angel LAGER",
+      "reason": "Same Angel product code and form; newer pack supplies the fuller product name.",
+      "status": "remapped"
+    },
+    "89c7796a-dcab-5b44-bc16-7b8d7857e12e": {
+      "new_id": null,
+      "old_name": "Bier Bitte",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "8ba051bd-10b8-5460-9638-b9fbe1091b47": {
+      "new_id": null,
+      "old_name": "Stranda Kveik (Lagertha)",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "8c5beb26-4328-5768-a861-b4ff24c39a70": {
+      "new_id": "8742f5b5-81ff-5767-afe7-c711297881ee",
+      "old_name": "Belgian Taste",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "8c991674-d137-544a-8484-a82522877c99": {
+      "new_id": "16832837-1835-5926-8f9f-b2db23c51c55",
+      "old_name": "CS31 - Angel ALE",
+      "reason": "Same Angel product code and form; newer pack supplies the fuller product name.",
+      "status": "remapped"
+    },
+    "8ccc50ea-889a-5494-8e3a-25e371c7deee": {
+      "new_id": "a89b27c9-37eb-544a-8fc4-c82bab78c8e9",
+      "old_name": "Belgian Strong Ale-2",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "8d614074-8b28-51b7-8876-262f00f2472f": {
+      "new_id": "46c10352-bbc1-5b55-8af2-d161ff3cc36c",
+      "old_name": "Gladfield Lactose (Fonterra \"SureStart\" Brand)",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "9106995f-3719-5f73-be03-9eee7d263693": {
+      "new_id": "1abd0237-5328-5161-aabc-925757b627c3",
+      "old_name": "WA18 - Angel ALE",
+      "reason": "Same Angel product code and form; newer pack supplies the fuller product name.",
+      "status": "remapped"
+    },
+    "92cf8b78-f4be-5cbd-8f4e-be5d2a17e3f2": {
+      "new_id": null,
+      "old_name": "Saaz",
+      "reason": "Intentionally omit this local baseline Czech-origin identity. The production Saaz record is US-origin and has a separately scoped mapping to Saaz U.S.; do not apply that substitution to Czech-origin records.",
+      "status": "excluded"
+    },
+    "9884fa68-cd00-562d-b6f0-311219097421": {
+      "new_id": "9f930184-cc01-5555-af0d-146b91e1bb9a",
+      "old_name": "Belgian Special Ale",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "992c959c-f2f1-559c-9fcb-81eefc90b46c": {
+      "new_id": "f8868840-3aa8-5eb2-9cdd-1aaa38fef8fe",
+      "old_name": "Oktoberfest/Marzen",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "9aeea03f-2600-510a-820c-4844ae77570d": {
+      "new_id": "c1fc65ee-4cdf-58db-9167-cf87d08f1cb0",
+      "old_name": "Gladfield Peat Smoked (Heavy)",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "9c030f9e-d1aa-5fa2-8f34-ab9268048ac0": {
+      "new_id": null,
+      "old_name": "Fruitbowl",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "9effb6d4-6919-5135-b7eb-1edc1ebfbf06": {
+      "new_id": "8af5de88-121d-58c5-bc92-576992c77763",
+      "old_name": "Sanders",
+      "reason": "Same-brand liquid culture now independently covered by the reviewed manufacturer supplement; retains the original form. Manufacturer explicitly renamed Sanders to Vermont Haze.",
+      "status": "remapped"
+    },
+    "a03d2863-4104-584d-98c6-72157fc4baf3": {
+      "new_id": "82de572c-7f32-5e1e-b1b2-48dbc857ad39",
+      "old_name": "Dusseldorf Ale",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "a12427f8-6583-57c1-8b76-37f0cdc79ede": {
+      "new_id": "09ed2ac3-1870-555e-ab6a-8b689288843c",
+      "old_name": "Gladfield Rolled Wheat (BLM)",
+      "reason": "Reasonable commodity replacement of the same ingredient/processing; supplier changes. Not a claim that brands are identical.",
+      "status": "remapped"
+    },
+    "a6d2a439-81c0-5d59-bcf0-bf1dd5de5321": {
+      "new_id": null,
+      "old_name": "Belgian Haze",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "a99fe9bf-cd9d-5c7d-adba-b530c8b7819d": {
+      "new_id": "9be042bd-77ee-5541-9c12-78a20b351a85",
+      "old_name": "Blend Trapista",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "a9f6372b-455f-538b-b59e-041455354e43": {
+      "new_id": "48ece1b7-ea32-599a-a3c3-4b63c46bb5c1",
+      "old_name": "Craft Beer Holanda",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "abf22147-b4d1-597e-a243-98e95a816bf9": {
+      "new_id": "2aa09ef1-6472-53fb-ac59-7359ab1eb570",
+      "old_name": "Pale Ale Malt",
+      "reason": "Generic ingredient mapped to the corresponding generic malt/adjunct definition; source region or analytical values may differ.",
+      "status": "remapped"
+    },
+    "b22341fc-644d-54c2-a040-77aa1372e3bd": {
+      "new_id": "1af2ba91-d07d-5e87-aafb-6737a77c52a0",
+      "old_name": "Gladfield Chit Wheat",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "b5cf859b-beef-5add-8b3a-6ac218b6b53c": {
+      "new_id": "97d49403-04b9-5633-b0ac-61392f0f2939",
+      "old_name": "Crystal Wheat",
+      "reason": "Existing notes identify Gladfield crystal wheat; manufacturer-labelled record selected.",
+      "status": "remapped"
+    },
+    "b77b0d15-e83b-5f0e-bf02-09261e1895cb": {
+      "new_id": "687cf179-c33e-5aef-b674-afa14e7128bd",
+      "old_name": "Craft Beer Alemanha",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "b8047c8a-03b2-5d62-92b3-fa4c454390f0": {
+      "new_id": "af931feb-81e2-50c9-842b-f7cbfe03027d",
+      "old_name": "Irish Ale-2",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "b9bebaba-6fdc-5dbc-9b92-ed6c6aaebebd": {
+      "new_id": "57889444-5144-5fb5-a55b-1d7577e65e71",
+      "old_name": "German Lager-2",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "ba148146-c1d6-50a5-b742-6262f650f934": {
+      "new_id": "7bd5b50f-9e8d-59e7-b9dd-11b8a552dcf5",
+      "old_name": "Craft Beer Inglaterra",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "ba5822e7-5263-5457-8cb6-c60fbe7430db": {
+      "new_id": null,
+      "old_name": "Brexit",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "bb3e7f5b-206d-5823-af5f-0dcdd0ab9082": {
+      "new_id": "7d8d3671-b571-5dbb-a8c5-49d6931e83a2",
+      "old_name": "Gladfield Rolled Oats (Harraway's)",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "bc82560a-166d-5ed3-be0c-6eead10ab0b2": {
+      "new_id": null,
+      "old_name": "Gladfield Golden Naked Oats",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "c88889db-5a12-56b1-bdb6-c6aecd91272c": {
+      "new_id": "7d8d3671-b571-5dbb-a8c5-49d6931e83a2",
+      "old_name": "Gladfield Rolled Oats (BLM)",
+      "reason": "Reasonable commodity replacement of the same ingredient/processing; supplier changes. Not a claim that brands are identical.",
+      "status": "remapped"
+    },
+    "cc71f49a-c54b-56ad-9ab2-01b4732954dd": {
+      "new_id": "46c10352-bbc1-5b55-8af2-d161ff3cc36c",
+      "old_name": "Gladfield Lactose (Saputo Brand)",
+      "reason": "Reasonable commodity replacement of the same ingredient/processing; supplier changes. Not a claim that brands are identical.",
+      "status": "remapped"
+    },
+    "cffe159b-3c2e-59eb-8ca7-503faf417ba8": {
+      "new_id": "8f14b3e0-f6a6-59cf-8205-ad7de93734c8",
+      "old_name": "London ESB",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "d0f53021-11fd-505f-b0b0-e1d98fb15986": {
+      "new_id": null,
+      "old_name": "Bond",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "d3fa9dad-6a2f-50ba-ae18-2ad7de5de6aa": {
+      "new_id": "a81eb1af-d39b-5fcb-b67f-4ed5f81304fd",
+      "old_name": "German Weiss",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "d861fc8d-f2f4-5895-85a8-f12d14710970": {
+      "new_id": "bbcff9d9-15ae-5959-9892-46d07c19e161",
+      "old_name": "English Ale-1",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "dc53e255-fdd2-52d4-8704-00e097a1a99d": {
+      "new_id": null,
+      "old_name": "Juice Machine",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "dee9cb92-5c98-5215-ae44-bf717c74b67e": {
+      "new_id": "16ca0554-06a0-55c4-bb20-6b13f927b51f",
+      "old_name": "CY115 - Angel ALE",
+      "reason": "Same Angel product code and form; newer pack supplies the fuller product name.",
+      "status": "remapped"
+    },
+    "dfe2bcd9-4855-5375-95c8-6517b4bba328": {
+      "new_id": "0a190793-6bda-58fb-8d64-dd686120e9ec",
+      "old_name": "Saturated",
+      "reason": "Same-brand liquid culture now independently covered by the reviewed manufacturer supplement; retains the original form.",
+      "status": "remapped"
+    },
+    "e67abd93-6b14-591f-8cc7-bce392f7e78d": {
+      "new_id": "c945a656-f945-5316-9f0b-5425b3ab8ba2",
+      "old_name": "BF27 - Angel LAGER",
+      "reason": "Same Angel product code and form; newer pack supplies the fuller product name.",
+      "status": "remapped"
+    },
+    "eb7e8022-4980-52c0-a3f8-0909db027561": {
+      "new_id": "eb804001-ac78-5245-9bb1-e9859a5c9d4a",
+      "old_name": "Honey - Heather",
+      "reason": "Same heather honey; Scotland versus Scotland, United Kingdom is an origin-label difference.",
+      "status": "remapped"
+    },
+    "ec798114-6536-54c6-9c46-e157b28e73e2": {
+      "new_id": "0d281a73-9822-5761-99ad-c9aa10e7bde1",
+      "old_name": "Gladfield Dark Chocolate Malt",
+      "reason": "Reviewed spelling, word-order or distributor-name alias for the same ingredient.",
+      "status": "remapped"
+    },
+    "eebb0d3d-d217-51b1-b0dc-8655f4754858": {
+      "new_id": "b284ea94-8fd8-5b53-9b84-d110b6842e66",
+      "old_name": "Belgian Lager",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "f122df79-6bf9-5a6d-82f5-7682f292dd19": {
+      "new_id": null,
+      "old_name": "Gladfield Go Nutty Roasted Oats",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "f2606b89-01dc-5179-bb83-fbb4b6dcff2f": {
+      "new_id": null,
+      "old_name": "Mad Monk",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "f39ab4ef-917f-5814-8ab6-b22d01692bbc": {
+      "new_id": "ee8db40a-02a7-58eb-9586-8acde2c5095d",
+      "old_name": "Einstein",
+      "reason": "Same-brand liquid culture now independently covered by the reviewed manufacturer supplement; retains the original form.",
+      "status": "remapped"
+    },
+    "f3b22227-f26d-519d-83ff-e00ef51c6944": {
+      "new_id": null,
+      "old_name": "Funky Pineapple",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "f5c043e9-15be-500b-ba54-957f0ed92de6": {
+      "new_id": "6844883b-76ba-52c6-90a1-ecc1a3e8ec87",
+      "old_name": "Craft Beer República Tcheca",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "f6adfd57-a339-5aa5-a9c8-d764a6fef2c7": {
+      "new_id": null,
+      "old_name": "Bubblegum",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "f7828194-6ab1-55a6-b8bf-647f8a903e6f": {
+      "new_id": null,
+      "old_name": "Arset Kveik (Odin)",
+      "reason": "Owner approved omitting unused legacy ingredients following a read-only production usage check. No production ingredient or recipe is deleted; absence from source packs does not imply the product is discontinued.",
+      "status": "excluded"
+    },
+    "f78ca7eb-b0e1-5134-93c1-dca3f688e78e": {
+      "new_id": "90e725a3-77b2-53e2-b6f4-aa5834ac4121",
+      "old_name": "Roasted Barley",
+      "reason": "Generic ingredient mapped to the corresponding generic malt/adjunct definition; source region or analytical values may differ.",
+      "status": "remapped"
+    },
+    "f82bb38d-fc3a-5d40-995e-7c424ce31fd7": {
+      "new_id": "a213c282-1aef-5cd6-b892-f1e6ee239018",
+      "old_name": "Blend Abadia",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "fb5d084c-61c7-5c8c-9409-98c760931bb9": {
+      "new_id": "14b0538a-d5ed-5169-b32c-b42037db069d",
+      "old_name": "Voss Kveik (Ragnar)",
+      "reason": "Reasonable same-brand named culture replacement using the available dry offering; legacy record is liquid. This is a proposed variant substitution, not proof that liquid and dry formulations are identical.",
+      "status": "remapped"
+    },
+    "fbfde3a8-0d08-5d02-9870-c028a0f0d4a3": {
+      "new_id": "1523060f-f5e4-5f7c-aa9e-82ebe40aec81",
+      "old_name": "Craft Beer Escócia",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    },
+    "ff3a8fd9-e693-593e-9961-bd94f5a7420c": {
+      "new_id": "0d93c8e5-1f92-5425-891d-e57644c08673",
+      "old_name": "Belgian Saison-2",
+      "reason": "Same DrYeast name and product code; source form 3 is culture, whereas the legacy importer defaulted it to liquid.",
+      "status": "remapped"
+    }
+  },
+  "version": 1
+}

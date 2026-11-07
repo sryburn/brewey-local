@@ -1,0 +1,2242 @@
+{
+  "description": "Public ingredient sources, pinned 2026-10-06. Lower priority number wins. Unavailable sources are optional. Re-review checksums for upstream updates.",
+  "registry": "identities.json",
+  "sources": [
+    {
+      "id": "reviewed-supplement",
+      "label": "Reviewed manufacturer facts and original summaries",
+      "format": "reviewed-json",
+      "priority": 5,
+      "required": true,
+      "locations": [
+        {
+          "path": "supplement.json",
+          "sha256": "4824e680bd2d0f691ffcd4ee0bfbc66c1e7fe8493df53bb90da574e5afd78a17"
+        }
+      ],
+      "reliability": "Reviewed primary manufacturer specifications; per-record evidence and qualifications included"
+    },
+    {
+      "format": "bsmx",
+      "id": "gladfield",
+      "label": "gladfield",
+      "locations": [
+        {
+          "sha256": "00b12ef2c1d436f0f1657d5d8d2e6ae0a1a0793109e9b8705517746f4fd88925",
+          "url": "https://drive.google.com/uc?export=download&id=1QNNGxPfO56jQ4bif3ma6LuMp39s2lYmD"
+        },
+        {
+          "sha256": "b57a26dc5c022465c018563c56729da2b760b3aa3b2ca4fa59833d3794aef2af",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/GladfieldMalt2025.bsmx"
+        }
+      ],
+      "priority": 10,
+      "provenance": "https://www.gladfieldmalt.co.nz/home-brewers",
+      "reliability": "Manufacturer-hosted file",
+      "required": false,
+      "unique_contribution_at_review": 48
+    },
+    {
+      "format": "bsmx",
+      "id": "froth.bsmx",
+      "label": "froth.bsmx",
+      "locations": [
+        {
+          "sha256": "a90afd3273e93de16f36b6ba012da373d4c8ee7fffb4198a4d48d10057590c15",
+          "url": "https://frothtech.co.nz/s/Froth-Tech-Yeast-Profiles-v2.bsmx"
+        }
+      ],
+      "priority": 10,
+      "provenance": "https://frothtech.co.nz/s/Froth-Tech-Yeast-Profiles-v2.bsmx",
+      "reliability": "Manufacturer-hosted file",
+      "required": false,
+      "unique_contribution_at_review": 8
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ImperialYeast2025.bsmx",
+      "label": "Imperial Yeast Strains (62 yeasts)",
+      "locations": [
+        {
+          "sha256": "e977b5a87131491c646d8469e34d9eef7661c47dd27bb82941989712fa8d76bc",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ImperialYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ImperialYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 62
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MangroveJackYeast2025.bsmx",
+      "label": "Mangrove Jack Yeasts (30 yeasts)",
+      "locations": [
+        {
+          "sha256": "339e6edce47231a96b08d2d399e76cb7cbb7f985ff101a4878cb800c11f2e257",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MangroveJackYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MangroveJackYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 30
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-OmegaYeast2025.bsmx",
+      "label": "Omega Yeasts (107 yeasts)",
+      "locations": [
+        {
+          "sha256": "88ecde5d74f35e83f9cbb9865e8901b13c99a76f69c0e47276ba893ad1e6ffb6",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/OmegaYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/OmegaYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 106
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-LevteckHomeYeast2025.bsmx",
+      "label": "Levteck Yeast (23 yeasts)",
+      "locations": [
+        {
+          "sha256": "d28e1a4aa43bb02db79bf00088f9193405eb3ee249e30ea70fbc65cf6cd7ed7a",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/LevteckHomeYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/LevteckHomeYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 23
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-PropagateYeast2025.bsmx",
+      "label": "Propagate Yeast (50 yeasts)",
+      "locations": [
+        {
+          "sha256": "0586faa87d13a7e92353db7f9cf434027cf2db7f0ea003791fdd08acd6755f87",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/PropagateYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/PropagateYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 50
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-TheYeastBay2025.bsmx",
+      "label": "Yeast Bay Yeast (49 yeasts)",
+      "locations": [
+        {
+          "sha256": "0825f96c455a884ed18336d4d14f69356fbd114624745bc14af5f86cea9f0e23",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/TheYeastBay2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/TheYeastBay2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 49
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-EscarpmentYeast2025.bsmx",
+      "label": "Escarpment Labs (88 yeasts)",
+      "locations": [
+        {
+          "sha256": "1f9ef106ee78f06c506a7cb12a7fae72dad92378ebc95bbfa9ffef4178c62dbe",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/EscarpmentYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/EscarpmentYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 88
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CrossMyLoof2025.bsmx",
+      "label": "Cross My Loof Yeast (15 yeasts)",
+      "locations": [
+        {
+          "sha256": "032e5ed6099b8e96b77d688071413a72b07bdb52e2d1dbed34a3ed1a5103158c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CrossMyLoof2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CrossMyLoof2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 15
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-RVAYeast2025.bsmx",
+      "label": "RVA Yeast (34 yeasts)",
+      "locations": [
+        {
+          "sha256": "e08552d898af8df9d7fe166bde83a5e7a027db61864b74b9bded97ad30f0248e",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/RVAYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/RVAYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 34
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-WHCLabsHomeYeast2025.bsmx",
+      "label": "WHCLAB Yeast (21 yeasts)",
+      "locations": [
+        {
+          "sha256": "0e3821f054549483bcb86804c8c53d4630f97515c2a19b074d6e7825ccb84fda",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/WHCLabsHomeYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/WHCLabsHomeYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 21
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-AngelYeast2025.bsmx",
+      "label": "Leveduras Angel Yeast (8 yeasts)",
+      "locations": [
+        {
+          "sha256": "0311b280705b8378b41b1a3501d336b16241c4696d7d3bb16c9234f76d29f9dc",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/AngelYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/AngelYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 8
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ApexYeast2025.bsmx",
+      "label": "Apex Yeast (16 yeasts)",
+      "locations": [
+        {
+          "sha256": "45136e4d4caa0561fafaeb2275b211215f4968022a79590126c9de115afefcad",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ApexYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ApexYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 16
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-LeLaboYeast2025.bsmx",
+      "label": "Le Labo Yeast (49 yeasts)",
+      "locations": [
+        {
+          "sha256": "c2e739456bb2fb3c45cddb4a994f1c215feca07f4e2c99c25a9c51c1f6d88b9c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/LeLaboYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/LeLaboYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 47
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CellarScience2026.bsmx",
+      "label": "Cellar Science Yeast (23 yeasts)",
+      "locations": [
+        {
+          "sha256": "f2890f0ed4be8119e9c92c9bf22dab56536bd0219d2c47629d51dab49d6ffdc8",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CellarScience2026.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CellarScience2026.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 23
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Fermentis2025.bsmx",
+      "label": "Fermentis Yeast (21 yeasts)",
+      "locations": [
+        {
+          "sha256": "0a273690e570dfa149d9aac3162cc46f5c85a6420ffb7c1897469230a456c935",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Fermentis2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Fermentis2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 21
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-LallemandYeast2025.bsmx",
+      "label": "Lallemand-Lalvin Yeast (29 yeasts)",
+      "locations": [
+        {
+          "sha256": "8a0a0193585bd17c65b12582a2c4916ca634e6649906bf9ab056f28ca1ad69d9",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/LallemandYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/LallemandYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 29
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-RedStarYeast2025.bsmx",
+      "label": "Red Star Yeast (6 yeasts)",
+      "locations": [
+        {
+          "sha256": "bb5db45fc5b1356a4980088ae6afaa83eb7665c660a1980c2d500dc7682d5fcd",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/RedStarYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/RedStarYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 6
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-WhiteLabs2025.bsmx",
+      "label": "White Labs Yeasts (192 yeasts)",
+      "locations": [
+        {
+          "sha256": "ba963590af850783e3cffce3526726329f33349cbee76bd51d88dd8745ea1cb7",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/WhiteLabs2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/WhiteLabs2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 144
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-WYeast2025.bsmx",
+      "label": "Wyeast Yeasts (97 yeasts)",
+      "locations": [
+        {
+          "sha256": "30bc29557490a7a057b9af7944e472fbf0f6ec93c5572e10937724fbc8bc65ee",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/WYeast2025.bsmx"
+        }
+      ],
+      "priority": 20,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/WYeast2025.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 97
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Barret_Burston.bsmx",
+      "label": "Barret Burston Malts (4 grains)",
+      "locations": [
+        {
+          "sha256": "ffdb7fc108f949c9c6507fdc9cf11217d4501cbec7fa851017834a6ce2cbf540",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Barret_Burston.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Barret_Burston.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 4
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Briess.bsmx",
+      "label": "Briess Malts (88 grains)",
+      "locations": [
+        {
+          "sha256": "01dd0c74e183ed71440a2431fd2fff0fa5e683e971d5b61f66a2215656dc32d0",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Briess.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Briess.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 88
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Cargill.bsmx",
+      "label": "Cargill Malts (15 grains)",
+      "locations": [
+        {
+          "sha256": "858f6c26a8a75c9fda51ad980981a371cf0b864e4542d8dec152cb281c46eb1f",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Cargill.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Cargill.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 15
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CrispMalts2020.bsmx",
+      "label": "Crisp Malts 2020 (27 grains)",
+      "locations": [
+        {
+          "sha256": "66ac806018f338db4b2884dee4078950271c224f453d3ba5c7fa3bc2c1bf15e6",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CrispMalts2020.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CrispMalts2020.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 41
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Dingemans.bsmx",
+      "label": "Dingemans Malts (13 grains)",
+      "locations": [
+        {
+          "sha256": "12ffd18d763329f2d39b6d83f3a874a05f89b78eb1380313f7976bf274fe1b36",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Dingemans.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Dingemans.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 13
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Durst.bsmx",
+      "label": "Durst Malz (4 grains)",
+      "locations": [
+        {
+          "sha256": "a64972c80a9880235708257ab5b1a0d88b9e882d156c57ce69377e6833dd8b48",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Durst.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Durst.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 4
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Hoepfner.bsmx",
+      "label": "Hoepfner Malts (11 grains)",
+      "locations": [
+        {
+          "sha256": "141e3e88b87758dd339a417e2c3a43f510233a529130ec36e0482454924b366d",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hoepfner.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hoepfner.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 11
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-IMC.bsmx",
+      "label": "IMC Malts (3 grains)",
+      "locations": [
+        {
+          "sha256": "fae7abdc47fc7027c81cac584e57ec6bd3ceee0df596e6586979d8ece717c07a",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/IMC.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/IMC.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 3
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Joe_White.bsmx",
+      "label": "Joe White Malts (13 grains)",
+      "locations": [
+        {
+          "sha256": "e84712ef98d37ad9c73b549f21940b70001233f96cabb396b0d82044fa66988e",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Joe_White.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Joe_White.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 13
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Rhoen.bsmx",
+      "label": "Rhoen Maltz (2 grains)",
+      "locations": [
+        {
+          "sha256": "1277b4edb995ee090974039c48f6f3095eb5763c6080ffeb4eb1cc4828a8a804",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Rhoen.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Rhoen.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 2
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Schreier.bsmx",
+      "label": "Schreier Malts (2 grains)",
+      "locations": [
+        {
+          "sha256": "0a7b7c479a7c32d26f3e1bcfef21a9534b37e135fb8dca7516984b06ef5325ca",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Schreier.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Schreier.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 2
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Thomas_Fawcett.bsmx",
+      "label": "Thomas Fawcett Malts (14 grains)",
+      "locations": [
+        {
+          "sha256": "16d38257c312cc75babb361b2ca7b807fad3b752631769365548ee3c34473925",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Thomas_Fawcett.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Thomas_Fawcett.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 14
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Viking2.bsmx",
+      "label": "Viking Malt (52 grains)",
+      "locations": [
+        {
+          "sha256": "02714d5c75dc30e48415e8289ab51a084935611def56f86010d2309fa31c24d0",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Viking2.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Viking2.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 49
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Weyermann.bsmx",
+      "label": "Weyermann Malts (30 grains)",
+      "locations": [
+        {
+          "sha256": "9c53dc9e27732b2a17cca97327eab04e8c94302b8edaf0e45f78a21c9d071d5b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Weyermann.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Weyermann.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 30
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Zymoferm.bsmx",
+      "label": "Zymoferm Yeast (18 yeasts)",
+      "locations": [
+        {
+          "sha256": "29742de79a335023f4511327cd8ea31a629a3140c5c9e4bd11760147e8af31b2",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Zymoferm.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Zymoferm.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 21
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-SimpsonsMalts.bsmx",
+      "label": "Simpsons Malts (29 grains)",
+      "locations": [
+        {
+          "sha256": "b11e68cb6506ca13b99ff39c02e6ff59751e3f0c9f327af1b709448e13e95f1f",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/SimpsonsMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/SimpsonsMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 30
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-GambrinusMalts.bsmx",
+      "label": "Gambrinus Malts (12 grains)",
+      "locations": [
+        {
+          "sha256": "825bbf10359f4cbbf57b99c9df1a23343a44c25bcb6a69c3b0ea887e5b274bd8",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/GambrinusMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/GambrinusMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 12
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Great-Western.bsmx",
+      "label": "Great Western Malts (35 grains)",
+      "locations": [
+        {
+          "sha256": "56ba651058a617f6ad064d607660924015c4e09ee9c6c3a06c35deef3a297d5b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Great-Western.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Great-Western.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 35
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CandiSyrupProducts.bsmx",
+      "label": "Candy Syrups (8 syrups)",
+      "locations": [
+        {
+          "sha256": "4b982366a65efaa5b45e374cf117557a35454ced2c827721121dd1e2e1a41728",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CandiSyrupProducts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CandiSyrupProducts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 8
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-DrYeast.bsmx",
+      "label": "DR Yeast in Portuguese (50 yeasts)",
+      "locations": [
+        {
+          "sha256": "ae3a2400faa08a087e32ba3c82e023c1f52763bd40e18996ef679c26cd5e2958",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/DrYeast.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/DrYeast.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 50
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-PatagoniaMalts.bsmx",
+      "label": "Patagonia Malts from Chile (20 grains)",
+      "locations": [
+        {
+          "sha256": "ce5cd22eef7bb5404004f33ed83abbfde67cf272db6a5beb402056dd3658b183",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/PatagoniaMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/PatagoniaMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 20
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CascadeSyrups.bsmx",
+      "label": "Cascade Beer Candy Syrup (22 grains)",
+      "locations": [
+        {
+          "sha256": "105d934b8eb132d6cf0eba296204ffe72155f297d01285b3850c642327dfbe22",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CascadeSyrups.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CascadeSyrups.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 22
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CastleMaltEnglish.bsmx",
+      "label": "Castle Malts - English (67 grains)",
+      "locations": [
+        {
+          "sha256": "10f80281a7378d7da337f169d83989a65dcdda4f9d379bcc46c93725ccf36208",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CastleMaltEnglish.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CastleMaltEnglish.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 67
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-AvangardMalt.bsmx",
+      "label": "Avangard Malts (5 grains)",
+      "locations": [
+        {
+          "sha256": "8f4e52f859e05f559d2a1eb8e2be5e6444288ebfcb74ceb02032782cf0e6617b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/AvangardMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/AvangardMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 5
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-BairdsMalt.bsmx",
+      "label": "Bairds Malt (15 grains)",
+      "locations": [
+        {
+          "sha256": "e840946c6b0010e514fb86330657c77c028291087ab9aa98574611b818ee5de2",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/BairdsMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/BairdsMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 15
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MuntonsMalts.bsmx",
+      "label": "Muntons Malts (40 grains)",
+      "locations": [
+        {
+          "sha256": "d3ec7b65711402a6833a3b80a74f2691766f382a53e751d8b2f2ef82902e4c77",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MuntonsMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MuntonsMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 60
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-RahrMalts.bsmx",
+      "label": "Rahr Malts (16 grains)",
+      "locations": [
+        {
+          "sha256": "a1679ef56184d8aadc78cc91c36633df9800109435047430ddc3f3710303fa7b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/RahrMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/RahrMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 16
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Inland-Island.bsmx",
+      "label": "Inland Island Yeasts (10 yeasts)",
+      "locations": [
+        {
+          "sha256": "279c816eb054199de947f5cc3bcb7ad4b2d2875105611e3b76e221b3637d94e6",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Inland-Island.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Inland-Island.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 10
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-HopsMay2016.bsmx",
+      "label": "Hop Update Jun 2016 (6 hops)",
+      "locations": [
+        {
+          "sha256": "e7114880a6e76e2313f21b01aff820abb9e19d8b53f4fbde72480787b951e698",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopsMay2016.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopsMay2016.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 6
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ArtisanYeast.bsmx",
+      "label": "Artisan Yeasts (7 yeasts)",
+      "locations": [
+        {
+          "sha256": "be86c140253f3c3bcc2314afde6bb8ee8eb65ec3d714dec8265307d3ae16566f",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ArtisanYeast.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ArtisanYeast.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MrBeer.bsmx",
+      "label": "Mr Beer Extracts (19 extracts)",
+      "locations": [
+        {
+          "sha256": "cf153ea3be2ad40a6519a6dd8eeed4e621184d1c08a2952b9d0a1d8c6ac049b3",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MrBeer.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MrBeer.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 20
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-SteinbachMalzerei.bsmx",
+      "label": "Steinbach Maltz Germany (18 grains)",
+      "locations": [
+        {
+          "sha256": "62257ee142fe401aa6cf73399c3a1246f7f6da1cbf5f2d49f0a43c32c2ccc28b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/SteinbachMalzerei.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/SteinbachMalzerei.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 18
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-BootlegYeast.bsmx",
+      "label": "Bootleg Yeast Cultures (9 yeasts)",
+      "locations": [
+        {
+          "sha256": "44d883a93823038d52bf8d918e265c2da3a394af68cefcfdef70f22101582f83",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/BootlegYeast.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/BootlegYeast.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 9
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-SwaenMalts.bsmx",
+      "label": "Swaen Malts Netherlands (69 grains)",
+      "locations": [
+        {
+          "sha256": "825ed78b2e5ddf52f1a2a22bfc92e39e0c8a658e4b633ac069e3cdb897c217fb",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/SwaenMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/SwaenMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 69
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-DoubleEagle.bsmx",
+      "label": "Double Eagle Malts (18 grains)",
+      "locations": [
+        {
+          "sha256": "3f400d6a088770a2863362d1ddd309ac3f86f57ab033c2442f74f6cab64c7708",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/DoubleEagle.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/DoubleEagle.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 18
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-KnudsenJuice.bsmx",
+      "label": "Knudsen Fruit Juices (11 Juices)",
+      "locations": [
+        {
+          "sha256": "c76fa29a1cb6ac95ee0b9b6ebe8afa6cfcddba15005eb3435766964fd654d368",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/KnudsenJuice.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/KnudsenJuice.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 11
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-WholeFruits.bsmx",
+      "label": "Whole Fruits - New (40 Fruits)",
+      "locations": [
+        {
+          "sha256": "23abd3931e8b6282801e00ebf1c416dffd3e556ccd94ca3f83e46ab4c359cc39",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/WholeFruits.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/WholeFruits.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 40
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-HoneyVarieties.bsmx",
+      "label": "Honey Varieties (24 Honeys)",
+      "locations": [
+        {
+          "sha256": "dec3b8c33bd35422cf5c346d89374337620ae1dfda5ca77133eeec7a9a59bb34",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/HoneyVarieties.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/HoneyVarieties.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 23
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CryoHops.bsmx",
+      "label": "Cryo Hops (39 hops)",
+      "locations": [
+        {
+          "sha256": "d851ea734941ce0a7ead821d2906deedda76a6078afd47dda955cfaf84b1ae09",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CryoHops.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CryoHops.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 38
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CiderJuice.bsmx",
+      "label": "Cider Apple Varieties (39 Apple Juices)",
+      "locations": [
+        {
+          "sha256": "2c3bde14f79b5a44c434ade25657aaf350c2ef71c9efa9e93002db1051ed5122",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CiderJuice.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CiderJuice.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 39
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-HopHash.bsmx",
+      "label": "Hop Hash (4 hops)",
+      "locations": [
+        {
+          "sha256": "47d5c20dc7a53cd4e401df25d73a037e6b2f040e723baea3dceadc123a36d4e3",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopHash.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopHash.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 4
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-HopExtracts.bsmx",
+      "label": "Hop CO2 Extracts (7 hops)",
+      "locations": [
+        {
+          "sha256": "6dfc3ef498f3f3ffa210094776fc94b010db26e001773e03d3d1c5bdff81d07e",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopExtracts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopExtracts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-VintnerPuree.bsmx",
+      "label": "Vintner's Fruit Puree (18 Juices)",
+      "locations": [
+        {
+          "sha256": "90b8291396fd008d4d29f7dd534518d1c0ba0aebca2bc30381edcf3bf0850c8e",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/VintnerPuree.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/VintnerPuree.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 18
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Malolactic.bsmx",
+      "label": "Malolactic Wine Bacteria (9 yeasts)",
+      "locations": [
+        {
+          "sha256": "5c60e7f83b20d9dcc7ae40c0f2167f3b5185ee9cab9b7585c7fbbbc663a4f8cb",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Malolactic.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Malolactic.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-VintnerYeast.bsmx",
+      "label": "Vintner's Wine Yeasts (9 yeasts)",
+      "locations": [
+        {
+          "sha256": "f0e5bebd0c0abf5a180e31d2db28f59559569b76b2a59c85e0956a17f3431742",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/VintnerYeast.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/VintnerYeast.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 9
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-BulldogYeast.bsmx",
+      "label": "Bulldog Yeast (10 yeasts)",
+      "locations": [
+        {
+          "sha256": "4f6b8aaf842938f9feff2c6845d999d19658ad90134c87424451faee72e6c406",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/BulldogYeast.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/BulldogYeast.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 10
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-YeasTech.bsmx",
+      "label": "YeasTech Yeast (7 yeasts)",
+      "locations": [
+        {
+          "sha256": "131f173da1075c9db0016aad682d74e6ce32b3a4eeb2f1c3c01b4a20a0d7450b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/YeasTech.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/YeasTech.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-SkagitMalts.bsmx",
+      "label": "Skagit Valley Malts (23 grains)",
+      "locations": [
+        {
+          "sha256": "fa0517fb33729823cf3f333f1cc93616ee465998290cc310346e6a6391b4820a",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/SkagitMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/SkagitMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 23
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-WineBaseBrix.bsmx",
+      "label": "Wine Base (Juice) by Brix Value (7 Juices)",
+      "locations": [
+        {
+          "sha256": "f037479a2bbfb5d9b9a5d5f12f577b4136e6a94fe34b3d52255923d272a5570c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/WineBaseBrix.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/WineBaseBrix.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MaltsSekado.bsmx",
+      "label": "Sekado Malts (7 grains)",
+      "locations": [
+        {
+          "sha256": "1b16a3c182902fe6cf8cd284c6b02dc60e3420178591954f680f70462a94bd6c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MaltsSekado.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MaltsSekado.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-FuglsangMalts.bsmx",
+      "label": "Fuglsang Malts (7 grains)",
+      "locations": [
+        {
+          "sha256": "27e2bbaba282200daa79147f728a5f834e1552ffcaad4758d41ac2654da21293",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/FuglsangMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/FuglsangMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 5
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Ireks.bsmx",
+      "label": "Ireks Malts (24 grains)",
+      "locations": [
+        {
+          "sha256": "7bec0bec347b7265499db370f33913636a3edce229be0650e5d324b5346502c6",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Ireks.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Ireks.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 23
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-GFFermentables.bsmx",
+      "label": "Gluten Free Fermentables (55 items)",
+      "locations": [
+        {
+          "sha256": "1abf1e1136c9082b1acd94b117ebd6fb4ea9e0c591d617564778818929b4a4ac",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/GFFermentables.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/GFFermentables.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 51
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MeccaMalts.bsmx",
+      "label": "Mecca Grade Estate Malts (9 grains)",
+      "locations": [
+        {
+          "sha256": "be81fce34d414f1ba2ce63df96393d334d67c14af922fc3d5885d1394827501e",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MeccaMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MeccaMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 9
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MuntonsSpraymalt.bsmx",
+      "label": "Muntons Spraymalt DME (5 DME)",
+      "locations": [
+        {
+          "sha256": "099d1dd52a7b24fa95994f30e576e8298c7d0553fa971eaeff5f44dd5e3d08be",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MuntonsSpraymalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MuntonsSpraymalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 5
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-AdmiralMalts.bsmx",
+      "label": "Admiral Malting (12 grains)",
+      "locations": [
+        {
+          "sha256": "0863e86855a88fc4ce7b1bc77ad0f6e28546a93171095e0007dd21618a56dbef",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/AdmiralMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/AdmiralMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 12
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-OriginMalts.bsmx",
+      "label": "Origin Malts (6 grains)",
+      "locations": [
+        {
+          "sha256": "cfe084e11f5fd9baca1c09b85d484f5b20db64809fe5512f342eefced38a5da5",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/OriginMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/OriginMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 6
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CoopersExtract.bsmx",
+      "label": "Coopers Extract (22 extracts)",
+      "locations": [
+        {
+          "sha256": "5a54898a48f4a94ccb86a03ec785bc029203490e6c0eea6cd73260273096f433",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CoopersExtract.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CoopersExtract.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 24
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-PaleAltiplano.bsmx",
+      "label": "Pale Ale Altiplano (1 grain)",
+      "locations": [
+        {
+          "sha256": "487e44826a5b55477bd4a76c03e8ea5e528124af7eb4c389467cdf2426d2630a",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/PaleAltiplano.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/PaleAltiplano.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 1
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ProximityMalt.bsmx",
+      "label": "Proximity Malts (35 grains)",
+      "locations": [
+        {
+          "sha256": "cb9ddab3f643483faa0c8ab2bf492f73a884a141ab73d7aa99e568c9de2efac0",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ProximityMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ProximityMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 35
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-DeerCreekMalts.bsmx",
+      "label": "Deer Creek Malts (21 grains)",
+      "locations": [
+        {
+          "sha256": "2b81303b0528faf5902e32da28e299dd8c930111b9f836fdca3e329b14cbaeb3",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/DeerCreekMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/DeerCreekMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 21
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-AgrariaMalts.bsmx",
+      "label": "Agraria Base Malts (4 grains)",
+      "locations": [
+        {
+          "sha256": "7ffb381fdff93c46c83050668f512d63810b4fed82f59d5fd209e3f3d4946778",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/AgrariaMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/AgrariaMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 4
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Malteurop.bsmx",
+      "label": "Malteurop Malts (15 grains)",
+      "locations": [
+        {
+          "sha256": "150857788d75001e42371978048c1aead03928ed6a6c070ca6553f38873e7c4a",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Malteurop.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Malteurop.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 15
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-BlackRockExtracts.bsmx",
+      "label": "Black Rock Extracts (29 extracts)",
+      "locations": [
+        {
+          "sha256": "b9b41f5eca82a418c9af51aa89a0ba5475017e8dc1b6963c20d2aea9151d16d6",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/BlackRockExtracts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/BlackRockExtracts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 29
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-GrouseMalts.bsmx",
+      "label": "Grouse Malts (32 grains)",
+      "locations": [
+        {
+          "sha256": "d881aca99514b1a7a023bf9f26b2f2024f0d1bed2130d210298b9474a3d7fdbf",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/GrouseMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/GrouseMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 32
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Belgomalt.bsmx",
+      "label": "Belgomalt Malts (5 grains)",
+      "locations": [
+        {
+          "sha256": "384c0b9cbadd7c7f9aeee3ae3a62c3c9a4ca66cc7247f5cc9a61b8943ef7a748",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Belgomalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Belgomalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 5
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ZHBaseMalt.bsmx",
+      "label": "ZH Base Malt (1 grains)",
+      "locations": [
+        {
+          "sha256": "a3cbb75c3941b78f16bc961d582cccc7b5e02bc90fcf5115ce7e67283b48fede",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ZHBaseMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ZHBaseMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 1
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ZH-SAfricanHops.bsmx",
+      "label": "ZH South African Hops (10 hops)",
+      "locations": [
+        {
+          "sha256": "d7dd7620bad61e7bc3ae0248f537c429047e3861c924a232d80545f600ee930b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ZH-SAfricanHops.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ZH-SAfricanHops.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 10
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MurphyRudeMalts.bsmx",
+      "label": "Murphy and Rude Malts (30 grains)",
+      "locations": [
+        {
+          "sha256": "f8ab1a4e921378d3078c67cc1773c261029d3c6e8b0a5b0648659a45a338641c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MurphyRudeMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MurphyRudeMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 30
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-VoyagerMalt.bsmx",
+      "label": "Voyager Malts (16 grains)",
+      "locations": [
+        {
+          "sha256": "fab74e48ef4d7a37cf6459ca3a245747b91da577fcf55befb75584e98a73df47",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/VoyagerMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/VoyagerMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 16
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Riverbend2021.bsmx",
+      "label": "Riverbend Malts (17 grains)",
+      "locations": [
+        {
+          "sha256": "7dc82a08e98e4bf480e1941d92b05d3d8b567134fed5add82a7a48b26626300c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Riverbend2021.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Riverbend2021.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 17
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Lupomax.bsmx",
+      "label": "LUPOMAX Hops (18 hops)",
+      "locations": [
+        {
+          "sha256": "802a2dade3f65651bc3d6cf12b1bf0afb87a2297aa0e68c237d97dfa46ca9a11",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Lupomax.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Lupomax.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 17
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-SugarCreekMalts.bsmx",
+      "label": "Sugar Creek Malts (29 grains)",
+      "locations": [
+        {
+          "sha256": "fdaa05cb7f4a927b1ba9654628bed440ed343e3ec9996d43fcf5ce255e041b49",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/SugarCreekMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/SugarCreekMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 29
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CanadaMalting.bsmx",
+      "label": "Canada Malting Malts (9 grains)",
+      "locations": [
+        {
+          "sha256": "cec7acca9cde65c7bcc51fc8462b90b1479344e7a98ed1c062443a2a4d1b8ff5",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CanadaMalting.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CanadaMalting.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 9
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ConeKeeperHops.bsmx",
+      "label": "Cone Keeper Hops (11 hops)",
+      "locations": [
+        {
+          "sha256": "7740efbdeda6aa141f39c303fb52846bdfad107f12a808061a8b575ea3192e0c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ConeKeeperHops.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ConeKeeperHops.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 11
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-PrairieMalt.bsmx",
+      "label": "Prairie Malt (27 grains)",
+      "locations": [
+        {
+          "sha256": "3ab56c8625a68c13604b7d6af2b180514e6daa98f3e45a89f675c087e74e3095",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/PrairieMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/PrairieMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 27
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MuntonsExtracts.bsmx",
+      "label": "Muntons Extracts (19 extracts)",
+      "locations": [
+        {
+          "sha256": "2e8d5ceba8cc17e27b847b25f5a7d47e071188bccb1f4e0113808e318ea58baa",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MuntonsExtracts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MuntonsExtracts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 20
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Bestmalz2022_EN.bsmx",
+      "label": "BestMalz Malts 2022 (37 grains)",
+      "locations": [
+        {
+          "sha256": "aa119e1ed141133124554cae03229a3480bbf64e5b11d9e7be3ec792225d7612",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Bestmalz2022_EN.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Bestmalz2022_EN.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 37
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-PrimersYeast.bsmx",
+      "label": "Primer's Yeast (1 yeast)",
+      "locations": [
+        {
+          "sha256": "32069a7ac3e141f3f4c5ebaad8ed503c2f1892fb6f0edca21d916d14e0648940",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/PrimersYeast.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/PrimersYeast.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 1
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-HookHeadMalt.bsmx",
+      "label": "Hook Head Malt Ireland (1 grain)",
+      "locations": [
+        {
+          "sha256": "44b836e455c1a0d3886092e7138940321506c598192b713b53c46f2585f6d26c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/HookHeadMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/HookHeadMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 1
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-MontanaMalts.bsmx",
+      "label": "Montana Malts (7 grains)",
+      "locations": [
+        {
+          "sha256": "2ba84dfc5f08afb4856a5fd7c54d36450bd58c57ad1b0828cd585fdbc6a45072",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/MontanaMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/MontanaMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-FarmhouseNorge.bsmx",
+      "label": "Farmhouse Norge (7 yeasts)",
+      "locations": [
+        {
+          "sha256": "64f4e080cd74c0424328c8ac247ebd2cb32910aec57e7e874a5665795a6f63d5",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/FarmhouseNorge.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/FarmhouseNorge.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 6
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CentralAltiplano.bsmx",
+      "label": "Central Altiplano Malts (2 grains)",
+      "locations": [
+        {
+          "sha256": "449072736ae921415946662da168cdd8f05269059d655fdd3a1fae2f8e85705e",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CentralAltiplano.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CentralAltiplano.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 1
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-UmaMalta.bsmx",
+      "label": "Uma Malta Malts (8 grains)",
+      "locations": [
+        {
+          "sha256": "102f05faeb4393cc7fbfa5c770877030fb8a7a9e14b7cdaec2eb5a274db87ce8",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/UmaMalta.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/UmaMalta.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 8
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-PaulsMalt.bsmx",
+      "label": "Pauls Malts (13 grains)",
+      "locations": [
+        {
+          "sha256": "f5f275c94ff09832bbc5d8d15bcd6c619345ffce623bf5f6d3bbfda4e96283ca",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/PaulsMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/PaulsMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 12
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-LesMaltiers.bsmx",
+      "label": "Les Maltiers (4 grains)",
+      "locations": [
+        {
+          "sha256": "eeeea02355604f4669d7d8849cdf370030dca38000d24fa5b7312987d9fcd2f9",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/LesMaltiers.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/LesMaltiers.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 4
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-RootShootMalt.bsmx",
+      "label": "Root Shoot Malts (12 grains)",
+      "locations": [
+        {
+          "sha256": "814704b052dd7691e73ae34b88de96cd43524e71502856179999e4c2c1f97a28",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/RootShootMalt.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/RootShootMalt.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 13
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-HistoricalHops.bsmx",
+      "label": "Historical Hops (33 hops)",
+      "locations": [
+        {
+          "sha256": "bce2ad17d25dfbfd4e57087bae85c85e509a991ab1c8b404012d2436a2cbb037",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/HistoricalHops.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/HistoricalHops.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 34
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-ExperimentalHops.bsmx",
+      "label": "Experimental Hops (40 hops)",
+      "locations": [
+        {
+          "sha256": "db15a19251afc1d53d60ab5cf823ff5121dfa5a561feea4597960d8490a181c7",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/ExperimentalHops.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/ExperimentalHops.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 40
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-CarolinaMalts.bsmx",
+      "label": "Carolina Malt House (14 grains)",
+      "locations": [
+        {
+          "sha256": "4d1aaabbefe8c9126128ed0c271b4dfb7c3f0e24913ea932193617def4b76cc2",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/CarolinaMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/CarolinaMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 14
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Incognito.bsmx",
+      "label": "Incognito Extracts (6 hops)",
+      "locations": [
+        {
+          "sha256": "1b11c5286a74feedd578d7ff11c79b3394ba16b97cc09a93faa1027b79d09dc4",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Incognito.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Incognito.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 6
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-DynaBoost.bsmx",
+      "label": "DynaBoost Extracts (6 hops)",
+      "locations": [
+        {
+          "sha256": "5bec824d59eda8a6f7c839c3b719621b98965469075dfa5cb65fca863890f293",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/DynaBoost.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/DynaBoost.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 6
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-BlueOxMalts.bsmx",
+      "label": "Blue Ox Malthouse (33 grains)",
+      "locations": [
+        {
+          "sha256": "c13233acd0beeef63e82643f1534f3c8fc4831864ab000f4b83a4532739a9951",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/BlueOxMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/BlueOxMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 33
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-TwoTrackMalts.bsmx",
+      "label": "Two Track Malting (12 grains)",
+      "locations": [
+        {
+          "sha256": "8a23574be2c7a6b01ae98e99459b99a5852aa80517a548f1f51ab8dc13be28bb",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/TwoTrackMalts.bsmx"
+        }
+      ],
+      "priority": 30,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/TwoTrackMalts.bsmx",
+      "reliability": "Named brand add-on; hosted by BeerSmith, authorship not independently established",
+      "required": false,
+      "unique_contribution_at_review": 12
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-HopUpdate2024.bsmx",
+      "label": "Hop Update 2024 (137 hops)",
+      "locations": [
+        {
+          "sha256": "c6549015ab050e6ba945e56a68a7abc7402d0b28d644df2438307ff98677184b",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopUpdate2024.bsmx"
+        }
+      ],
+      "priority": 35,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/HopUpdate2024.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 136
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Yeast2020.bsmx",
+      "label": "Yeast Update 2020 - Recommended (78 yeasts)",
+      "locations": [
+        {
+          "sha256": "84a1f5a97ea440aa470ef25287d377eacf383e5b590e14708f5c76fe2912402c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Yeast2020.bsmx"
+        }
+      ],
+      "priority": 36,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Yeast2020.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 13
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Hops2020.bsmx",
+      "label": "Hop Update 2020 (63 hops)",
+      "locations": [
+        {
+          "sha256": "cf7cd1cf68f5669a3a387875bf97900e0b323b5b6c1f9e175cd79bf5252395fa",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hops2020.bsmx"
+        }
+      ],
+      "priority": 36,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hops2020.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 61
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Hops2018.bsmx",
+      "label": "Hop Update 2018 (58 hops)",
+      "locations": [
+        {
+          "sha256": "247e5e11d61504afd6edb5aeae87cd57b8f3146953e180a7703cb8d9e79163c5",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hops2018.bsmx"
+        }
+      ],
+      "priority": 37,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hops2018.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 56
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Hops2016Update.bsmx",
+      "label": "Hop Update 2016 (32 hops)",
+      "locations": [
+        {
+          "sha256": "0b9331374c53c0d8ddc92330ed7e640b91333d084b0bfd6965df601929c20e65",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hops2016Update.bsmx"
+        }
+      ],
+      "priority": 38,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hops2016Update.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 28
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Yeast2016Update.bsmx",
+      "label": "Yeast Update 2016 (178 yeasts)",
+      "locations": [
+        {
+          "sha256": "f8c05612854874bc2c4e96ba6b7d47bc7eb26d457988417c7b5414ab23c3efb6",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Yeast2016Update.bsmx"
+        }
+      ],
+      "priority": 38,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Yeast2016Update.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 60
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Misc2016Update.bsmx",
+      "label": "Misc Update 2016 (48 items)",
+      "locations": [
+        {
+          "sha256": "a1e7586f810582e59937b51fe5090eee133607ac57d39f19b34866294ba9a091",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Misc2016Update.bsmx"
+        }
+      ],
+      "priority": 38,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Misc2016Update.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 48
+    },
+    {
+      "format": "bsmx",
+      "id": "addon-Hop-Update-2013.bsmx",
+      "label": "Hop Update 2013 - Hops included in V2.2 (63 hops)",
+      "locations": [
+        {
+          "sha256": "86be978ef3d7dc628657e42281ff6db85fa5b034d7a66f4212db12e7fa3ee85c",
+          "url": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hop-Update-2013.bsmx"
+        }
+      ],
+      "priority": 39,
+      "provenance": "https://d1sqla7250puhf.cloudfront.net/Plugin/Hop-Update-2013.bsmx",
+      "reliability": "General BeerSmith update",
+      "required": false,
+      "unique_contribution_at_review": 54
+    },
+    {
+      "format": "bsmx",
+      "id": "base-Hops.bsmx",
+      "label": "base-Hops.bsmx",
+      "locations": [
+        {
+          "member": "usr/share/BeerSmith3/Hops.bsmx",
+          "member_sha256": "4222e89fcdd0b959a4974700a790db5e4a352b80a91ffa0ccd4d31b8f2b6d922",
+          "sha256": "209f72df899f300295769f0f4575f8d88ca72915b7eeca8d6f79400b920f418d",
+          "url": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb"
+        }
+      ],
+      "priority": 60,
+      "provenance": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb",
+      "reliability": "Generic/legacy base definitions from official installer",
+      "required": false,
+      "unique_contribution_at_review": 94
+    },
+    {
+      "format": "bsmx",
+      "id": "base-Grain.bsmx",
+      "label": "base-Grain.bsmx",
+      "locations": [
+        {
+          "member": "usr/share/BeerSmith3/Grain.bsmx",
+          "member_sha256": "9dd9897373e8342fa97075103f0d8da89ef6c7339ecb216bc1d6c4bfaecd7404",
+          "sha256": "209f72df899f300295769f0f4575f8d88ca72915b7eeca8d6f79400b920f418d",
+          "url": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb"
+        }
+      ],
+      "priority": 60,
+      "provenance": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb",
+      "reliability": "Generic/legacy base definitions from official installer",
+      "required": false,
+      "unique_contribution_at_review": 84
+    },
+    {
+      "format": "bsmx",
+      "id": "base-Yeast.bsmx",
+      "label": "base-Yeast.bsmx",
+      "locations": [
+        {
+          "member": "usr/share/BeerSmith3/Yeast.bsmx",
+          "member_sha256": "88043ee113d0fa47ea0f3b57d2174e513f0d9bfa785da188cc6a46d687947f29",
+          "sha256": "209f72df899f300295769f0f4575f8d88ca72915b7eeca8d6f79400b920f418d",
+          "url": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb"
+        }
+      ],
+      "priority": 60,
+      "provenance": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb",
+      "reliability": "Generic/legacy base definitions from official installer",
+      "required": false,
+      "unique_contribution_at_review": 19
+    },
+    {
+      "format": "bsmx",
+      "id": "base-Misc.bsmx",
+      "label": "base-Misc.bsmx",
+      "locations": [
+        {
+          "member": "usr/share/BeerSmith3/Misc.bsmx",
+          "member_sha256": "774f07042b53bcd5c1a2bc18bd8af869e9c6a40dc996019381159f231bd1481a",
+          "sha256": "209f72df899f300295769f0f4575f8d88ca72915b7eeca8d6f79400b920f418d",
+          "url": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb"
+        }
+      ],
+      "priority": 60,
+      "provenance": "https://beersmith3-2.s3.amazonaws.com/BeerSmith-3.2.8_24_04_amd64.deb",
+      "reliability": "Generic/legacy base definitions from official installer",
+      "required": false,
+      "unique_contribution_at_review": 85
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1KuJMgX6CkG4U1umKIc_KB35UuYkca35D.bsmx",
+      "label": "piquiri-1KuJMgX6CkG4U1umKIc_KB35UuYkca35D.bsmx",
+      "locations": [
+        {
+          "sha256": "7ea5337b894cbad6c329b60ba0a1c2a5590eedcb042d549b605d0ec08e33f6c7",
+          "url": "https://drive.google.com/uc?export=download&id=1KuJMgX6CkG4U1umKIc_KB35UuYkca35D"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 1
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1MuGW3bPOnwF1qM9womUNY4IpUT1jgh3D.bsmx",
+      "label": "piquiri-1MuGW3bPOnwF1qM9womUNY4IpUT1jgh3D.bsmx",
+      "locations": [
+        {
+          "sha256": "11047d6163b157ad96793045922f2e05d592b530b9a1df61348732dc83f2d43c",
+          "url": "https://drive.google.com/uc?export=download&id=1MuGW3bPOnwF1qM9womUNY4IpUT1jgh3D"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 23
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1iJ0xZ13-lgHzNJ4ylTDCtarc2Iky2cc4.bsmx",
+      "label": "piquiri-1iJ0xZ13-lgHzNJ4ylTDCtarc2Iky2cc4.bsmx",
+      "locations": [
+        {
+          "sha256": "bac4e6f5425dad898c9b41e7815d660719e5134848badcf09d89496e4cdf6e45",
+          "url": "https://drive.google.com/uc?export=download&id=1iJ0xZ13-lgHzNJ4ylTDCtarc2Iky2cc4"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 4
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1QUXBcI7dVDP8D39ZLtvoQap3TVNd8me7.bsmx",
+      "label": "piquiri-1QUXBcI7dVDP8D39ZLtvoQap3TVNd8me7.bsmx",
+      "locations": [
+        {
+          "sha256": "f0183456bc05582dc9aae963718d61b8d5031a5fc3e5853d5a63d477f5188d60",
+          "url": "https://drive.google.com/uc?export=download&id=1QUXBcI7dVDP8D39ZLtvoQap3TVNd8me7"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 5
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1WAWC4g9FSy3lxB0PsXB_108njC7ueTTo.bsmx",
+      "label": "piquiri-1WAWC4g9FSy3lxB0PsXB_108njC7ueTTo.bsmx",
+      "locations": [
+        {
+          "sha256": "db1149473421578e87413a8c4cb3b6f4023085ef3861c14c4d7e72cf77e38302",
+          "url": "https://drive.google.com/uc?export=download&id=1WAWC4g9FSy3lxB0PsXB_108njC7ueTTo"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 10
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1fGo5_FI52ksC6dzodVwhbkkCXgOCwJXP.bsmx",
+      "label": "piquiri-1fGo5_FI52ksC6dzodVwhbkkCXgOCwJXP.bsmx",
+      "locations": [
+        {
+          "sha256": "96d7da7fcb9a2e3184b561dc64d29e923378919492dc5bdf46bc6a393339f5fc",
+          "url": "https://drive.google.com/uc?export=download&id=1fGo5_FI52ksC6dzodVwhbkkCXgOCwJXP"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 4
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1WwsL2hEeZthRR8VFRvj8XcnkVPWHPNqf.bsmx",
+      "label": "piquiri-1WwsL2hEeZthRR8VFRvj8XcnkVPWHPNqf.bsmx",
+      "locations": [
+        {
+          "sha256": "2cae03b7b888683fccb53e7de74ac9f231c7dc4e593d97d487c9a416c1c6ce9e",
+          "url": "https://drive.google.com/uc?export=download&id=1WwsL2hEeZthRR8VFRvj8XcnkVPWHPNqf"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 14
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1HNpOSZ5bPQjM5p_dRfGk8h7zAmGl7RZj.bsmx",
+      "label": "piquiri-1HNpOSZ5bPQjM5p_dRfGk8h7zAmGl7RZj.bsmx",
+      "locations": [
+        {
+          "sha256": "ddebacf03f219548a869c39b4139c6269e3641f95542a610743e53f9c24343f8",
+          "url": "https://drive.google.com/uc?export=download&id=1HNpOSZ5bPQjM5p_dRfGk8h7zAmGl7RZj"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 7
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1d4wAgn1GXSWAO_2q_iNNkniNSOPF2m2l.bsmx",
+      "label": "piquiri-1d4wAgn1GXSWAO_2q_iNNkniNSOPF2m2l.bsmx",
+      "locations": [
+        {
+          "sha256": "f42b10d6cd03c0b3e554148395ceee8429e6b567ad3d5f3a9208661b54447373",
+          "url": "https://drive.google.com/uc?export=download&id=1d4wAgn1GXSWAO_2q_iNNkniNSOPF2m2l"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 10
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-1mBymasfj_L8DV1MBTtICUDPDrLb9WcFL.bsmx",
+      "label": "piquiri-1mBymasfj_L8DV1MBTtICUDPDrLb9WcFL.bsmx",
+      "locations": [
+        {
+          "sha256": "1dbcbb2e0315a41a8087310b13567d888dc6047a6f8b2d12d02187342d274305",
+          "url": "https://drive.google.com/uc?export=download&id=1mBymasfj_L8DV1MBTtICUDPDrLb9WcFL"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 67
+    },
+    {
+      "format": "bsmx",
+      "id": "piquiri-11etRUCnj94iNEJMMORhwEyuZw8A8KpHh.bsmx",
+      "label": "piquiri-11etRUCnj94iNEJMMORhwEyuZw8A8KpHh.bsmx",
+      "locations": [
+        {
+          "sha256": "9f20bbde309bcd82472a6f23399ce9e96de95cf675e34d6d37e4a35142a97e4e",
+          "url": "https://drive.google.com/uc?export=download&id=11etRUCnj94iNEJMMORhwEyuZw8A8KpHh"
+        }
+      ],
+      "priority": 70,
+      "provenance": "https://www.piquiribrewshop.com.br/pagina/arquivos-beersmith.html",
+      "reliability": "Retailer/community supplemental file",
+      "required": false,
+      "unique_contribution_at_review": 6
+    }
+  ],
+  "version": 1,
+  "styles": "styles.json"
+}

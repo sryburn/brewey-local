@@ -1,0 +1,243 @@
+{
+  "decisions": {
+    "03c20df93ac12270e918b977df516485bd704ba5447ed61fde2520b0937e14b4": {
+      "evidence": [
+        "https://www.yakimachief.com/variety/krush-brand"
+      ],
+      "qualifications": [
+        "Web text extraction exposes default T90 ranges; this decision used the visibly selected Cryo technical tab.",
+        "Crop and lot values vary; preserve HBC586 historical alias and processing identity."
+      ],
+      "reason": "The current concentrated-pellet values 20% alpha and 12% beta are manufacturer Cryo range midpoints. The alternative 12%/8% values match the default T90 section, not Cryo.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "13137a02721dff915fbee8ee8f322168e382cd1f5a5be6f1e19a7df4e50fd48a": {
+      "evidence": [
+        "https://wyeastlab.com/product/american-ale-ii/"
+      ],
+      "qualifications": [
+        "No current primary page verifying the historical GF product was found. Retain the explicitly GF-labelled source identity and do not transfer any current gluten-free claim to standard 1272.",
+        "Historical external announcement corroborates a 1272 GF product but is supporting context only: https://www.realbeer.com/wyeast-debuts-gluten-free-yeast/ ."
+      ],
+      "reason": "The source explicitly identifies a gluten-free variant. Sharing a strain number and brewing specifications does not establish product equivalence across propagation media.",
+      "reviewed_on": "2026-10-06",
+      "status": "distinct"
+    },
+    "59816567b8253ea1f2509158184dbaa000337cb6bf4140710c3cf4f095e4bb23": {
+      "evidence": [
+        "https://www.yakimachief.com/product/simcoe-brand-cryo-hops-pellets"
+      ],
+      "qualifications": [
+        "Manufacturer values are typical ranges across crop years/lots; use the actual lot certificate for brewing inventory. Preserve concentrated product identity."
+      ],
+      "reason": "The current beta-acid value is the midpoint of the manufacturer range for concentrated Cryo pellets. The alternative is a lower ordinary-hop-like value, inappropriate as the Cryo default.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "64fa24bdf1aa8399936c2240923305d692e9c87ec193df0efa7742057efe2977": {
+      "evidence": [
+        "https://www.lallemandbrewing.com/en/global/products/nottingham-high-performance-ale-yeast/"
+      ],
+      "qualifications": [],
+      "reason": "The current 10°C minimum agrees with the manufacturer. Older 60°F/16.666667°C minimum is an outdated or narrower brewing recommendation.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "78032d0ce2c8a7061993650f2577786ed6c252ca08f62e3d325b9018aeeeed48": {
+      "evidence": [
+        "https://www.yakimachief.com/product/palisade-brand-cryo-hops-pellets"
+      ],
+      "qualifications": [
+        "Manufacturer values are typical ranges across crop years/lots; use the actual lot certificate for brewing inventory. Preserve concentrated product identity."
+      ],
+      "reason": "The current beta-acid value is the midpoint of the manufacturer range for concentrated Cryo pellets. The alternative is a lower ordinary-hop-like value, inappropriate as the Cryo default.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "800eca322581827f9c0143a003dea947a3e1cb6ab6d1e9be79d65b4c0264cb44": {
+      "evidence": [
+        "https://www.muntons.com/wp-content/uploads/2024/03/Muntons-Brewers-Guide.pdf"
+      ],
+      "qualifications": [
+        "The source-pack values 47 and 68 may represent different batches or nominal defaults. Neither is independently tied to a lot or analytical method.",
+        "Do not silently compare or convert malt colour methods as if all EBC-labelled values are identical."
+      ],
+      "reason": "Both 47EBC and 68EBC lie within the manufacturer 40–75EBC range. No evidence supports overriding the existing default merely because another source differs.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "8c4c59b0e91b65549cb3a95758f674b14763d703730081512f9781e82daeef41": {
+      "evidence": [
+        "https://www.yakimachief.com/product/loral-brand-cryo-hops-pellets"
+      ],
+      "qualifications": [
+        "Manufacturer values are typical ranges across crop years/lots; use the actual lot certificate for brewing inventory. Preserve concentrated product identity."
+      ],
+      "reason": "The current beta-acid value is the midpoint of the manufacturer range for concentrated Cryo pellets. The alternative is a lower ordinary-hop-like value, inappropriate as the Cryo default.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "9e19c2ca28a7bb23fcca534044d1653adbd73d51431ef4970e6a9c265b88c6a3": {
+      "evidence": [
+        "https://www.yakimachief.com/product/mosaic-brand-cryo-hops-pellets"
+      ],
+      "qualifications": [
+        "Manufacturer values are typical ranges across crop years/lots; use the actual lot certificate for brewing inventory. Preserve concentrated product identity."
+      ],
+      "reason": "The current beta-acid value is the midpoint of the manufacturer range for concentrated Cryo pellets. The alternative is a lower ordinary-hop-like value, inappropriate as the Cryo default.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "a001b732edb96c54201492714c21c2d0e3784426c8fb09839e6b3f635ead74b1": {
+      "evidence": [
+        "https://www.johnihaas.com/wp-content/uploads/2015/01/Triskel.pdf",
+        "https://www.barthhaas.com/fileadmin/user_upload/01-barthhaas-2022/Downloads/Reports_Broschures/Hop_Harvest_Guide/English/barthhaas-hop-harvest-guide-2019-en.pdf",
+        "https://www.johnihaas.com/wp-content/uploads/2020/06/Technical-sheet-Triskel-Eng.pdf"
+      ],
+      "qualifications": [
+        "Current 8.5 is not asserted to be the sole current universal typical value. Field conflict remains a range/method/crop provenance issue.",
+        "Alternative 2.6% alpha/6.7% beta is not independently verified to a crop or lot. Keep it in original conflict provenance rather than claiming invalid measurement.",
+        "Use actual crop/lot certificate for brewing."
+      ],
+      "reason": "Current 8.5% alpha and 4.3% beta are supported by a primary hop supplier specification. Other primary producer/supplier documents give lower typical alpha ranges, so a blanket numeric replacement would erase genuine source/method/crop differences.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "a5ce43cc3a822b6109540ff85f688bfee32f4650fd77af157e6833647c7f6ac8": {
+      "evidence": [
+        "https://charlesfaram.com/hop-oracle/belma/",
+        "https://castlemalting.com/Publications/HopProducts/Belma_CMSpecDP.pdf",
+        "https://hopsdirect.com/pages/belma-homepage-build"
+      ],
+      "qualifications": [
+        "Grower beta range not independently found; support is firsthand supplier specifications, not a grower lot certificate.",
+        "Do not infer a measured zero from an old pack field."
+      ],
+      "reason": "Current 4% beta is supported by supplier technical specifications; older 0% is not credible evidence of chemically zero beta acids.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "b4cb4014a40e5d4ecb2d8026be7d5babb2714d409b602238de48622887f06969": {
+      "evidence": [
+        "https://www.yakimachief.com/variety/krush-brand"
+      ],
+      "qualifications": [
+        "Web text extraction exposes default T90 ranges; this decision used the visibly selected Cryo technical tab.",
+        "Crop and lot values vary; preserve HBC586 historical alias and processing identity."
+      ],
+      "reason": "The current concentrated-pellet values 20% alpha and 12% beta are manufacturer Cryo range midpoints. The alternative 12%/8% values match the default T90 section, not Cryo.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "c5a32a22d734e18d9cf8333611ae61aff0c85889c0c5ddc2860229f615b2b885": {
+      "evidence": [
+        "https://www.yakimachief.com/product/citra-brand-cryo-hops-pellets"
+      ],
+      "qualifications": [
+        "Manufacturer values are typical ranges across crop years/lots; use the actual lot certificate for brewing inventory. Preserve concentrated product identity."
+      ],
+      "reason": "The current beta-acid value is the midpoint of the manufacturer range for concentrated Cryo pellets. The alternative is a lower ordinary-hop-like value, inappropriate as the Cryo default.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "cf0d500afa549c104bcb452bd2895a6f79a6ccc9b691b0d330c956f3a9d00f56": {
+      "evidence": [
+        "https://propagatelab.com/product/brett-c/",
+        "https://propagatelab.com/product-category/brettanomyces-and-wild-yeast/",
+        "https://propagatelab.com/product/brett-ghost/"
+      ],
+      "qualifications": [
+        "A secondary historical transcription lists Brett phantom as MIP-760: https://zerotolerance.mywikis.wiki/wiki/Yeast . Do not apply 760 without a primary archived library or manufacturer confirmation.",
+        "Current Ghost/Fantome origin is insufficient to substitute SKU 752 or rename/merge Phantome.",
+        "Historical manufacturer yeast-library URL could not be retrieved: https://www.propagatelab.com/yeast-library ."
+      ],
+      "reason": "Primary manufacturer confirms MIP-720 is Clausenii. The historical Phantome source description is different, so no merge is justified. Exact historical Phantome code is not primary-verified.",
+      "reviewed_on": "2026-10-06",
+      "status": "unresolved"
+    },
+    "d4574e614e13dd8de56da16c29ce0c6297c43993fc15e01ed7b26b873ef73d6d": {
+      "evidence": [
+        "https://www.yakimachief.com/product/cascade-cryo-hops-pellets"
+      ],
+      "qualifications": [
+        "Manufacturer values are typical ranges across crop years/lots; use the actual lot certificate for brewing inventory. Preserve concentrated product identity."
+      ],
+      "reason": "The current beta-acid value is the midpoint of the manufacturer range for concentrated Cryo pellets. The alternative is a lower ordinary-hop-like value, inappropriate as the Cryo default.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "df4ec352491e5ea530d2b2930024f908b3fcbc1432d5473cb08b6957e8b574bc": {
+      "evidence": [
+        "https://www.lallemandwine.com/es/south-america/productos/levaduras-enologicas/lalvin-bm4x4",
+        "https://www.lallemandwine.com/it/italy/prodotti/wine-yeasts/lalvin-bm-4x4",
+        "https://www.eaton.com/content/dam/eaton/products/filtration-solutions/yeasts/lalvin-bm-4x4/technical-data-sheets/eaton-lalvin-bm-4x4-technical-data-sheet-en.pdf"
+      ],
+      "qualifications": [
+        "App schema cannot express the distinction between initial pitching minimum and ongoing optimum. Retain existing 18–28 for this pass and preserve context.",
+        "Beer-wort attenuation percentage is outside scope of this wine temperature conflict review."
+      ],
+      "reason": "Current 18°C minimum is supported by a current Lallemand regional specification and initial-start recommendation. The 10°C alternative is unsupported. Preserve optimal-versus-start and regional differences rather than replacing 18 with 16 indiscriminately.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    },
+    "e59e1b87175c8b30e2a98525f0cc47edd480549c1d1f89967cd00cfe381af1a4": {
+      "evidence": [
+        "https://www.johnihaas.com/wp-content/uploads/2015/01/Triskel.pdf",
+        "https://www.barthhaas.com/fileadmin/user_upload/01-barthhaas-2022/Downloads/Reports_Broschures/Hop_Harvest_Guide/English/barthhaas-hop-harvest-guide-2019-en.pdf",
+        "https://www.johnihaas.com/wp-content/uploads/2020/06/Technical-sheet-Triskel-Eng.pdf"
+      ],
+      "qualifications": [
+        "Current 8.5 is not asserted to be the sole current universal typical value. Field conflict remains a range/method/crop provenance issue.",
+        "Alternative 2.6% alpha/6.7% beta is not independently verified to a crop or lot. Keep it in original conflict provenance rather than claiming invalid measurement.",
+        "Use actual crop/lot certificate for brewing."
+      ],
+      "reason": "Current 8.5% alpha and 4.3% beta are supported by a primary hop supplier specification. Other primary producer/supplier documents give lower typical alpha ranges, so a blanket numeric replacement would erase genuine source/method/crop differences.",
+      "reviewed_on": "2026-10-06",
+      "status": "retain"
+    }
+  },
+  "manual_open_questions": [
+    {
+      "evidence": [
+        "https://www.lallemandbrewing.com/en/global/products/belgian-wit-style-ale-yeast/",
+        "https://www.lallemandbrewing.com/en/global/products/munich-classic-wheat-beer-yeast/",
+        "https://www.lallemandbrewing.com/docs/products/tds/TDS_LALBREW_PREM_MUNICH_ENGLISH_DIGITAL.pdf",
+        "https://www.lallemandbrewing.com/en/continental-europe/product-details/belgian-wit-style-ale-yeast/"
+      ],
+      "ingredients": [
+        {
+          "id": "f74066e2-0e4d-54f8-8aab-b06f05c40ee2",
+          "name": "LalBrew Wit"
+        },
+        {
+          "id": "9ab16912-8df7-5848-af33-37f9efbbf9cc",
+          "name": "LalBrew Munich Classic Wheat Beer"
+        },
+        {
+          "id": "378a0854-a967-5ae5-9ce8-e2a82a131c10",
+          "name": "Munuch"
+        }
+      ],
+      "issue": "historical_munich_wit_identity",
+      "qualifications": [
+        "Historical Munich is present as Munuch, ID 378a0854-a967-5ae5-9ce8-e2a82a131c10, from base-Yeast.bsmx and the piquiri pack. Its note explicitly names Danstar Munich Wheat Beer yeast. Preserve this identity and its source spelling pending explicit primary rename evidence; no alias or merge is recommended.",
+        "Third-party historical discussion reports manufacturer rename wording: https://homebrewtalk.com/threads/danstar-lallemand-munich-vs-munich-classic.674847/ . It is a lead for archived primary evidence, not primary proof."
+      ],
+      "reason": "Current Wit and Munich Classic are explicitly distinct manufacturer products. No accessible explicit primary statement proves historical plain Munich was renamed to Wit. Historical similarity and third-party reports are insufficient to change established identity mappings.",
+      "reviewed_on": "2026-10-06",
+      "status": "unresolved"
+    },
+    {
+      "evidence": [
+        "https://glutenfreehomebrewing.com/STOREProduct/992/Flaked-Quinoa-Unmalted-5-LB.html"
+      ],
+      "issue": "quinoa_product_identity",
+      "reason": "Flaked Quinoa Unmalted and the older Grouse Flaked Quinoa record may overlap, but source specifications differ and equivalence is unproven; retain separate identities.",
+      "reviewed_on": "2026-10-06",
+      "status": "unresolved"
+    }
+  ],
+  "reviewed_on": "2026-10-06",
+  "version": 1
+}

@@ -1,0 +1,29 @@
+name: brewey-selfhosted
+services:
+  web:
+    image: ${BREWEY_IMAGE:?Set BREWEY_IMAGE in .env to the image reference from your chosen release}
+    restart: unless-stopped
+    init: true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    ports:
+      - '${BIND_ADDRESS:-127.0.0.1}:${WEB_PORT:-3100}:3000'
+    environment:
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:3100}
+      DISABLE_SIGNUP: ${DISABLE_SIGNUP:-false}
+      BREWEY_DATA_DIR: /var/lib/brewey
+      BREWEY_DATABASE_PATH: /var/lib/brewey/brewey.sqlite
+      NEXT_TELEMETRY_DISABLED: '1'
+    volumes:
+      - codex-state:/var/lib/brewey
+    healthcheck:
+      test: [CMD, node, -e, "fetch('http://localhost:3000/api/health').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+volumes:
+  codex-state:

@@ -1,0 +1,586 @@
+{
+  "version": 1,
+  "description": "Reviewed factual supplements with original concise descriptions. App units: degrees Celsius and percentages. Attenuation is the midpoint of the recorded manufacturer range.",
+  "records": [
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "BUDDY | FT01 (American Ale)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT01",
+        "form": "dry",
+        "yeast_type": "ale",
+        "attenuation_percent": 76.0,
+        "temperature_range_min": 19,
+        "temperature_range_max": 22,
+        "notes": "Neutral American ale yeast for hop-led beers."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "72",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "VAPE | FT02 (Hazy / English Ale)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT02",
+        "form": "dry",
+        "yeast_type": "ale",
+        "attenuation_percent": 74.5,
+        "temperature_range_min": 19,
+        "temperature_range_max": 23,
+        "notes": "English ale yeast for hazy IPAs with restrained esters."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "71",
+        "MAX_ATTENUATION": "78"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "HEFF | FT10 (Wheat Ale)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT10",
+        "form": "dry",
+        "yeast_type": "wheat",
+        "attenuation_percent": 79.0,
+        "temperature_range_min": 16,
+        "temperature_range_max": 24,
+        "notes": "Wheat yeast with banana and clove character."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "73",
+        "MAX_ATTENUATION": "85"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "PROST | FT11 (Kölsch Ale Yeast)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT11",
+        "form": "dry",
+        "yeast_type": "ale",
+        "attenuation_percent": 78.5,
+        "temperature_range_min": 12,
+        "temperature_range_max": 25,
+        "notes": "Kölsch ale yeast; warmer fermentation increases fruit character."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "75",
+        "MAX_ATTENUATION": "82"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "SESH | FT52 (German Lager)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT52",
+        "form": "dry",
+        "yeast_type": "lager",
+        "attenuation_percent": 82.5,
+        "temperature_range_min": 10,
+        "temperature_range_max": 18,
+        "notes": "German lager yeast with a dry finish."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "80",
+        "MAX_ATTENUATION": "85"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "ALPEN | FT53 (Swiss Lager)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT53",
+        "form": "dry",
+        "yeast_type": "lager",
+        "attenuation_percent": 82.0,
+        "temperature_range_min": 10,
+        "temperature_range_max": 15,
+        "notes": "Swiss lager yeast with strong settling and low diacetyl."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "80",
+        "MAX_ATTENUATION": "84"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "MYTHOS | FT60 (Voss Kveik)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT60",
+        "form": "dry",
+        "yeast_type": "ale",
+        "attenuation_percent": 78.5,
+        "temperature_range_min": 20,
+        "temperature_range_max": 35,
+        "notes": "Voss kveik yeast suited to warm, rapid fermentation."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "75",
+        "MAX_ATTENUATION": "82"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "NADA | FT00 (Low & Non-Alc Yeast)",
+        "laboratory": "Froth Technologies",
+        "product_id": "FT00",
+        "form": "dry",
+        "yeast_type": "other",
+        "attenuation_percent": 16.0,
+        "temperature_range_min": 17,
+        "temperature_range_max": 23,
+        "notes": "Torulaspora yeast for reduced alcohol; does not ferment maltose or maltotriose."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "15",
+        "MAX_ATTENUATION": "17"
+      },
+      "evidence": [
+        "https://frothtech.co.nz/yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer strain page explicitly includes dry form; linked v2 BSMX contains eight liquid records only. "
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "SafLager SH-45",
+        "laboratory": "DCL/Fermentis",
+        "product_id": "SH-45",
+        "form": "dry",
+        "yeast_type": "lager",
+        "attenuation_percent": 82.0,
+        "temperature_range_min": 12,
+        "temperature_range_max": 18,
+        "notes": "Lager yeast selected for thiol release and esterification in hop-led beers."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "80",
+        "MAX_ATTENUATION": "84"
+      },
+      "evidence": [
+        "https://fermentis.com/en/product/saflager-sh-45/",
+        "https://fermentis.com/en/knowledge-center/expert-insights/beer/saflager-sh-45-the-ideal-lager-yeast-to-enhance-hop-thiol-release/"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Confirmed current dry yeast absent from selected catalogue. Attenuation is a manufacturer trial range with stated wort conditions; it is not a universal performance guarantee."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Belgian Haze",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "dry",
+        "yeast_type": "wheat",
+        "attenuation_percent": 75.0,
+        "temperature_range_min": 17,
+        "temperature_range_max": 22,
+        "notes": "Belgian wit yeast with spice and phenolic character."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "73",
+        "MAX_ATTENUATION": "77"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/belgian-haze-dry-brewing-yeast",
+        "https://www.whclab.com/cdn/shop/files/belgian-haze-dry-brewing-yeast-tds.pdf?v=14443815697263851960"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes. Shop range 18–21 C conflicts with technical sheet and 2026 catalogue 17–22 C. Proposal uses technical-sheet range; attenuation 73–77% comes from the shop."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "The Dubliner",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "dry",
+        "yeast_type": "ale",
+        "attenuation_percent": 77.5,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Ale yeast for Irish stouts, porters and red ales."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "75",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/the-dubliner-irish-stout-yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Thiol Unleashed",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "dry",
+        "yeast_type": "ale",
+        "attenuation_percent": 77.0,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Hybrid ale yeast selected to increase fruity thiol expression."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "74",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/thiol-unleashed-hybrid-non-gmo-dried-yeast",
+        "https://www.whclab.com/cdn/shop/files/SPEC-P-65_Rev_1_Dry_TDS_-_Thiol_Unleashed_1.pdf?v=6502582224936891283"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Zero Hero",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "dry",
+        "yeast_type": "other",
+        "attenuation_percent": 18.0,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Torulaspora yeast for low alcohol beer. WHC requires pasteurisation because residual sugars can support refermentation."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "16",
+        "MAX_ATTENUATION": "20"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/zero-hero-low-non-alcoholic-dry-yeast",
+        "https://www.whclab.com/cdn/shop/files/zero-hero-dry-brewing-yeast-tds.pdf?v=14666179570859637489"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Cerveza Campeón",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "dry",
+        "yeast_type": "lager",
+        "attenuation_percent": 78.0,
+        "temperature_range_min": 10,
+        "temperature_range_max": 14,
+        "notes": "Mexican lager yeast for a clean finish and mild malt sweetness."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "76",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/cerveza-campeon-mexican-lager-yeast",
+        "https://www.whclab.com/cdn/shop/files/SPEC-P-68_Rev_1_Dry_TDS_-_Cereveza_Campeon.pdf?v=15552721933983606808"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Fountainbridge",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "dry",
+        "yeast_type": "ale",
+        "attenuation_percent": 78.0,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Scottish ale yeast for clean beers with subtle fruit esters."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "76",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/fountainbridge-ale-dry-yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Helles Fire Club",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "lager",
+        "attenuation_percent": 72.0,
+        "temperature_range_min": 10,
+        "temperature_range_max": 16,
+        "notes": "Munich lager yeast with a mild malt profile and low sulphur production."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "70",
+        "MAX_ATTENUATION": "74"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/helles-fire-club-premium-fresh-liquid-lager-yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Saturated",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "ale",
+        "attenuation_percent": 75.0,
+        "temperature_range_min": 19,
+        "temperature_range_max": 22,
+        "notes": "English ale yeast for fruity hazy beers and a full mouthfeel."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "73",
+        "MAX_ATTENUATION": "77"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/saturated-fresh-liquid-yeast-neipa-pouch"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Haze Heaven",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "ale",
+        "attenuation_percent": 78.0,
+        "temperature_range_min": 18,
+        "temperature_range_max": 21,
+        "notes": "English ale yeast for hop-led beers with stable haze and fruity esters."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "76",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/haze-heaven"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Vermont Haze (formerly Sanders)",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "ale",
+        "attenuation_percent": 75.0,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Ale yeast for fruity hazy IPAs; formerly sold as Sanders."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "73",
+        "MAX_ATTENUATION": "77"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/vermont-haze-modern-neipa-yeast-10hl-fresh-yeast-pouch"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes. Rename is explicit in manufacturer product title. Resolve legacy Sanders exclusion/identity before integrating; do not create a second identity for the same liquid culture."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Tropical Paradise",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "ale",
+        "attenuation_percent": 65.5,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Maltotriose-negative ale yeast for table beers with lower attenuation."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "63",
+        "MAX_ATTENUATION": "68"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/tropical-paradise-fresh-yeast-pouch"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes. Shop descriptive prose says 64–68%; the technical-specifications table and 2026 catalogue say 63–68%. Proposal uses the technical table."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Einstein",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "lager",
+        "attenuation_percent": 78.0,
+        "temperature_range_min": 9,
+        "temperature_range_max": 16,
+        "notes": "German bottom-fermenting yeast for clean, crisp lagers."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "76",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://www.whclab.com/products/einstein-german-lager-liquid-yeast"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Current manufacturer brewing collection and product page independently establish this product/form; absent from selected dry pack. Manufacturer strain/product code is not published in the checked page; product_id remains null. Document IDs are specification IDs, not inferred strain codes."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "LAX",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "ale",
+        "attenuation_percent": 78.0,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "American ale yeast with a neutral profile for hop-led beers."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "76",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Listed in the liquid brewers yeast section of the independently published 2026 manufacturer catalogue, although absent from current online liquid collection. No current shop product page in the checked six-entry liquid collection; catalogue listing establishes form/specifications but immediate ordering availability is unverified. No strain code published; product_id remains null."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Blitz Lager",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "ale",
+        "attenuation_percent": 75.0,
+        "temperature_range_min": 16,
+        "temperature_range_max": 20,
+        "notes": "Ale yeast for lager-style beers fermented at warmer temperatures."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "73",
+        "MAX_ATTENUATION": "77"
+      },
+      "evidence": [
+        "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Listed in the liquid brewers yeast section of the independently published 2026 manufacturer catalogue, although absent from current online liquid collection. No current shop product page in the checked six-entry liquid collection; catalogue listing establishes form/specifications but immediate ordering availability is unverified. No strain code published; product_id remains null."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Thiol Theory",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "ale",
+        "attenuation_percent": 76.5,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Hybrid-bred ale yeast selected for release of bound thiols."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "73",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Listed in the liquid brewers yeast section of the independently published 2026 manufacturer catalogue, although absent from current online liquid collection. No current shop product page in the checked six-entry liquid collection; catalogue listing establishes form/specifications but immediate ordering availability is unverified. No strain code published; product_id remains null. Do not infer identity equivalence with dry Thiol Unleashed; names and published attenuation ranges differ."
+    },
+    {
+      "table": "yeasts",
+      "data": {
+        "name": "Banana Split",
+        "laboratory": "WHCLAB",
+        "product_id": null,
+        "form": "liquid",
+        "yeast_type": "wheat",
+        "attenuation_percent": 76.5,
+        "temperature_range_min": 18,
+        "temperature_range_max": 22,
+        "notes": "Non-diastatic wheat yeast with banana-led esters."
+      },
+      "extra": {
+        "MIN_ATTENUATION": "73",
+        "MAX_ATTENUATION": "80"
+      },
+      "evidence": [
+        "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074"
+      ],
+      "reviewed_on": "2026-10-06",
+      "reason": "Listed in the liquid brewers yeast section of the independently published 2026 manufacturer catalogue, although absent from current online liquid collection. No current shop product page in the checked six-entry liquid collection; catalogue listing establishes form/specifications but immediate ordering availability is unverified. No strain code published; product_id remains null."
+    }
+  ]
+}

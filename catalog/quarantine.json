@@ -1,0 +1,375 @@
+{
+  "version": 1,
+  "description": "Source records held out of generated catalogues because required brewing values are unsupported. Source identities are reserved for later repair. This is separate from intentionally omitted legacy ingredients.",
+  "records": [
+    {
+      "id": "7de9a9cd-b82f-5dc5-b2f1-3d1c9199a770",
+      "name": "Auora Mills Organic Flaked Wheat",
+      "identity_key": "grains|auoramillsorganicflakedwheat|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|auoramillsorganicflakedwheat|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 5 (zero-index page 4), Foam & Flakes",
+          "factual_basis": "Lists Flaked wheat; product description agrees with imported record. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Current catalogue drops the Aurora Mills brand; descriptions support the product family but do not prove a brand or crop specification is unchanged. Source zero yield and zero moisture/protein values are not usable measured specifications.",
+        "Mashing and enzyme availability determine starch conversion; adding body or foam does not establish zero soluble extract. No numeric correction without supplier assay."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "4fceebe4-a915-52b9-87f7-6aaefc840ebf",
+      "name": "Aurora Mills Organic Flaked Oats",
+      "identity_key": "grains|auroramillsorganicflakedoats|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|auroramillsorganicflakedoats|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 5 (zero-index page 4), Foam & Flakes",
+          "factual_basis": "Lists Flaked oats; product description agrees with imported record. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Current catalogue drops the Aurora Mills brand; descriptions support the product family but do not prove a brand or crop specification is unchanged. Source zero yield and zero moisture/protein values are not usable measured specifications.",
+        "Mashing and enzyme availability determine starch conversion; adding body or foam does not establish zero soluble extract. No numeric correction without supplier assay."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "869cbdf5-3431-569f-a01a-9b3a908ef744",
+      "name": "Aurora Mills Organic Flaked Rye",
+      "identity_key": "grains|auroramillsorganicflakedrye|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|auroramillsorganicflakedrye|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 5 (zero-index page 4), Foam & Flakes",
+          "factual_basis": "Lists Flaked rye; product description agrees with imported record. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Current catalogue drops the Aurora Mills brand; descriptions support the product family but do not prove a brand or crop specification is unchanged. Source zero yield and zero moisture/protein values are not usable measured specifications.",
+        "Mashing and enzyme availability determine starch conversion; adding body or foam does not establish zero soluble extract. No numeric correction without supplier assay."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "db40069f-3eaa-5e78-aaf6-53e26ae3f496",
+      "name": "Aurora Mills Organic Flaked Spelt",
+      "identity_key": "grains|auroramillsorganicflakedspelt|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|auroramillsorganicflakedspelt|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 5 (zero-index page 4), Foam & Flakes",
+          "factual_basis": "Lists Flaked spelt; product description agrees with imported record. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Current catalogue drops the Aurora Mills brand; descriptions support the product family but do not prove a brand or crop specification is unchanged. Source zero yield and zero moisture/protein values are not usable measured specifications.",
+        "Mashing and enzyme availability determine starch conversion; adding body or foam does not establish zero soluble extract. No numeric correction without supplier assay."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "801b25f6-a612-5962-8a76-fedd30d9bbe0",
+      "name": "Clarimalt XD (Muntons)",
+      "identity_key": "grains|clarimaltxdmuntons|unitedkingdom|muntons",
+      "fingerprints": [
+        "grains|clarimaltxdmuntons|unitedkingdom|muntons"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://www.muntons.com/food_beverage/clarimalt-xd-liquid/",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Identifies this exact variant as a liquid malt extract intended for beverage colour/flavour adjustment. No yield or solids specification is published on the variant page."
+        },
+        {
+          "url": "https://www.muntons.com/wp-content/uploads/2023/11/Roasted-Malt-Extract-Nov-2023.pdf",
+          "source_type": "manufacturer_product_sheet",
+          "location": "Single-page parameter table",
+          "factual_basis": "Roasted Malt Extract sheet: refractometric solids 49.0–59.0%; colour 680–925 EBC at 10% w/v. Linked from manufacturer brewing URL whose slug is clarimalt-xd-liquid."
+        }
+      ],
+      "uncertainty": [
+        "The linked brewing sheet may describe the current XD offering, but does not name the XD variant, and its colour test differs from the imported record. Refractometric solids is not directly a brewing gravity yield/fine-grind extract; no exact numeric replacement is supported. Do not average 49–59% into an invented 54% yield.",
+        "Water solubility is distinct from solids mass fraction and yeast fermentability."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "3e92fcb4-abbf-5468-a428-00f88d0d6052",
+      "name": "Clarimalt XD3 (Muntons)",
+      "identity_key": "grains|clarimaltxd3muntons|unitedkingdom|muntons",
+      "fingerprints": [
+        "grains|clarimaltxd3muntons|unitedkingdom|muntons"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://www.muntons.com/food_beverage/clarimalt-xd3-liquid/",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Identifies this exact variant as a liquid malt extract intended for beverage colour/flavour adjustment. No yield or solids specification is published on the variant page."
+        }
+      ],
+      "uncertainty": [
+        "No variant-specific gravity yield, dry matter or refractometric solids found. Do not borrow XD values for XD3/XD5.",
+        "Zero fermentability, if established, would still not establish zero soluble extract."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "4b16a8f8-2873-53fb-8a5f-00edd0041156",
+      "name": "Clarimalt XD5 (Muntons)",
+      "identity_key": "grains|clarimaltxd5muntons|unitedkingdom|muntons",
+      "fingerprints": [
+        "grains|clarimaltxd5muntons|unitedkingdom|muntons"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://www.muntons.com/food_beverage/clarimalt-xd5-liquid/",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Identifies this exact variant as a liquid malt extract intended for beverage colour/flavour adjustment. No yield or solids specification is published on the variant page."
+        }
+      ],
+      "uncertainty": [
+        "No variant-specific gravity yield, dry matter or refractometric solids found. Do not borrow XD values for XD3/XD5.",
+        "Zero fermentability, if established, would still not establish zero soluble extract."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "3939099c-56ae-5582-bd71-2c17e88e9ea6",
+      "name": "Dextrine Malt (Proximity)",
+      "identity_key": "grains|dextrinemaltproximity|unitedstates|proximitymalt",
+      "fingerprints": [
+        "grains|dextrinemaltproximity|unitedstates|proximitymalt"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://proximitymalt.com/product/dextrin-malt/",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Typical analysis gives plump 85, thru 1 and colour 3; describes body and foam use."
+        },
+        {
+          "url": "https://proximitymalt.com/wp-content/uploads/2019/06/Dextrin.pdf",
+          "source_type": "manufacturer_spec_sheet",
+          "factual_basis": "Exact Dextrin sheet repeats those three analysis values; no extract percentage is supplied."
+        }
+      ],
+      "uncertainty": [
+        "The imported note claims non-fermentability, but current sheet does not publish an attenuation assay or extract value. Dextrins contribute dissolved extract even if not fermented by ordinary brewing yeast.",
+        "Cannot transfer extract from other maltsters’ dextrin malts."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "378f7c24-7d37-5b4a-8b15-e0b57b81ccea",
+      "name": "Floor-Malted Chocolate Rye Malt",
+      "identity_key": "grains|floormaltedchocolateryemalt|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|floormaltedchocolateryemalt|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 8 (zero-index page 7), Roasted Grains & Malts",
+          "factual_basis": "Lists Chocolate Rye, 350 SRM, and matching product description. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Roasting and zero diastatic power do not prove zero soluble extract. Colour/flavour specification alone cannot determine yield. No manufacturer COA or extract assay located."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "73fd81a3-513f-5919-abf2-997b49d8f522",
+      "name": "Roasted Barley [Blue Ox Malthouse, Maine, USA]",
+      "identity_key": "grains|roastedbarley|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|roastedbarley|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 8 (zero-index page 7), Roasted Grains & Malts",
+          "factual_basis": "Lists Roasted Barley, 600 SRM, and matching product description. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Roasting and zero diastatic power do not prove zero soluble extract. Colour/flavour specification alone cannot determine yield. No manufacturer COA or extract assay located."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "40fb8b31-4d7e-520f-8af9-7ae92a5ccbe2",
+      "name": "Roasted Bohemian Sekado",
+      "identity_key": "grains|roastedbohemiansekado|czechrepublic|sekado",
+      "fingerprints": [
+        "grains|roastedbohemiansekado|czechrepublic|sekado"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://www.sekado.cz/en/malt.php",
+          "source_type": "manufacturer_supplier_page",
+          "location": "Coloured malt section",
+          "factual_basis": "Coloured/roasted malt at 1200–1500 EBC, standard black malt 1300 EBC and matching descriptive text; moisture maximum 4.5%. No extract specification appears for coloured malt."
+        }
+      ],
+      "uncertainty": [
+        "Manufacturer distinguishes chocolate malt 800–1000 EBC from coloured malt 1200–1500 EBC. Exact record maps to coloured malt, but extract is unspecified.",
+        "A historical third-party Portuguese catalogue reports minimum 74% dry extract for Roasted malt; no directly published Sekado extract assay/spec could be confirmed, so that value is not recommended."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "a97ff378-b9b6-50ef-9faf-2cd607e7e709",
+      "name": "Roasted Oats",
+      "identity_key": "grains|roastedoats|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|roastedoats|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 8 (zero-index page 7), Roasted Grains & Malts",
+          "factual_basis": "Lists Roasted Oats, 8–11 SRM, and matching product description. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Roasting and zero diastatic power do not prove zero soluble extract. Colour/flavour specification alone cannot determine yield. No manufacturer COA or extract assay located."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "ead32bff-99b0-567c-80bf-bc8cf80d45fc",
+      "name": "Roasted Wheat",
+      "identity_key": "grains|roastedwheat|maineusa|blueoxmalthouse",
+      "fingerprints": [
+        "grains|roastedwheat|maineusa|blueoxmalthouse"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://static1.squarespace.com/static/528e2b7fe4b0877c78236a00/t/69139286ca28da435b261b29/1762890374268/Blue%2BOx%2B2025%2BCatalog%2B%283%29.pdf",
+          "source_type": "manufacturer_catalogue",
+          "location": "PDF page 8 (zero-index page 7), Roasted Grains & Malts",
+          "factual_basis": "Lists Roasted Wheat, 550 SRM, and matching product description. No extract percentage or PPG is provided."
+        },
+        {
+          "url": "https://www.blueoxmalthouse.com/products-new",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Links the 2025 catalogue."
+        }
+      ],
+      "uncertainty": [
+        "Roasting and zero diastatic power do not prove zero soluble extract. Colour/flavour specification alone cannot determine yield. No manufacturer COA or extract assay located."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    },
+    {
+      "id": "5861de2a-1706-55c3-8b79-38f80c4fbedf",
+      "name": "Spraymalt Super Dark (Muntons)",
+      "identity_key": "grains|spraymaltsuperdarkmuntons|unitedkingdom|muntons",
+      "fingerprints": [
+        "grains|spraymaltsuperdarkmuntons|unitedkingdom|muntons"
+      ],
+      "reason": "Quarantined: source specifies zero extract, but no reliable numeric extract specification was found. Do not use zero as unknown in recipe calculations.",
+      "reviewed_on": "2026-10-06",
+      "evidence": [
+        {
+          "url": "https://www.muntons.com/food_beverage/spraymalt-super-dark/",
+          "source_type": "manufacturer_page",
+          "factual_basis": "Identifies exact Super Dark product as a spray-dried barley malt extract powder. No extract yield, gravity or moisture specification provided."
+        },
+        {
+          "url": "https://www.muntons.com/food_type/spray-dried/",
+          "source_type": "manufacturer_process_page",
+          "factual_basis": "Describes atomising liquid extracts into heated chamber and drying to powder; lists Super Dark variant."
+        }
+      ],
+      "uncertainty": [
+        "Dry extract identity establishes neither exact gravity yield nor exact dry matter percentage. Cannot borrow a generic DME yield or normal-dark Spraymalt specification.",
+        "No manufacturer gravity/yield specification found. Zero yeast fermentability, if established, would not equal zero soluble extract."
+      ],
+      "restore_when": "A reviewed numeric extract value is available; remove these explicit fingerprint exclusions after validation."
+    }
+  ]
+}

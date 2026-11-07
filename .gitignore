@@ -1,0 +1,24 @@
+.env
+.env.*
+!.env.example
+!**/.env.example
+.runtime/
+node_modules/
+.next/
+.jest-cache/
+*.tsbuildinfo
+*.log
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.tar.gz
+__pycache__/
+*.pyc
+frontend/public/api-docs/vendor/
+# Private remnants of retired local tooling must never enter a release.
+backend/
+docker/
+
+# Local Supabase CLI linking/cache state is not application source.
+supabase/.temp/

@@ -1,0 +1,605 @@
+{
+  "source": {
+    "package": "brewing-water-calculator@2.0.0",
+    "adapter": "legacy MCP waterAdapter.ts",
+    "captured_at": "2026-10-02T02:21:58.501Z"
+  },
+  "cases": [
+    {
+      "name": "balanced-pale",
+      "water": {
+        "volume_liters": 20,
+        "ca_ppm": 48,
+        "base_ca_ppm": 22,
+        "mg_ppm": 2.7,
+        "base_mg_ppm": 2.7,
+        "na_ppm": 12,
+        "base_na_ppm": 12,
+        "so4_ppm": 60,
+        "base_so4_ppm": 6,
+        "cl_ppm": 40,
+        "base_cl_ppm": 14,
+        "hco3_ppm": 50,
+        "base_hco3_ppm": 50
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 1.4,
+          "calcium_chloride_cacl2_grams": 0.9,
+          "epsom_salt_mgso4_grams": 0.8,
+          "table_salt_nacl_grams": 0.1,
+          "baking_soda_nahco3_grams": 0
+        },
+        "calculated_profile": {
+          "ca_ppm": 50.3,
+          "mg_ppm": 6.4,
+          "na_ppm": 14,
+          "so4_ppm": 59.1,
+          "cl_ppm": 38.7,
+          "hco3_ppm": 50
+        },
+        "deviations": {
+          "ca_ppm": 2.3,
+          "mg_ppm": 3.7,
+          "na_ppm": 2,
+          "so4_ppm": -0.9,
+          "cl_ppm": -1.3,
+          "hco3_ppm": 0
+        },
+        "total_salt_weight_grams": 3.2,
+        "water_analysis": {
+          "alkalinity_ppm": 41,
+          "residual_alkalinity": 1.3,
+          "sulfate_chloride_ratio": 1.53,
+          "sulfate_chloride_balance": "Slightly Bitter",
+          "total_hardness_ppm": 56.7,
+          "effective_hardness_ppm": 39.7,
+          "color_range": "8-20 EBC (Pale)"
+        }
+      }
+    },
+    {
+      "name": "balanced-pale-double-volume",
+      "water": {
+        "volume_liters": 40,
+        "ca_ppm": 48,
+        "base_ca_ppm": 22,
+        "mg_ppm": 2.7,
+        "base_mg_ppm": 2.7,
+        "na_ppm": 12,
+        "base_na_ppm": 12,
+        "so4_ppm": 60,
+        "base_so4_ppm": 6,
+        "cl_ppm": 40,
+        "base_cl_ppm": 14,
+        "hco3_ppm": 50,
+        "base_hco3_ppm": 50
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 2.7,
+          "calcium_chloride_cacl2_grams": 1.8,
+          "epsom_salt_mgso4_grams": 1.5,
+          "table_salt_nacl_grams": 0.2,
+          "baking_soda_nahco3_grams": 0
+        },
+        "calculated_profile": {
+          "ca_ppm": 50.3,
+          "mg_ppm": 6.4,
+          "na_ppm": 14,
+          "so4_ppm": 59.1,
+          "cl_ppm": 38.7,
+          "hco3_ppm": 50
+        },
+        "deviations": {
+          "ca_ppm": 2.3,
+          "mg_ppm": 3.7,
+          "na_ppm": 2,
+          "so4_ppm": -0.9,
+          "cl_ppm": -1.3,
+          "hco3_ppm": 0
+        },
+        "total_salt_weight_grams": 6.2,
+        "water_analysis": {
+          "alkalinity_ppm": 41,
+          "residual_alkalinity": 1.3,
+          "sulfate_chloride_ratio": 1.53,
+          "sulfate_chloride_balance": "Slightly Bitter",
+          "total_hardness_ppm": 56.7,
+          "effective_hardness_ppm": 39.7,
+          "color_range": "8-20 EBC (Pale)"
+        }
+      }
+    },
+    {
+      "name": "all-zero-known-base",
+      "water": {
+        "volume_liters": 20,
+        "ca_ppm": 0,
+        "base_ca_ppm": 0,
+        "mg_ppm": 0,
+        "base_mg_ppm": 0,
+        "na_ppm": 0,
+        "base_na_ppm": 0,
+        "so4_ppm": 0,
+        "base_so4_ppm": 0,
+        "cl_ppm": 0,
+        "base_cl_ppm": 0,
+        "hco3_ppm": 0,
+        "base_hco3_ppm": 0
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 0,
+          "calcium_chloride_cacl2_grams": 0,
+          "epsom_salt_mgso4_grams": 0,
+          "table_salt_nacl_grams": 0,
+          "baking_soda_nahco3_grams": 0
+        },
+        "calculated_profile": {
+          "ca_ppm": 0,
+          "mg_ppm": 0,
+          "na_ppm": 0,
+          "so4_ppm": 0,
+          "cl_ppm": 0,
+          "hco3_ppm": 0
+        },
+        "deviations": {
+          "ca_ppm": 0,
+          "mg_ppm": 0,
+          "na_ppm": 0,
+          "so4_ppm": 0,
+          "cl_ppm": 0,
+          "hco3_ppm": 0
+        },
+        "total_salt_weight_grams": 0,
+        "water_analysis": {
+          "alkalinity_ppm": 0,
+          "residual_alkalinity": 0,
+          "sulfate_chloride_ratio": 0,
+          "sulfate_chloride_balance": "N/A (No Chloride)",
+          "total_hardness_ppm": 0,
+          "effective_hardness_ppm": 0,
+          "color_range": "8-20 EBC (Pale)"
+        }
+      }
+    },
+    {
+      "name": "lower-than-base",
+      "water": {
+        "volume_liters": 20,
+        "ca_ppm": 0,
+        "base_ca_ppm": 50,
+        "mg_ppm": 0,
+        "base_mg_ppm": 10,
+        "na_ppm": 0,
+        "base_na_ppm": 20,
+        "so4_ppm": 0,
+        "base_so4_ppm": 80,
+        "cl_ppm": 0,
+        "base_cl_ppm": 60,
+        "hco3_ppm": 0,
+        "base_hco3_ppm": 120
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 0,
+          "calcium_chloride_cacl2_grams": 0,
+          "epsom_salt_mgso4_grams": 0,
+          "table_salt_nacl_grams": 0,
+          "baking_soda_nahco3_grams": 0
+        },
+        "calculated_profile": {
+          "ca_ppm": 50,
+          "mg_ppm": 10,
+          "na_ppm": 20,
+          "so4_ppm": 80,
+          "cl_ppm": 60,
+          "hco3_ppm": 120
+        },
+        "deviations": {
+          "ca_ppm": 50,
+          "mg_ppm": 10,
+          "na_ppm": 20,
+          "so4_ppm": 80,
+          "cl_ppm": 60,
+          "hco3_ppm": 120
+        },
+        "total_salt_weight_grams": 0,
+        "water_analysis": {
+          "alkalinity_ppm": 98.4,
+          "residual_alkalinity": 56.8,
+          "sulfate_chloride_ratio": 1.33,
+          "sulfate_chloride_balance": "Slightly Bitter",
+          "total_hardness_ppm": 60,
+          "effective_hardness_ppm": 41.6,
+          "color_range": "20-35 EBC (Amber)"
+        }
+      }
+    },
+    {
+      "name": "bitter-from-ro",
+      "water": {
+        "volume_liters": 25,
+        "ca_ppm": 110,
+        "base_ca_ppm": 0,
+        "mg_ppm": 12,
+        "base_mg_ppm": 0,
+        "na_ppm": 20,
+        "base_na_ppm": 0,
+        "so4_ppm": 250,
+        "base_so4_ppm": 0,
+        "cl_ppm": 70,
+        "base_cl_ppm": 0,
+        "hco3_ppm": 20,
+        "base_hco3_ppm": 0
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 8.9,
+          "calcium_chloride_cacl2_grams": 2.6,
+          "epsom_salt_mgso4_grams": 3.3,
+          "table_salt_nacl_grams": 0.8,
+          "baking_soda_nahco3_grams": 0.7
+        },
+        "calculated_profile": {
+          "ca_ppm": 110.6,
+          "mg_ppm": 13,
+          "na_ppm": 20.6,
+          "so4_ppm": 249.7,
+          "cl_ppm": 69.6,
+          "hco3_ppm": 19.8
+        },
+        "deviations": {
+          "ca_ppm": 0.6,
+          "mg_ppm": 1,
+          "na_ppm": 0.6,
+          "so4_ppm": -0.3,
+          "cl_ppm": -0.4,
+          "hco3_ppm": -0.2
+        },
+        "total_salt_weight_grams": 16.3,
+        "water_analysis": {
+          "alkalinity_ppm": 16.2,
+          "residual_alkalinity": -70.4,
+          "sulfate_chloride_ratio": 3.59,
+          "sulfate_chloride_balance": "Very Bitter",
+          "total_hardness_ppm": 123.6,
+          "effective_hardness_ppm": 86.6,
+          "color_range": "2-8 EBC (Pilsner)"
+        }
+      }
+    },
+    {
+      "name": "malty-from-ro",
+      "water": {
+        "volume_liters": 20,
+        "ca_ppm": 80,
+        "base_ca_ppm": 0,
+        "mg_ppm": 8,
+        "base_mg_ppm": 0,
+        "na_ppm": 20,
+        "base_na_ppm": 0,
+        "so4_ppm": 40,
+        "base_so4_ppm": 0,
+        "cl_ppm": 120,
+        "base_cl_ppm": 0,
+        "hco3_ppm": 80,
+        "base_hco3_ppm": 0
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 0.8,
+          "calcium_chloride_cacl2_grams": 5,
+          "epsom_salt_mgso4_grams": 0.9,
+          "table_salt_nacl_grams": 0,
+          "baking_soda_nahco3_grams": 2.1
+        },
+        "calculated_profile": {
+          "ca_ppm": 77.9,
+          "mg_ppm": 4.6,
+          "na_ppm": 28.9,
+          "so4_ppm": 40.9,
+          "cl_ppm": 121.2,
+          "hco3_ppm": 76.7
+        },
+        "deviations": {
+          "ca_ppm": -2.1,
+          "mg_ppm": -3.4,
+          "na_ppm": 8.9,
+          "so4_ppm": 0.9,
+          "cl_ppm": 1.2,
+          "hco3_ppm": -3.3
+        },
+        "total_salt_weight_grams": 8.8,
+        "water_analysis": {
+          "alkalinity_ppm": 62.9,
+          "residual_alkalinity": 4.5,
+          "sulfate_chloride_ratio": 0.34,
+          "sulfate_chloride_balance": "Very Malty",
+          "total_hardness_ppm": 82.5,
+          "effective_hardness_ppm": 58.3,
+          "color_range": "8-20 EBC (Pale)"
+        }
+      }
+    },
+    {
+      "name": "stout-alkalinity",
+      "water": {
+        "volume_liters": 30,
+        "ca_ppm": 100,
+        "base_ca_ppm": 30,
+        "mg_ppm": 15,
+        "base_mg_ppm": 5,
+        "na_ppm": 80,
+        "base_na_ppm": 10,
+        "so4_ppm": 80,
+        "base_so4_ppm": 20,
+        "cl_ppm": 100,
+        "base_cl_ppm": 20,
+        "hco3_ppm": 250,
+        "base_hco3_ppm": 40
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 2.5,
+          "calcium_chloride_cacl2_grams": 5.1,
+          "epsom_salt_mgso4_grams": 1.1,
+          "table_salt_nacl_grams": 0,
+          "baking_soda_nahco3_grams": 8.5
+        },
+        "calculated_profile": {
+          "ca_ppm": 96.1,
+          "mg_ppm": 8.6,
+          "na_ppm": 88,
+          "so4_ppm": 81.6,
+          "cl_ppm": 102.2,
+          "hco3_ppm": 247
+        },
+        "deviations": {
+          "ca_ppm": -3.9,
+          "mg_ppm": -6.4,
+          "na_ppm": 8,
+          "so4_ppm": 1.6,
+          "cl_ppm": 2.2,
+          "hco3_ppm": -3
+        },
+        "total_salt_weight_grams": 17.2,
+        "water_analysis": {
+          "alkalinity_ppm": 202.5,
+          "residual_alkalinity": 128.8,
+          "sulfate_chloride_ratio": 0.8,
+          "sulfate_chloride_balance": "Slightly Malty",
+          "total_hardness_ppm": 104.7,
+          "effective_hardness_ppm": 73.7,
+          "color_range": "35-50 EBC (Brown)"
+        }
+      }
+    },
+    {
+      "name": "precise-profile-rounded-salts",
+      "water": {
+        "volume_liters": 0.1,
+        "ca_ppm": 10,
+        "base_ca_ppm": 0,
+        "mg_ppm": 1,
+        "base_mg_ppm": 0,
+        "na_ppm": 3,
+        "base_na_ppm": 0,
+        "so4_ppm": 20,
+        "base_so4_ppm": 0,
+        "cl_ppm": 15,
+        "base_cl_ppm": 0,
+        "hco3_ppm": 10,
+        "base_hco3_ppm": 0
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 0,
+          "calcium_chloride_cacl2_grams": 0,
+          "epsom_salt_mgso4_grams": 0,
+          "table_salt_nacl_grams": 0,
+          "baking_soda_nahco3_grams": 0
+        },
+        "calculated_profile": {
+          "ca_ppm": 11.2,
+          "mg_ppm": 2.9,
+          "na_ppm": 4,
+          "so4_ppm": 19.5,
+          "cl_ppm": 14.3,
+          "hco3_ppm": 9.6
+        },
+        "deviations": {
+          "ca_ppm": 1.2,
+          "mg_ppm": 1.9,
+          "na_ppm": 1,
+          "so4_ppm": -0.5,
+          "cl_ppm": -0.7,
+          "hco3_ppm": -0.4
+        },
+        "total_salt_weight_grams": 0,
+        "water_analysis": {
+          "alkalinity_ppm": 7.9,
+          "residual_alkalinity": -1.8,
+          "sulfate_chloride_ratio": 1.36,
+          "sulfate_chloride_balance": "Slightly Bitter",
+          "total_hardness_ppm": 14.1,
+          "effective_hardness_ppm": 9.7,
+          "color_range": "2-8 EBC (Pilsner)"
+        }
+      }
+    },
+    {
+      "name": "no-chloride-analysis",
+      "water": {
+        "volume_liters": 20,
+        "ca_ppm": 30,
+        "base_ca_ppm": 30,
+        "mg_ppm": 5,
+        "base_mg_ppm": 5,
+        "na_ppm": 10,
+        "base_na_ppm": 10,
+        "so4_ppm": 50,
+        "base_so4_ppm": 50,
+        "cl_ppm": 0,
+        "base_cl_ppm": 0,
+        "hco3_ppm": 80,
+        "base_hco3_ppm": 80
+      },
+      "expected": {
+        "success": true,
+        "salt_additions": {
+          "gypsum_caso4_grams": 0,
+          "calcium_chloride_cacl2_grams": 0,
+          "epsom_salt_mgso4_grams": 0,
+          "table_salt_nacl_grams": 0,
+          "baking_soda_nahco3_grams": 0
+        },
+        "calculated_profile": {
+          "ca_ppm": 30,
+          "mg_ppm": 5,
+          "na_ppm": 10,
+          "so4_ppm": 50,
+          "cl_ppm": 0,
+          "hco3_ppm": 80
+        },
+        "deviations": {
+          "ca_ppm": 0,
+          "mg_ppm": 0,
+          "na_ppm": 0,
+          "so4_ppm": 0,
+          "cl_ppm": 0,
+          "hco3_ppm": 0
+        },
+        "total_salt_weight_grams": 0,
+        "water_analysis": {
+          "alkalinity_ppm": 65.6,
+          "residual_alkalinity": 41.2,
+          "sulfate_chloride_ratio": 0,
+          "sulfate_chloride_balance": "N/A (No Chloride)",
+          "total_hardness_ppm": 35,
+          "effective_hardness_ppm": 24.4,
+          "color_range": "8-20 EBC (Pale)"
+        }
+      }
+    },
+    {
+      "name": "zero-volume-rejected",
+      "water": {
+        "volume_liters": 0,
+        "ca_ppm": 48,
+        "base_ca_ppm": 22,
+        "mg_ppm": 2.7,
+        "base_mg_ppm": 2.7,
+        "na_ppm": 12,
+        "base_na_ppm": 12,
+        "so4_ppm": 60,
+        "base_so4_ppm": 6,
+        "cl_ppm": 40,
+        "base_cl_ppm": 14,
+        "hco3_ppm": 50,
+        "base_hco3_ppm": 50
+      },
+      "expected": {
+        "success": false,
+        "error": "Input validation failed: volume must be positive",
+        "additions": {
+          "Gypsum (CaSO4)": 0,
+          "Calcium Chloride (CaCl2)": 0,
+          "Epsom Salt (MgSO4)": 0,
+          "Table Salt (NaCl)": 0,
+          "Baking Soda (NaHCO3)": 0
+        },
+        "calculatedProfile": {
+          "Ca": 22,
+          "Mg": 2.7,
+          "Na": 12,
+          "SO4": 6,
+          "Cl": 14,
+          "HCO3": 50
+        },
+        "deviations": {
+          "Ca": 0,
+          "Mg": 0,
+          "Na": 0,
+          "SO4": 0,
+          "Cl": 0,
+          "HCO3": 0
+        },
+        "totalSaltWeight": 0,
+        "brewingAnalysis": {
+          "alkalinity": 41,
+          "residualAlkalinity": 23.7,
+          "sulfateChlorideRatio": 0.43,
+          "sulfateChlorideBalance": "Malty",
+          "totalHardness": 24.7,
+          "effectiveHardness": 17.3,
+          "colorRange": "8-20 EBC (Pale)"
+        }
+      }
+    },
+    {
+      "name": "magnesium-range-rejected",
+      "water": {
+        "volume_liters": 20,
+        "ca_ppm": 48,
+        "base_ca_ppm": 22,
+        "mg_ppm": 201,
+        "base_mg_ppm": 2.7,
+        "na_ppm": 12,
+        "base_na_ppm": 12,
+        "so4_ppm": 60,
+        "base_so4_ppm": 6,
+        "cl_ppm": 40,
+        "base_cl_ppm": 14,
+        "hco3_ppm": 50,
+        "base_hco3_ppm": 50
+      },
+      "expected": {
+        "success": false,
+        "error": "Input validation failed: target profile: Mg must be between 0 and 200 ppm",
+        "additions": {
+          "Gypsum (CaSO4)": 0,
+          "Calcium Chloride (CaCl2)": 0,
+          "Epsom Salt (MgSO4)": 0,
+          "Table Salt (NaCl)": 0,
+          "Baking Soda (NaHCO3)": 0
+        },
+        "calculatedProfile": {
+          "Ca": 22,
+          "Mg": 2.7,
+          "Na": 12,
+          "SO4": 6,
+          "Cl": 14,
+          "HCO3": 50
+        },
+        "deviations": {
+          "Ca": 0,
+          "Mg": 0,
+          "Na": 0,
+          "SO4": 0,
+          "Cl": 0,
+          "HCO3": 0
+        },
+        "totalSaltWeight": 0,
+        "brewingAnalysis": {
+          "alkalinity": 41,
+          "residualAlkalinity": 23.7,
+          "sulfateChlorideRatio": 0.43,
+          "sulfateChlorideBalance": "Malty",
+          "totalHardness": 24.7,
+          "effectiveHardness": 17.3,
+          "colorRange": "8-20 EBC (Pale)"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Contributor override; end users use the published image in compose.yaml.
+services:
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile

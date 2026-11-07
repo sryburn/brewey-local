@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "description": "Reviewed selector rules compiled into the hosted export identity index. No production UUIDs or user data. Baseline UUID mappings remain in legacy-mappings.json.",
+  "rules": [
+    {
+      "table": "hops",
+      "match": {
+        "name": "Saaz",
+        "origin": "United States",
+        "form": "pellet"
+      },
+      "new_id": "788bb695-5a95-5ba4-997e-5cd84813520a",
+      "reason": "Production Saaz is labelled US-grown; keep distinct from Czech Saaz. Name-only matching is not permitted."
+    }
+  ]
+}

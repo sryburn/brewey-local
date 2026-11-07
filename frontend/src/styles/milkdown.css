@@ -1,0 +1,168 @@
+/* ===== MILKDOWN EDITOR STYLES ===== */
+/* Custom overrides for Milkdown editor styling */
+
+/* ===== MILKDOWN LIGHT MODE TEXT COLOR FIX ===== */
+/* Use high specificity to override Nord theme without !important */
+:root:not(.dark) .milkdown-theme-nord.prose,
+:root:not(.dark) .milkdown-theme-nord.prose .ProseMirror {
+  color: #111827; /* text-gray-900 */
+}
+
+:root:not(.dark) .milkdown-theme-nord.prose h1,
+:root:not(.dark) .milkdown-theme-nord.prose h2,
+:root:not(.dark) .milkdown-theme-nord.prose h3,
+:root:not(.dark) .milkdown-theme-nord.prose h4,
+:root:not(.dark) .milkdown-theme-nord.prose h5,
+:root:not(.dark) .milkdown-theme-nord.prose h6,
+:root:not(.dark) .milkdown-theme-nord.prose p,
+:root:not(.dark) .milkdown-theme-nord.prose li,
+:root:not(.dark) .milkdown-theme-nord.prose blockquote,
+:root:not(.dark) .milkdown-theme-nord.prose code,
+:root:not(.dark) .milkdown-theme-nord.prose pre {
+  color: #111827; /* text-gray-900 */
+}
+
+:root:not(.dark) .milkdown-theme-nord.prose a {
+  color: #1d4ed8; /* blue-700 */
+  text-decoration: underline;
+  position: relative; /* for helper positioning */
+}
+
+/* Dark mode links: readable blue with underline */
+:root.dark .milkdown-theme-nord.prose a {
+  color: #60a5fa; /* blue-400 */
+  text-decoration: underline;
+  position: relative; /* for helper positioning */
+}
+
+/* Desktop helper hint on hover for following links (rendered via ::after) */
+@media (pointer: fine) {
+  .milkdown .ProseMirror a:hover::after {
+    content: "Ctrl + click to follow";
+    font-size: 0.75rem;
+    color: #d1d5db !important; /* consistent in both themes */
+    pointer-events: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 0.25rem;
+    text-decoration: none !important; /* ensure no underline */
+    white-space: nowrap; /* prevent wrapping */
+    background-color: var(--background);
+    padding: 0 0.25rem;
+    border-radius: 4px;
+    z-index: 1;
+  }
+}
+
+/* Dark mode color override for helper text */
+@media (pointer: fine) {
+  :root.dark .milkdown .ProseMirror a:hover::after {
+    color: #d1d5db !important; /* gray-300 */
+  }
+}
+
+/* ===== MILKDOWN TABLE OVERRIDES ===== */
+/* Use high specificity to override Nord theme table styles */
+:root .milkdown-theme-nord.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid var(--neutral-stroke);
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+:root .milkdown-theme-nord.prose th,
+:root .milkdown-theme-nord.prose td {
+  border: 1px solid var(--neutral-stroke);
+  background-color: transparent;
+  padding: 0.15em 0.35em; /* scales with font size */
+  box-shadow: none;
+}
+
+:root .milkdown-theme-nord.prose tr {
+  background-color: transparent; /* remove striping */
+}
+
+:root .milkdown-theme-nord.prose thead th {
+  font-weight: 600;
+  background-color: transparent;
+}
+
+/* Remove any column striping the theme applies */
+:root .milkdown-theme-nord.prose table td:nth-child(2n),
+:root .milkdown-theme-nord.prose table th:nth-child(2n),
+:root .milkdown-theme-nord.prose tbody tr:nth-child(2n) td,
+:root .milkdown-theme-nord.prose tbody tr:nth-child(2n) th {
+  background: transparent;
+}
+
+/* Horizontal rule color = neutral stroke */
+:root .milkdown-theme-nord.prose hr {
+  border: 0;
+  border-top: 1px solid var(--neutral-stroke);
+  background: transparent;
+  height: 0;
+}
+
+/* ===== MILKDOWN FOCUS OUTLINE/BORDER REMOVAL ===== */
+:root .milkdown-theme-nord.prose .ProseMirror:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* ===== MILKDOWN CODE STYLES (INLINE + BLOCK) ===== */
+/* Light mode: softer background, readable foreground, shared look */
+:root:not(.dark) .milkdown-theme-nord.prose code,
+:root:not(.dark) .milkdown-theme-nord.prose pre,
+:root:not(.dark) .milkdown-theme-nord.prose pre code {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #111827; /* gray-900 */
+  font-family: var(--font-mono);
+}
+
+:root:not(.dark) .milkdown-theme-nord.prose code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  border: none;
+}
+
+:root:not(.dark) .milkdown-theme-nord.prose pre {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  overflow: auto;
+  border: none;
+}
+
+:root:not(.dark) .milkdown-theme-nord.prose pre code {
+  border: none;
+}
+
+/* Dark mode: keep pleasant background, lighten text for contrast, shared look */
+:root.dark .milkdown-theme-nord.prose code,
+:root.dark .milkdown-theme-nord.prose pre,
+:root.dark .milkdown-theme-nord.prose pre code {
+  background-color: #1f2937; /* gray-800 */
+  color: #e5e7eb; /* gray-200 */
+  font-family: var(--font-mono);
+}
+
+:root.dark .milkdown-theme-nord.prose code {
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  border: none;
+}
+
+:root.dark .milkdown-theme-nord.prose pre {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  overflow: auto;
+  border: none;
+}
+
+:root.dark .milkdown-theme-nord.prose pre code {
+  border: none;
+}

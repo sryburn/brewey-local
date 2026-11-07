@@ -1,0 +1,6 @@
+# Replace the hostname and upstream for your environment.
+brewey.example.com {
+    reverse_proxy 127.0.0.1:3100 {
+        flush_interval -1
+    }
+}

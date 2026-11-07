@@ -1,0 +1,2834 @@
+{
+  "metric": [
+    {
+      "name": "add_fermentation_step_to_recipe",
+      "description": "Add a fermentation step to a recipe. Fermentation steps are executed in step_order sequence during fermentation process. Temperature in Celsius.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add fermentation step to"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the fermentation step (e.g., 'Primary Fermentation', 'Secondary', 'Cold Crash')"
+          },
+          "temperature_c": {
+            "type": "number",
+            "description": "Temperature in Celsius (range: 15-25\u00b0C, typical: 18-20\u00b0C for ales, 10-12\u00b0C for lagers)"
+          },
+          "end_temperature_c": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Ending temperature in Celsius for temperature ramps (range: 15-25\u00b0C, null for constant temperature)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration of fermentation step in days"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the fermentation process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the fermentation step"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "name",
+          "temperature_c",
+          "duration_days"
+        ]
+      }
+    },
+    {
+      "name": "add_grain_to_recipe",
+      "description": "Add a grain (malt, adjunct, or extract) to a recipe. Use search_grains to search for grain varieties if grain_id is unknown. Grain additions affect OG, color, and flavor calculations. Specify weight in kilograms.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add grain to"
+          },
+          "grain_id": {
+            "type": "string",
+            "description": "Grain variety ID from the grains database (use search_grains to search if unknown)"
+          },
+          "amount_kg": {
+            "type": "number",
+            "description": "Amount of grain in kilograms"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "grain_id",
+          "amount_kg"
+        ]
+      }
+    },
+    {
+      "name": "add_hop_to_recipe",
+      "description": "Add a hop addition to a recipe. Use search_hops to search for hop varieties if hop_id is unknown. For whirlpool hops, temperature_c affects IBU calculations significantly. For dry hop additions, use dry_hop_duration_days and dry_hop_start_day instead of time_minutes. Specify weight in grams and temperature in Celsius.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add hop to"
+          },
+          "hop_id": {
+            "type": "string",
+            "description": "Hop variety ID from the hops database (use search_hops to search if unknown)"
+          },
+          "amount_grams": {
+            "type": "number",
+            "minimum": 0.1,
+            "description": "Amount of hops in grams (minimum: 0.1g)"
+          },
+          "alpha_acid_percent_override": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 30
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Override hop alpha acid percentage for this recipe when actual batch analysis differs from database value (0-30%, null to use database value)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "first_wort",
+              "boil",
+              "whirlpool",
+              "dry_hop"
+            ],
+            "description": "When/how hop is used: 'mash' (during mashing), 'first_wort' (added to first wort, uses recipe boil time), 'boil' (during boil), 'whirlpool' (post-boil steeping, optionally specify temperature), 'dry_hop' (during fermentation, optionally specify dry hop timing)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes (required for boil and whirlpool IBU calculations, optional for mash, not used for first_wort or dry_hop)."
+          },
+          "temperature_c": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 40,
+                "maximum": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Temperature in Celsius (required for whirlpool hops 40-100\u00b0C, optional for others). Defaults to 80\u00b0C for whirlpool if not specified."
+          },
+          "dry_hop_duration_days": {
+            "type": "number",
+            "description": "Duration in days for dry hop contact time (optional, null = indefinite/until manual removal)"
+          },
+          "dry_hop_start_day": {
+            "type": "number",
+            "description": "Days since fermentation start to begin dry hopping (optional, used with dry_hop use_type)"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "hop_id",
+          "amount_grams",
+          "use_type"
+        ]
+      }
+    },
+    {
+      "name": "add_mash_step_to_recipe",
+      "description": "Add a mash step to a recipe. Mash steps are executed in step_order sequence during mashing process. Temperature in Celsius.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add mash step to"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the mash step (e.g., 'Protein Rest', 'Saccharification', 'Mash Out')"
+          },
+          "temperature_c": {
+            "type": "number",
+            "description": "Temperature in Celsius (range: 60-78\u00b0C, typical: 65-67\u00b0C for saccharification)"
+          },
+          "duration_minutes": {
+            "type": "number",
+            "description": "Duration of mash step in minutes"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the mash process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the mash step"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "name",
+          "temperature_c",
+          "duration_minutes"
+        ]
+      }
+    },
+    {
+      "name": "add_misc_to_recipe",
+      "description": "Add a miscellaneous ingredient to a recipe (water agents, spices, finings, etc.). Use search_misc_ingredients to search for ingredients if misc_ingredient_id is unknown. For fermentation/aging additions, use start_day and duration_days instead of time_minutes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add misc ingredient to"
+          },
+          "misc_ingredient_id": {
+            "type": "string",
+            "description": "Misc ingredient ID from the misc_ingredients database (use search_misc_ingredients to search if unknown)"
+          },
+          "amount_units": {
+            "type": "number",
+            "minimum": 0.01,
+            "description": "Amount of ingredient in the specified unit_type (minimum: 0.01)"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "grams",
+              "ml",
+              "tsp",
+              "tbsp",
+              "oz",
+              "tablets",
+              "drops",
+              "pieces"
+            ],
+            "description": "Unit type for amount: 'grams' (weight), 'ml' (volume), 'tsp'/'tbsp' (spoons), 'oz' (ounces), 'tablets' (pills), 'drops' (liquid drops), 'pieces' (individual items)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "boil",
+              "primary",
+              "secondary",
+              "bottling",
+              "aging"
+            ],
+            "description": "When ingredient is used: 'mash' (during mashing), 'boil' (during boil), 'primary' (primary fermentation), 'secondary' (secondary fermentation), 'bottling' (at bottling, no timing needed), 'aging' (during aging)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes for mash and boil processes (optional for all use_types). Not used for fermentation stages (use start_day/duration_days) or bottling."
+          },
+          "start_day": {
+            "type": "number",
+            "description": "Days from the beginning of the use_type step to add ingredient (optional, used for primary, secondary, aging)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration in days for ingredient contact time (optional, null = indefinite/until manual removal)"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "misc_ingredient_id",
+          "amount_units",
+          "use_type"
+        ]
+      }
+    },
+    {
+      "name": "add_water_to_recipe",
+      "description": "Add water with target water profile to a recipe. Specify base water profile for brewing salt calculations. Common profiles: mash water, sparge water, or total brewing water. Volume in liters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add water to"
+          },
+          "name": {
+            "type": "string",
+            "description": "Descriptive name for water addition (e.g., 'Mash Water', 'Sparge Water', 'Total Brewing Water')"
+          },
+          "volume_liters": {
+            "type": "number",
+            "description": "Volume of water in liters"
+          },
+          "ca_ppm": {
+            "type": "number",
+            "description": "Target calcium content in parts per million (ppm)"
+          },
+          "mg_ppm": {
+            "type": "number",
+            "description": "Target magnesium content in parts per million (ppm)"
+          },
+          "na_ppm": {
+            "type": "number",
+            "description": "Target sodium content in parts per million (ppm)"
+          },
+          "so4_ppm": {
+            "type": "number",
+            "description": "Target sulfate content in parts per million (ppm)"
+          },
+          "cl_ppm": {
+            "type": "number",
+            "description": "Target chloride content in parts per million (ppm)"
+          },
+          "hco3_ppm": {
+            "type": "number",
+            "description": "Target bicarbonate content in parts per million (ppm)"
+          },
+          "base_ca_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water calcium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_mg_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water magnesium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_na_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sodium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_so4_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sulfate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_cl_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water chloride content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_hco3_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water bicarbonate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          }
+        },
+        "required": [
+          "recipe_id",
+          "name",
+          "volume_liters",
+          "ca_ppm",
+          "mg_ppm",
+          "na_ppm",
+          "so4_ppm",
+          "cl_ppm",
+          "hco3_ppm"
+        ]
+      }
+    },
+    {
+      "name": "add_yeast_to_recipe",
+      "description": "Add yeast to a recipe. Use search_yeasts to search for yeast strains if yeast_id is unknown. Yeast affects attenuation and flavor calculations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add yeast to"
+          },
+          "yeast_id": {
+            "type": "string",
+            "description": "Yeast strain ID from the yeasts database (use search_yeasts to search if unknown)"
+          },
+          "amount_units": {
+            "type": "number",
+            "description": "Amount of yeast in the specified unit_type"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "packets",
+              "grams",
+              "ml"
+            ],
+            "description": "Unit type for yeast amount: 'packets' (dry yeast packets), 'grams' (dry yeast by weight), 'ml' (liquid yeast volume)"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "yeast_id",
+          "amount_units"
+        ]
+      }
+    },
+    {
+      "name": "clone_recipe",
+      "description": "Create a complete copy of an existing recipe including all ingredients, process steps, water chemistry, and settings",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to clone"
+          },
+          "new_name": {
+            "type": "string",
+            "description": "Name for the cloned recipe"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "new_name"
+        ]
+      }
+    },
+    {
+      "name": "create_recipe",
+      "description": "Create a new beer recipe. Batch size in liters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Recipe name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Recipe description"
+          },
+          "batch_size_liters": {
+            "type": "number",
+            "description": "Batch size in liters"
+          },
+          "boil_time_minutes": {
+            "type": "number",
+            "description": "Boil time in minutes"
+          },
+          "efficiency_percent": {
+            "type": "number",
+            "description": "Mash efficiency percentage (typical range: 70-85%, homebrewer average: 75%)"
+          },
+          "mash_thickness": {
+            "type": "number",
+            "description": "Water to grain ratio in litres per kilogram (range: 1.0-10.0, typical: 2.5-4.0 L/kg)"
+          },
+          "brewing_notes": {
+            "type": "string",
+            "description": "Notes about the brewing process, techniques, and observations"
+          },
+          "tasting_notes": {
+            "type": "string",
+            "description": "Tasting notes, flavor descriptions, and evaluation"
+          },
+          "bjcp_style_id": {
+            "type": "string",
+            "description": "Optional BJCP style ID (use search_beer_styles to find available styles)"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "delete_recipe",
+      "description": "Delete a recipe (removes all associated ingredients)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "find_styles_for_recipe",
+      "description": "Find BJCP beer styles that match a recipe based on calculated values (OG, FG, ABV, IBU, EBC) and ingredient keywords. Returns compatibility scores (0-100) with higher scores indicating better matches. Scoring considers how well recipe parameters fit within BJCP style guidelines.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to find matching styles for"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional keywords to refine style matching (e.g., ['hoppy', 'malty', 'dark'])"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of matching styles to return (default: 10)"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "get_privacy_policy",
+      "description": "Retrieve the current Privacy Policy document. Use this when users ask about privacy, data handling or security practices. If no results found, say so rather than making up answers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_recipe_by_id",
+      "description": "Get a recipe with all its ingredients and calculated values. Returns values in metric units.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "get_style_by_id",
+      "description": "Get complete BJCP style details by UUID or style number",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "style_id": {
+            "type": "string",
+            "description": "Either a UUID (e.g., '123e4567-e89b-12d3-a456-426614174000') or a BJCP style number (e.g., '34A', '21A')"
+          }
+        },
+        "required": [
+          "style_id"
+        ]
+      }
+    },
+    {
+      "name": "get_terms_of_use",
+      "description": "Retrieve the current Terms of Use document. Use this when users ask about service terms, acceptable use, disclaimers, or user responsibilities. If no results found, say so rather than making up answers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "remove_fermentation_step_from_recipe",
+      "description": "Remove a fermentation step from a recipe",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_fermentation_step_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "recipe_fermentation_step_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_grain_from_recipe",
+      "description": "Remove a grain addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_grain_id": {
+            "type": "string",
+            "description": "Unique ID of the grain addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_grain_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_hop_from_recipe",
+      "description": "Remove a hop addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_hop_id": {
+            "type": "string",
+            "description": "Unique ID of the hop addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_hop_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_mash_step_from_recipe",
+      "description": "Remove a mash step from a recipe. Other mash steps will maintain their step_order.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_mash_step_id": {
+            "type": "string",
+            "description": "Unique ID of the mash step in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_mash_step_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_misc_from_recipe",
+      "description": "Remove a miscellaneous ingredient addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_misc_id": {
+            "type": "string",
+            "description": "Unique ID of the misc ingredient addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_misc_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_water_from_recipe",
+      "description": "Remove a water addition from a recipe. This will update water chemistry calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_water_id": {
+            "type": "string",
+            "description": "Unique ID of the water addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_water_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_yeast_from_recipe",
+      "description": "Remove a yeast addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_yeast_id": {
+            "type": "string",
+            "description": "Unique ID of the yeast addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_yeast_id"
+        ]
+      }
+    },
+    {
+      "name": "search_beer_styles",
+      "description": "Search and filter BJCP beer styles",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of beer styles to return (default: 20)"
+          },
+          "search": {
+            "type": "string",
+            "description": "Search by style name, number (e.g., '21A'), category, or description (case-insensitive full-text search)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_grains",
+      "description": "Search available fermentables including base malts, specialty malts, adjuncts, liquid/dry extracts, sugars, fruits, fruit juices, and honey with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of grains to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search grains by name (case-insensitive partial match)"
+          },
+          "grain_type": {
+            "type": "string",
+            "description": "Search by grain type",
+            "enum": [
+              "base",
+              "specialty",
+              "adjunct",
+              "liquid_extract",
+              "sugar",
+              "dry_extract",
+              "fruit",
+              "juice",
+              "honey"
+            ]
+          },
+          "min_color_ebc": {
+            "type": "number",
+            "description": "Minimum color in EBC"
+          },
+          "max_color_ebc": {
+            "type": "number",
+            "description": "Maximum color in EBC"
+          },
+          "min_extract_potential": {
+            "type": "number",
+            "description": "Minimum extract potential (0.0-1.0, where 0.8 = 80% extraction, typical range: 0.75-0.85 for base malts)"
+          },
+          "max_extract_potential": {
+            "type": "number",
+            "description": "Maximum extract potential (0.0-1.0, where 0.8 = 80% extraction, typical range: 0.75-0.85 for base malts)"
+          },
+          "must_mash": {
+            "type": "boolean",
+            "description": "Search by whether grain requires mashing (true = must mash, false = does not require mashing)"
+          },
+          "origin": {
+            "type": "string",
+            "description": "Search by origin/country using standardized country names (e.g., \"United States\" not \"US\") - case-insensitive partial match"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_hops",
+      "description": "Search available hops with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of hops to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search hops by name (case-insensitive partial match)"
+          },
+          "hop_type": {
+            "type": "string",
+            "description": "Search by hop type (\"bittering\" or \"aroma\")"
+          },
+          "min_alpha_acid": {
+            "type": "number",
+            "description": "Minimum alpha acid percentage"
+          },
+          "max_alpha_acid": {
+            "type": "number",
+            "description": "Maximum alpha acid percentage"
+          },
+          "min_beta_acid": {
+            "type": "number",
+            "description": "Minimum beta acid percentage"
+          },
+          "max_beta_acid": {
+            "type": "number",
+            "description": "Maximum beta acid percentage"
+          },
+          "form": {
+            "type": "string",
+            "description": "Search by hop form (\"whole\", \"pellet\", \"plug\", \"extract\", \"powder\")",
+            "enum": [
+              "whole",
+              "pellet",
+              "plug",
+              "extract",
+              "powder"
+            ]
+          },
+          "origin": {
+            "type": "string",
+            "description": "Search by origin/country using standardized country names (e.g., \"United States\" not \"US\") - case-insensitive partial match"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_misc_ingredients",
+      "description": "Search available miscellaneous ingredients with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of misc ingredients to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search ingredients by name (case-insensitive partial match)"
+          },
+          "ingredient_type": {
+            "type": "string",
+            "description": "Search by ingredient type"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_recipes",
+      "description": "Search recipes with advanced filtering by ingredients, style, and properties. Batch size in liters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of recipes to return (default: 10)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search recipes by name (case-insensitive partial match)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Search recipes by description (case-insensitive partial match)"
+          },
+          "ingredient": {
+            "type": "string",
+            "description": "Search by ingredient name across grains, hops, and yeasts (searches ingredient names and varieties, case-insensitive partial match)"
+          },
+          "min_abv": {
+            "type": "number",
+            "description": "Minimum ABV percentage"
+          },
+          "max_abv": {
+            "type": "number",
+            "description": "Maximum ABV percentage"
+          },
+          "min_ibu": {
+            "type": "number",
+            "description": "Minimum IBU"
+          },
+          "max_ibu": {
+            "type": "number",
+            "description": "Maximum IBU"
+          },
+          "min_ebc": {
+            "type": "number",
+            "description": "Minimum EBC color"
+          },
+          "max_ebc": {
+            "type": "number",
+            "description": "Maximum EBC color"
+          },
+          "min_batch_size": {
+            "type": "number",
+            "description": "Minimum batch size in liters"
+          },
+          "max_batch_size": {
+            "type": "number",
+            "description": "Maximum batch size in liters"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_yeasts",
+      "description": "Search available yeasts with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of yeasts to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search yeasts by name (case-insensitive partial match)"
+          },
+          "yeast_type": {
+            "type": "string",
+            "description": "Search by yeast type (\"ale\", \"lager\", \"wild\", \"brett\")",
+            "enum": [
+              "ale",
+              "lager",
+              "wild",
+              "brett"
+            ]
+          },
+          "form": {
+            "type": "string",
+            "description": "Search by yeast form (\"liquid\", \"dry\")",
+            "enum": [
+              "liquid",
+              "dry"
+            ]
+          },
+          "min_attenuation": {
+            "type": "number",
+            "description": "Minimum attenuation percentage"
+          },
+          "max_attenuation": {
+            "type": "number",
+            "description": "Maximum attenuation percentage"
+          },
+          "min_temperature": {
+            "type": "number",
+            "description": "Minimum fermentation temperature (\u00b0C)"
+          },
+          "max_temperature": {
+            "type": "number",
+            "description": "Maximum fermentation temperature (\u00b0C)"
+          },
+          "laboratory": {
+            "type": "string",
+            "description": "Search by laboratory/supplier (case-insensitive partial match)"
+          },
+          "product_id": {
+            "type": "string",
+            "description": "Search by product ID (case-insensitive partial match)"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "update_fermentation_step_in_recipe",
+      "description": "Update a fermentation step in a recipe. Temperature in Celsius.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_fermentation_step_id": {
+            "type": "string",
+            "description": "Unique ID of the fermentation step in the recipe"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the fermentation step (e.g., 'Primary Fermentation', 'Secondary', 'Cold Crash')"
+          },
+          "temperature_c": {
+            "type": "number",
+            "description": "Temperature in Celsius (range: 15-25\u00b0C, typical: 18-20\u00b0C for ales, 10-12\u00b0C for lagers)"
+          },
+          "end_temperature_c": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Ending temperature in Celsius for temperature ramps (range: 15-25\u00b0C, null for constant temperature)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration of fermentation step in days"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the fermentation process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the fermentation step"
+          }
+        },
+        "required": [
+          "recipe_fermentation_step_id"
+        ]
+      }
+    },
+    {
+      "name": "update_grain_in_recipe",
+      "description": "Update a grain's amount in a recipe. To use a different grain variety, use add_grain_to_recipe and remove_grain_from_recipe. Changes affect OG, color, and flavor calculations. Specify weight in kilograms.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_grain_id": {
+            "type": "string",
+            "description": "Unique ID of the grain addition in the recipe"
+          },
+          "amount_kg": {
+            "type": "number",
+            "description": "Amount of grain in kilograms"
+          }
+        },
+        "required": [
+          "recipe_grain_id"
+        ]
+      }
+    },
+    {
+      "name": "update_hop_in_recipe",
+      "description": "Update a hop's properties in a recipe (amount, timing, usage). To use a different hop variety, use add_hop_to_recipe and remove_hop_from_recipe. For dry hop additions, use dry_hop_duration_days and dry_hop_start_day instead of time_minutes. Specify weight in grams and temperature in Celsius.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_hop_id": {
+            "type": "string",
+            "description": "Unique ID of the hop addition in the recipe"
+          },
+          "amount_grams": {
+            "type": "number",
+            "minimum": 0.1,
+            "description": "Amount of hops in grams (minimum: 0.1g)"
+          },
+          "alpha_acid_percent_override": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 30
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Override hop alpha acid percentage for this recipe when actual batch analysis differs from database value (0-30%, null to use database value)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "first_wort",
+              "boil",
+              "whirlpool",
+              "dry_hop"
+            ],
+            "description": "When/how hop is used: 'mash' (during mashing), 'first_wort' (added to first wort, uses recipe boil time), 'boil' (during boil), 'whirlpool' (post-boil steeping, optionally specify temperature), 'dry_hop' (during fermentation, optionally specify dry hop timing)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes (required for boil and whirlpool IBU calculations, optional for mash, not used for first_wort or dry_hop)."
+          },
+          "temperature_c": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 40,
+                "maximum": 100
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Temperature in Celsius (required for whirlpool hops 40-100\u00b0C, optional for others). When changing use_type to whirlpool, defaults to 80\u00b0C if not specified."
+          },
+          "dry_hop_duration_days": {
+            "type": "number",
+            "description": "Duration in days for dry hop contact time (optional, null = indefinite/until manual removal)"
+          },
+          "dry_hop_start_day": {
+            "type": "number",
+            "description": "Days since fermentation start to begin dry hopping (optional, used with dry_hop use_type)"
+          }
+        },
+        "required": [
+          "recipe_hop_id"
+        ]
+      }
+    },
+    {
+      "name": "update_mash_step_in_recipe",
+      "description": "Update a mash step's properties in a recipe. Changes to step_order will affect the sequence of mash steps. Temperature in Celsius.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_mash_step_id": {
+            "type": "string",
+            "description": "Unique ID of the mash step in the recipe"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the mash step (e.g., 'Protein Rest', 'Saccharification', 'Mash Out')"
+          },
+          "temperature_c": {
+            "type": "number",
+            "description": "Temperature in Celsius (range: 60-78\u00b0C, typical: 65-67\u00b0C for saccharification)"
+          },
+          "duration_minutes": {
+            "type": "number",
+            "description": "Duration of mash step in minutes"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the mash process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the mash step"
+          }
+        },
+        "required": [
+          "recipe_mash_step_id"
+        ]
+      }
+    },
+    {
+      "name": "update_misc_in_recipe",
+      "description": "Update a miscellaneous ingredient's properties in a recipe (amount, timing, usage). To use a different misc ingredient, use add_misc_to_recipe and remove_misc_from_recipe. For fermentation/aging additions, use start_day and duration_days instead of time_minutes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_misc_id": {
+            "type": "string",
+            "description": "Unique ID of the misc ingredient addition in the recipe"
+          },
+          "amount_units": {
+            "type": "number",
+            "minimum": 0.01,
+            "description": "Amount of ingredient in the specified unit_type (minimum: 0.01)"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "grams",
+              "ml",
+              "tsp",
+              "tbsp",
+              "oz",
+              "tablets",
+              "drops",
+              "pieces"
+            ],
+            "description": "Unit type for amount: 'grams' (weight), 'ml' (volume), 'tsp'/'tbsp' (spoons), 'oz' (ounces), 'tablets' (pills), 'drops' (liquid drops), 'pieces' (individual items)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "boil",
+              "primary",
+              "secondary",
+              "bottling",
+              "aging"
+            ],
+            "description": "When ingredient is used: 'mash' (during mashing), 'boil' (during boil), 'primary' (primary fermentation), 'secondary' (secondary fermentation), 'bottling' (at bottling, no timing needed), 'aging' (during aging)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes for mash and boil processes (optional for all use_types). Not used for fermentation stages (use start_day/duration_days) or bottling."
+          },
+          "start_day": {
+            "type": "number",
+            "description": "Days from the beginning of the use_type step to add ingredient (optional, used for primary, secondary, aging)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration in days for ingredient contact time (optional, null = indefinite/until manual removal)"
+          }
+        },
+        "required": [
+          "recipe_misc_id"
+        ]
+      }
+    },
+    {
+      "name": "update_recipe",
+      "description": "Update a recipe's basic information. Batch size in liters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "Recipe name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Recipe description"
+          },
+          "batch_size_liters": {
+            "type": "number",
+            "description": "Batch size in liters"
+          },
+          "boil_time_minutes": {
+            "type": "number",
+            "description": "Boil time in minutes"
+          },
+          "efficiency_percent": {
+            "type": "number",
+            "description": "Mash efficiency percentage (typical range: 70-85%, homebrewer average: 75%)"
+          },
+          "mash_thickness": {
+            "type": "number",
+            "description": "Water to grain ratio in litres per kilogram (range: 1.0-10.0, typical: 2.5-4.0 L/kg)"
+          },
+          "brewing_notes": {
+            "type": "string",
+            "description": "Notes about the brewing process, techniques, and observations"
+          },
+          "tasting_notes": {
+            "type": "string",
+            "description": "Tasting notes, flavor descriptions, and evaluation"
+          },
+          "bjcp_style_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "BJCP style ID or null to clear (use search_beer_styles to find available styles)"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "update_user_profile",
+      "description": "Update the authenticated user's profile data including preferences, equipment profiles, water profiles, ingredient availability, and other AI agent context. IMPORTANT: Proactively suggest profile updates when you learn new information about the user's brewing setup, preferences, or constraints that would improve future recommendations. Always seek explicit permission before updating. Preserve existing content and update to reflect current state only - do not add edit annotations or change logs. Markdown formatting is supported and should be preserved. You may provide a markdown link to [view profile](/profile) if the user needs to see their current profile information.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "User profile data in markdown format (equipment, preferences, water profiles, ingredient availability, brewing setup, etc.)"
+          }
+        },
+        "required": [
+          "profile"
+        ]
+      }
+    },
+    {
+      "name": "update_water_in_recipe",
+      "description": "Update water properties in a recipe. Changes to base water profile will recalculate brewing salt additions automatically. Volume in liters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_water_id": {
+            "type": "string",
+            "description": "Unique ID of the water addition in the recipe"
+          },
+          "name": {
+            "type": "string",
+            "description": "Descriptive name for water addition (e.g., 'Mash Water', 'Sparge Water')"
+          },
+          "volume_liters": {
+            "type": "number",
+            "description": "Volume of water in liters"
+          },
+          "ca_ppm": {
+            "type": "number",
+            "description": "Target calcium content in parts per million (ppm)"
+          },
+          "mg_ppm": {
+            "type": "number",
+            "description": "Target magnesium content in parts per million (ppm)"
+          },
+          "na_ppm": {
+            "type": "number",
+            "description": "Target sodium content in parts per million (ppm)"
+          },
+          "so4_ppm": {
+            "type": "number",
+            "description": "Target sulfate content in parts per million (ppm)"
+          },
+          "cl_ppm": {
+            "type": "number",
+            "description": "Target chloride content in parts per million (ppm)"
+          },
+          "hco3_ppm": {
+            "type": "number",
+            "description": "Target bicarbonate content in parts per million (ppm)"
+          },
+          "base_ca_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water calcium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_mg_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water magnesium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_na_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sodium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_so4_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sulfate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_cl_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water chloride content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_hco3_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water bicarbonate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          }
+        },
+        "required": [
+          "recipe_water_id"
+        ]
+      }
+    },
+    {
+      "name": "update_yeast_in_recipe",
+      "description": "Update a yeast's properties in a recipe (amount, unit type). To use a different yeast strain, use add_yeast_to_recipe and remove_yeast_from_recipe. Changes affect attenuation calculations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_yeast_id": {
+            "type": "string",
+            "description": "Unique ID of the yeast addition in the recipe"
+          },
+          "amount_units": {
+            "type": "number",
+            "description": "Amount of yeast in the specified unit_type"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "packets",
+              "grams",
+              "ml"
+            ],
+            "description": "Unit type for yeast amount: 'packets' (dry yeast packets), 'grams' (dry yeast by weight), 'ml' (liquid yeast volume)"
+          }
+        },
+        "required": [
+          "recipe_yeast_id"
+        ]
+      }
+    }
+  ],
+  "imperial": [
+    {
+      "name": "add_fermentation_step_to_recipe",
+      "description": "Add a fermentation step to a recipe. Fermentation steps are executed in step_order sequence during fermentation process. Temperature in Fahrenheit.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add fermentation step to"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the fermentation step (e.g., 'Primary Fermentation', 'Secondary', 'Cold Crash')"
+          },
+          "temperature_f": {
+            "type": "number",
+            "description": "Temperature in Fahrenheit (range: 59-77\u00b0F, typical: 64-68\u00b0F for ales, 50-54\u00b0F for lagers)"
+          },
+          "end_temperature_f": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Ending temperature in Fahrenheit for temperature ramps (range: 59-77\u00b0F, null for constant temperature)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration of fermentation step in days"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the fermentation process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the fermentation step"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "name",
+          "temperature_f",
+          "duration_days"
+        ]
+      }
+    },
+    {
+      "name": "add_grain_to_recipe",
+      "description": "Add a grain (malt, adjunct, or extract) to a recipe. Use search_grains to search for grain varieties if grain_id is unknown. Grain additions affect OG, color, and flavor calculations. Specify weight in pounds.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add grain to"
+          },
+          "grain_id": {
+            "type": "string",
+            "description": "Grain variety ID from the grains database (use search_grains to search if unknown)"
+          },
+          "amount_lb": {
+            "type": "number",
+            "description": "Amount of grain in pounds"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "grain_id",
+          "amount_lb"
+        ]
+      }
+    },
+    {
+      "name": "add_hop_to_recipe",
+      "description": "Add a hop addition to a recipe. Use search_hops to search for hop varieties if hop_id is unknown. For whirlpool hops, temperature_f affects IBU calculations significantly. For dry hop additions, use dry_hop_duration_days and dry_hop_start_day instead of time_minutes. Specify weight in ounces and temperature in Fahrenheit.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add hop to"
+          },
+          "hop_id": {
+            "type": "string",
+            "description": "Hop variety ID from the hops database (use search_hops to search if unknown)"
+          },
+          "amount_oz": {
+            "type": "number",
+            "minimum": 0.01,
+            "description": "Amount of hops in ounces (minimum: 0.01oz)"
+          },
+          "alpha_acid_percent_override": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 30
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Override hop alpha acid percentage for this recipe when actual batch analysis differs from database value (0-30%, null to use database value)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "first_wort",
+              "boil",
+              "whirlpool",
+              "dry_hop"
+            ],
+            "description": "When/how hop is used: 'mash' (during mashing), 'first_wort' (added to first wort, uses recipe boil time), 'boil' (during boil), 'whirlpool' (post-boil steeping, optionally specify temperature), 'dry_hop' (during fermentation, optionally specify dry hop timing)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes (required for boil and whirlpool IBU calculations, optional for mash, not used for first_wort or dry_hop)."
+          },
+          "temperature_f": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 104,
+                "maximum": 212
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Temperature in Fahrenheit (required for whirlpool hops 104-212\u00b0F, optional for others). Defaults to 176\u00b0F for whirlpool if not specified."
+          },
+          "dry_hop_duration_days": {
+            "type": "number",
+            "description": "Duration in days for dry hop contact time (optional, null = indefinite/until manual removal)"
+          },
+          "dry_hop_start_day": {
+            "type": "number",
+            "description": "Days since fermentation start to begin dry hopping (optional, used with dry_hop use_type)"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "hop_id",
+          "amount_oz",
+          "use_type"
+        ]
+      }
+    },
+    {
+      "name": "add_mash_step_to_recipe",
+      "description": "Add a mash step to a recipe. Mash steps are executed in step_order sequence during mashing process. Temperature in Fahrenheit.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add mash step to"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the mash step (e.g., 'Protein Rest', 'Saccharification', 'Mash Out')"
+          },
+          "temperature_f": {
+            "type": "number",
+            "description": "Temperature in Fahrenheit (range: 140-172\u00b0F, typical: 149-153\u00b0F for saccharification)"
+          },
+          "duration_minutes": {
+            "type": "number",
+            "description": "Duration of mash step in minutes"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the mash process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the mash step"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "name",
+          "temperature_f",
+          "duration_minutes"
+        ]
+      }
+    },
+    {
+      "name": "add_misc_to_recipe",
+      "description": "Add a miscellaneous ingredient to a recipe (water agents, spices, finings, etc.). Use search_misc_ingredients to search for ingredients if misc_ingredient_id is unknown. For fermentation/aging additions, use start_day and duration_days instead of time_minutes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add misc ingredient to"
+          },
+          "misc_ingredient_id": {
+            "type": "string",
+            "description": "Misc ingredient ID from the misc_ingredients database (use search_misc_ingredients to search if unknown)"
+          },
+          "amount_units": {
+            "type": "number",
+            "minimum": 0.01,
+            "description": "Amount of ingredient in the specified unit_type (minimum: 0.01)"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "grams",
+              "ml",
+              "tsp",
+              "tbsp",
+              "oz",
+              "tablets",
+              "drops",
+              "pieces"
+            ],
+            "description": "Unit type for amount: 'grams' (weight), 'ml' (volume), 'tsp'/'tbsp' (spoons), 'oz' (ounces), 'tablets' (pills), 'drops' (liquid drops), 'pieces' (individual items)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "boil",
+              "primary",
+              "secondary",
+              "bottling",
+              "aging"
+            ],
+            "description": "When ingredient is used: 'mash' (during mashing), 'boil' (during boil), 'primary' (primary fermentation), 'secondary' (secondary fermentation), 'bottling' (at bottling, no timing needed), 'aging' (during aging)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes for mash and boil processes (optional for all use_types). Not used for fermentation stages (use start_day/duration_days) or bottling."
+          },
+          "start_day": {
+            "type": "number",
+            "description": "Days from the beginning of the use_type step to add ingredient (optional, used for primary, secondary, aging)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration in days for ingredient contact time (optional, null = indefinite/until manual removal)"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "misc_ingredient_id",
+          "amount_units",
+          "use_type"
+        ]
+      }
+    },
+    {
+      "name": "add_water_to_recipe",
+      "description": "Add water with target water profile to a recipe. Specify base water profile for brewing salt calculations. Common profiles: mash water, sparge water, or total brewing water. Volume in gallons.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add water to"
+          },
+          "name": {
+            "type": "string",
+            "description": "Descriptive name for water addition (e.g., 'Mash Water', 'Sparge Water', 'Total Brewing Water')"
+          },
+          "volume_gallons": {
+            "type": "number",
+            "description": "Volume of water in gallons"
+          },
+          "ca_ppm": {
+            "type": "number",
+            "description": "Target calcium content in parts per million (ppm)"
+          },
+          "mg_ppm": {
+            "type": "number",
+            "description": "Target magnesium content in parts per million (ppm)"
+          },
+          "na_ppm": {
+            "type": "number",
+            "description": "Target sodium content in parts per million (ppm)"
+          },
+          "so4_ppm": {
+            "type": "number",
+            "description": "Target sulfate content in parts per million (ppm)"
+          },
+          "cl_ppm": {
+            "type": "number",
+            "description": "Target chloride content in parts per million (ppm)"
+          },
+          "hco3_ppm": {
+            "type": "number",
+            "description": "Target bicarbonate content in parts per million (ppm)"
+          },
+          "base_ca_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water calcium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_mg_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water magnesium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_na_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sodium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_so4_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sulfate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_cl_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water chloride content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_hco3_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water bicarbonate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          }
+        },
+        "required": [
+          "recipe_id",
+          "name",
+          "volume_gallons",
+          "ca_ppm",
+          "mg_ppm",
+          "na_ppm",
+          "so4_ppm",
+          "cl_ppm",
+          "hco3_ppm"
+        ]
+      }
+    },
+    {
+      "name": "add_yeast_to_recipe",
+      "description": "Add yeast to a recipe. Use search_yeasts to search for yeast strains if yeast_id is unknown. Yeast affects attenuation and flavor calculations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to add yeast to"
+          },
+          "yeast_id": {
+            "type": "string",
+            "description": "Yeast strain ID from the yeasts database (use search_yeasts to search if unknown)"
+          },
+          "amount_units": {
+            "type": "number",
+            "description": "Amount of yeast in the specified unit_type"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "packets",
+              "grams",
+              "ml"
+            ],
+            "description": "Unit type for yeast amount: 'packets' (dry yeast packets), 'grams' (dry yeast by weight), 'ml' (liquid yeast volume)"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "yeast_id",
+          "amount_units"
+        ]
+      }
+    },
+    {
+      "name": "clone_recipe",
+      "description": "Create a complete copy of an existing recipe including all ingredients, process steps, water chemistry, and settings",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to clone"
+          },
+          "new_name": {
+            "type": "string",
+            "description": "Name for the cloned recipe"
+          }
+        },
+        "required": [
+          "recipe_id",
+          "new_name"
+        ]
+      }
+    },
+    {
+      "name": "create_recipe",
+      "description": "Create a new beer recipe. Batch size in gallons.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Recipe name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Recipe description"
+          },
+          "batch_size_gallons": {
+            "type": "number",
+            "description": "Batch size in gallons"
+          },
+          "boil_time_minutes": {
+            "type": "number",
+            "description": "Boil time in minutes"
+          },
+          "efficiency_percent": {
+            "type": "number",
+            "description": "Mash efficiency percentage (typical range: 70-85%, homebrewer average: 75%)"
+          },
+          "mash_thickness": {
+            "type": "number",
+            "description": "Water to grain ratio in quarts per pound (range: 1.0-3.0, typical: 1.25-1.5 qt/lb)"
+          },
+          "brewing_notes": {
+            "type": "string",
+            "description": "Notes about the brewing process, techniques, and observations"
+          },
+          "tasting_notes": {
+            "type": "string",
+            "description": "Tasting notes, flavor descriptions, and evaluation"
+          },
+          "bjcp_style_id": {
+            "type": "string",
+            "description": "Optional BJCP style ID (use search_beer_styles to find available styles)"
+          }
+        },
+        "required": [
+          "name"
+        ]
+      }
+    },
+    {
+      "name": "delete_recipe",
+      "description": "Delete a recipe (removes all associated ingredients)",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "find_styles_for_recipe",
+      "description": "Find BJCP beer styles that match a recipe based on calculated values (OG, FG, ABV, IBU, EBC) and ingredient keywords. Returns compatibility scores (0-100) with higher scores indicating better matches. Scoring considers how well recipe parameters fit within BJCP style guidelines.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID to find matching styles for"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Optional keywords to refine style matching (e.g., ['hoppy', 'malty', 'dark'])"
+          },
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of matching styles to return (default: 10)"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "get_privacy_policy",
+      "description": "Retrieve the current Privacy Policy document. Use this when users ask about privacy, data handling or security practices. If no results found, say so rather than making up answers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "get_recipe_by_id",
+      "description": "Get a recipe with all its ingredients and calculated values. Returns values in imperial units.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "get_style_by_id",
+      "description": "Get complete BJCP style details by UUID or style number",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "style_id": {
+            "type": "string",
+            "description": "Either a UUID (e.g., '123e4567-e89b-12d3-a456-426614174000') or a BJCP style number (e.g., '34A', '21A')"
+          }
+        },
+        "required": [
+          "style_id"
+        ]
+      }
+    },
+    {
+      "name": "get_terms_of_use",
+      "description": "Retrieve the current Terms of Use document. Use this when users ask about service terms, acceptable use, disclaimers, or user responsibilities. If no results found, say so rather than making up answers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "remove_fermentation_step_from_recipe",
+      "description": "Remove a fermentation step from a recipe",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_fermentation_step_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "recipe_fermentation_step_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_grain_from_recipe",
+      "description": "Remove a grain addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_grain_id": {
+            "type": "string",
+            "description": "Unique ID of the grain addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_grain_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_hop_from_recipe",
+      "description": "Remove a hop addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_hop_id": {
+            "type": "string",
+            "description": "Unique ID of the hop addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_hop_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_mash_step_from_recipe",
+      "description": "Remove a mash step from a recipe. Other mash steps will maintain their step_order.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_mash_step_id": {
+            "type": "string",
+            "description": "Unique ID of the mash step in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_mash_step_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_misc_from_recipe",
+      "description": "Remove a miscellaneous ingredient addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_misc_id": {
+            "type": "string",
+            "description": "Unique ID of the misc ingredient addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_misc_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_water_from_recipe",
+      "description": "Remove a water addition from a recipe. This will update water chemistry calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_water_id": {
+            "type": "string",
+            "description": "Unique ID of the water addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_water_id"
+        ]
+      }
+    },
+    {
+      "name": "remove_yeast_from_recipe",
+      "description": "Remove a yeast addition from a recipe. This will update recipe calculations automatically.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_yeast_id": {
+            "type": "string",
+            "description": "Unique ID of the yeast addition in the recipe to remove"
+          }
+        },
+        "required": [
+          "recipe_yeast_id"
+        ]
+      }
+    },
+    {
+      "name": "search_beer_styles",
+      "description": "Search and filter BJCP beer styles",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of beer styles to return (default: 20)"
+          },
+          "search": {
+            "type": "string",
+            "description": "Search by style name, number (e.g., '21A'), category, or description (case-insensitive full-text search)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_grains",
+      "description": "Search available fermentables including base malts, specialty malts, adjuncts, liquid/dry extracts, sugars, fruits, fruit juices, and honey with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of grains to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search grains by name (case-insensitive partial match)"
+          },
+          "grain_type": {
+            "type": "string",
+            "description": "Search by grain type",
+            "enum": [
+              "base",
+              "specialty",
+              "adjunct",
+              "liquid_extract",
+              "sugar",
+              "dry_extract",
+              "fruit",
+              "juice",
+              "honey"
+            ]
+          },
+          "min_color_ebc": {
+            "type": "number",
+            "description": "Minimum color in EBC"
+          },
+          "max_color_ebc": {
+            "type": "number",
+            "description": "Maximum color in EBC"
+          },
+          "min_extract_potential": {
+            "type": "number",
+            "description": "Minimum extract potential (0.0-1.0, where 0.8 = 80% extraction, typical range: 0.75-0.85 for base malts)"
+          },
+          "max_extract_potential": {
+            "type": "number",
+            "description": "Maximum extract potential (0.0-1.0, where 0.8 = 80% extraction, typical range: 0.75-0.85 for base malts)"
+          },
+          "must_mash": {
+            "type": "boolean",
+            "description": "Search by whether grain requires mashing (true = must mash, false = does not require mashing)"
+          },
+          "origin": {
+            "type": "string",
+            "description": "Search by origin/country using standardized country names (e.g., \"United States\" not \"US\") - case-insensitive partial match"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_hops",
+      "description": "Search available hops with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of hops to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search hops by name (case-insensitive partial match)"
+          },
+          "hop_type": {
+            "type": "string",
+            "description": "Search by hop type (\"bittering\" or \"aroma\")"
+          },
+          "min_alpha_acid": {
+            "type": "number",
+            "description": "Minimum alpha acid percentage"
+          },
+          "max_alpha_acid": {
+            "type": "number",
+            "description": "Maximum alpha acid percentage"
+          },
+          "min_beta_acid": {
+            "type": "number",
+            "description": "Minimum beta acid percentage"
+          },
+          "max_beta_acid": {
+            "type": "number",
+            "description": "Maximum beta acid percentage"
+          },
+          "form": {
+            "type": "string",
+            "description": "Search by hop form (\"whole\", \"pellet\", \"plug\", \"extract\", \"powder\")",
+            "enum": [
+              "whole",
+              "pellet",
+              "plug",
+              "extract",
+              "powder"
+            ]
+          },
+          "origin": {
+            "type": "string",
+            "description": "Search by origin/country using standardized country names (e.g., \"United States\" not \"US\") - case-insensitive partial match"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_misc_ingredients",
+      "description": "Search available miscellaneous ingredients with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of misc ingredients to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search ingredients by name (case-insensitive partial match)"
+          },
+          "ingredient_type": {
+            "type": "string",
+            "description": "Search by ingredient type"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_recipes",
+      "description": "Search recipes with advanced filtering by ingredients, style, and properties. Batch size in gallons.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of recipes to return (default: 10)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search recipes by name (case-insensitive partial match)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Search recipes by description (case-insensitive partial match)"
+          },
+          "ingredient": {
+            "type": "string",
+            "description": "Search by ingredient name across grains, hops, and yeasts (searches ingredient names and varieties, case-insensitive partial match)"
+          },
+          "min_abv": {
+            "type": "number",
+            "description": "Minimum ABV percentage"
+          },
+          "max_abv": {
+            "type": "number",
+            "description": "Maximum ABV percentage"
+          },
+          "min_ibu": {
+            "type": "number",
+            "description": "Minimum IBU"
+          },
+          "max_ibu": {
+            "type": "number",
+            "description": "Maximum IBU"
+          },
+          "min_ebc": {
+            "type": "number",
+            "description": "Minimum EBC color"
+          },
+          "max_ebc": {
+            "type": "number",
+            "description": "Maximum EBC color"
+          },
+          "min_batch_size_gallons": {
+            "type": "number",
+            "description": "Minimum batch size in gallons"
+          },
+          "max_batch_size_gallons": {
+            "type": "number",
+            "description": "Maximum batch size in gallons"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_yeasts",
+      "description": "Search available yeasts with comprehensive filtering options",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "number",
+            "description": "Maximum number of yeasts to return (default: 20)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Search yeasts by name (case-insensitive partial match)"
+          },
+          "yeast_type": {
+            "type": "string",
+            "description": "Search by yeast type (\"ale\", \"lager\", \"wild\", \"brett\")",
+            "enum": [
+              "ale",
+              "lager",
+              "wild",
+              "brett"
+            ]
+          },
+          "form": {
+            "type": "string",
+            "description": "Search by yeast form (\"liquid\", \"dry\")",
+            "enum": [
+              "liquid",
+              "dry"
+            ]
+          },
+          "min_attenuation": {
+            "type": "number",
+            "description": "Minimum attenuation percentage"
+          },
+          "max_attenuation": {
+            "type": "number",
+            "description": "Maximum attenuation percentage"
+          },
+          "min_temperature": {
+            "type": "number",
+            "description": "Minimum fermentation temperature (\u00b0C)"
+          },
+          "max_temperature": {
+            "type": "number",
+            "description": "Maximum fermentation temperature (\u00b0C)"
+          },
+          "laboratory": {
+            "type": "string",
+            "description": "Search by laboratory/supplier (case-insensitive partial match)"
+          },
+          "product_id": {
+            "type": "string",
+            "description": "Search by product ID (case-insensitive partial match)"
+          },
+          "notes": {
+            "type": "string",
+            "description": "Search by notes content (case-insensitive partial match)"
+          }
+        }
+      }
+    },
+    {
+      "name": "update_fermentation_step_in_recipe",
+      "description": "Update a fermentation step in a recipe. Temperature in Fahrenheit.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_fermentation_step_id": {
+            "type": "string",
+            "description": "Unique ID of the fermentation step in the recipe"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the fermentation step (e.g., 'Primary Fermentation', 'Secondary', 'Cold Crash')"
+          },
+          "temperature_f": {
+            "type": "number",
+            "description": "Temperature in Fahrenheit (range: 59-77\u00b0F, typical: 64-68\u00b0F for ales, 50-54\u00b0F for lagers)"
+          },
+          "end_temperature_f": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Ending temperature in Fahrenheit for temperature ramps (range: 59-77\u00b0F, null for constant temperature)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration of fermentation step in days"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the fermentation process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the fermentation step"
+          }
+        },
+        "required": [
+          "recipe_fermentation_step_id"
+        ]
+      }
+    },
+    {
+      "name": "update_grain_in_recipe",
+      "description": "Update a grain's amount in a recipe. To use a different grain variety, use add_grain_to_recipe and remove_grain_from_recipe. Changes affect OG, color, and flavor calculations. Specify weight in pounds.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_grain_id": {
+            "type": "string",
+            "description": "Unique ID of the grain addition in the recipe"
+          },
+          "amount_lb": {
+            "type": "number",
+            "description": "Amount of grain in pounds"
+          }
+        },
+        "required": [
+          "recipe_grain_id"
+        ]
+      }
+    },
+    {
+      "name": "update_hop_in_recipe",
+      "description": "Update a hop's properties in a recipe (amount, timing, usage). To use a different hop variety, use add_hop_to_recipe and remove_hop_from_recipe. For dry hop additions, use dry_hop_duration_days and dry_hop_start_day instead of time_minutes. Specify weight in ounces and temperature in Fahrenheit.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_hop_id": {
+            "type": "string",
+            "description": "Unique ID of the hop addition in the recipe"
+          },
+          "amount_oz": {
+            "type": "number",
+            "minimum": 0.01,
+            "description": "Amount of hops in ounces (minimum: 0.01oz)"
+          },
+          "alpha_acid_percent_override": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 30
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Override hop alpha acid percentage for this recipe when actual batch analysis differs from database value (0-30%, null to use database value)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "first_wort",
+              "boil",
+              "whirlpool",
+              "dry_hop"
+            ],
+            "description": "When/how hop is used: 'mash' (during mashing), 'first_wort' (added to first wort, uses recipe boil time), 'boil' (during boil), 'whirlpool' (post-boil steeping, optionally specify temperature), 'dry_hop' (during fermentation, optionally specify dry hop timing)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes (required for boil and whirlpool IBU calculations, optional for mash, not used for first_wort or dry_hop)."
+          },
+          "temperature_f": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": 104,
+                "maximum": 212
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Temperature in Fahrenheit (required for whirlpool hops 104-212\u00b0F, optional for others). When changing use_type to whirlpool, defaults to 176\u00b0F if not specified."
+          },
+          "dry_hop_duration_days": {
+            "type": "number",
+            "description": "Duration in days for dry hop contact time (optional, null = indefinite/until manual removal)"
+          },
+          "dry_hop_start_day": {
+            "type": "number",
+            "description": "Days since fermentation start to begin dry hopping (optional, used with dry_hop use_type)"
+          }
+        },
+        "required": [
+          "recipe_hop_id"
+        ]
+      }
+    },
+    {
+      "name": "update_mash_step_in_recipe",
+      "description": "Update a mash step's properties in a recipe. Changes to step_order will affect the sequence of mash steps. Temperature in Fahrenheit.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_mash_step_id": {
+            "type": "string",
+            "description": "Unique ID of the mash step in the recipe"
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the mash step (e.g., 'Protein Rest', 'Saccharification', 'Mash Out')"
+          },
+          "temperature_f": {
+            "type": "number",
+            "description": "Temperature in Fahrenheit (range: 140-172\u00b0F, typical: 149-153\u00b0F for saccharification)"
+          },
+          "duration_minutes": {
+            "type": "number",
+            "description": "Duration of mash step in minutes"
+          },
+          "step_order": {
+            "type": "number",
+            "description": "Order of this step in the mash process (1, 2, 3, etc.). If order conflicts with existing steps, they will be automatically reordered."
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional detailed description of the mash step"
+          }
+        },
+        "required": [
+          "recipe_mash_step_id"
+        ]
+      }
+    },
+    {
+      "name": "update_misc_in_recipe",
+      "description": "Update a miscellaneous ingredient's properties in a recipe (amount, timing, usage). To use a different misc ingredient, use add_misc_to_recipe and remove_misc_from_recipe. For fermentation/aging additions, use start_day and duration_days instead of time_minutes.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_misc_id": {
+            "type": "string",
+            "description": "Unique ID of the misc ingredient addition in the recipe"
+          },
+          "amount_units": {
+            "type": "number",
+            "minimum": 0.01,
+            "description": "Amount of ingredient in the specified unit_type (minimum: 0.01)"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "grams",
+              "ml",
+              "tsp",
+              "tbsp",
+              "oz",
+              "tablets",
+              "drops",
+              "pieces"
+            ],
+            "description": "Unit type for amount: 'grams' (weight), 'ml' (volume), 'tsp'/'tbsp' (spoons), 'oz' (ounces), 'tablets' (pills), 'drops' (liquid drops), 'pieces' (individual items)"
+          },
+          "use_type": {
+            "type": "string",
+            "enum": [
+              "mash",
+              "boil",
+              "primary",
+              "secondary",
+              "bottling",
+              "aging"
+            ],
+            "description": "When ingredient is used: 'mash' (during mashing), 'boil' (during boil), 'primary' (primary fermentation), 'secondary' (secondary fermentation), 'bottling' (at bottling, no timing needed), 'aging' (during aging)"
+          },
+          "time_minutes": {
+            "type": "number",
+            "description": "Time in minutes for mash and boil processes (optional for all use_types). Not used for fermentation stages (use start_day/duration_days) or bottling."
+          },
+          "start_day": {
+            "type": "number",
+            "description": "Days from the beginning of the use_type step to add ingredient (optional, used for primary, secondary, aging)"
+          },
+          "duration_days": {
+            "type": "number",
+            "description": "Duration in days for ingredient contact time (optional, null = indefinite/until manual removal)"
+          }
+        },
+        "required": [
+          "recipe_misc_id"
+        ]
+      }
+    },
+    {
+      "name": "update_recipe",
+      "description": "Update a recipe's basic information. Batch size in gallons.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_id": {
+            "type": "string",
+            "description": "Recipe ID"
+          },
+          "name": {
+            "type": "string",
+            "description": "Recipe name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Recipe description"
+          },
+          "batch_size_gallons": {
+            "type": "number",
+            "description": "Batch size in gallons"
+          },
+          "boil_time_minutes": {
+            "type": "number",
+            "description": "Boil time in minutes"
+          },
+          "efficiency_percent": {
+            "type": "number",
+            "description": "Mash efficiency percentage (typical range: 70-85%, homebrewer average: 75%)"
+          },
+          "mash_thickness": {
+            "type": "number",
+            "description": "Water to grain ratio in quarts per pound (range: 1.0-3.0, typical: 1.25-1.5 qt/lb)"
+          },
+          "brewing_notes": {
+            "type": "string",
+            "description": "Notes about the brewing process, techniques, and observations"
+          },
+          "tasting_notes": {
+            "type": "string",
+            "description": "Tasting notes, flavor descriptions, and evaluation"
+          },
+          "bjcp_style_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "BJCP style ID or null to clear (use search_beer_styles to find available styles)"
+          }
+        },
+        "required": [
+          "recipe_id"
+        ]
+      }
+    },
+    {
+      "name": "update_user_profile",
+      "description": "Update the authenticated user's profile data including preferences, equipment profiles, water profiles, ingredient availability, and other AI agent context. IMPORTANT: Proactively suggest profile updates when you learn new information about the user's brewing setup, preferences, or constraints that would improve future recommendations. Always seek explicit permission before updating. Preserve existing content and update to reflect current state only - do not add edit annotations or change logs. Markdown formatting is supported and should be preserved. You may provide a markdown link to [view profile](/profile) if the user needs to see their current profile information.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "User profile data in markdown format (equipment, preferences, water profiles, ingredient availability, brewing setup, etc.)"
+          }
+        },
+        "required": [
+          "profile"
+        ]
+      }
+    },
+    {
+      "name": "update_water_in_recipe",
+      "description": "Update water properties in a recipe. Changes to base water profile will recalculate brewing salt additions automatically. Volume in gallons.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_water_id": {
+            "type": "string",
+            "description": "Unique ID of the water addition in the recipe"
+          },
+          "name": {
+            "type": "string",
+            "description": "Descriptive name for water addition (e.g., 'Mash Water', 'Sparge Water')"
+          },
+          "volume_gallons": {
+            "type": "number",
+            "description": "Volume of water in gallons"
+          },
+          "ca_ppm": {
+            "type": "number",
+            "description": "Target calcium content in parts per million (ppm)"
+          },
+          "mg_ppm": {
+            "type": "number",
+            "description": "Target magnesium content in parts per million (ppm)"
+          },
+          "na_ppm": {
+            "type": "number",
+            "description": "Target sodium content in parts per million (ppm)"
+          },
+          "so4_ppm": {
+            "type": "number",
+            "description": "Target sulfate content in parts per million (ppm)"
+          },
+          "cl_ppm": {
+            "type": "number",
+            "description": "Target chloride content in parts per million (ppm)"
+          },
+          "hco3_ppm": {
+            "type": "number",
+            "description": "Target bicarbonate content in parts per million (ppm)"
+          },
+          "base_ca_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water calcium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_mg_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water magnesium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_na_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sodium content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_so4_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water sulfate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_cl_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water chloride content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          },
+          "base_hco3_ppm": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Base water bicarbonate content in ppm - your starting water chemistry before salt additions (leave null if unknown). Used to calculate which brewing salts to add to reach target values."
+          }
+        },
+        "required": [
+          "recipe_water_id"
+        ]
+      }
+    },
+    {
+      "name": "update_yeast_in_recipe",
+      "description": "Update a yeast's properties in a recipe (amount, unit type). To use a different yeast strain, use add_yeast_to_recipe and remove_yeast_from_recipe. Changes affect attenuation calculations.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "recipe_yeast_id": {
+            "type": "string",
+            "description": "Unique ID of the yeast addition in the recipe"
+          },
+          "amount_units": {
+            "type": "number",
+            "description": "Amount of yeast in the specified unit_type"
+          },
+          "unit_type": {
+            "type": "string",
+            "enum": [
+              "packets",
+              "grams",
+              "ml"
+            ],
+            "description": "Unit type for yeast amount: 'packets' (dry yeast packets), 'grams' (dry yeast by weight), 'ml' (liquid yeast volume)"
+          }
+        },
+        "required": [
+          "recipe_yeast_id"
+        ]
+      }
+    }
+  ]
+}

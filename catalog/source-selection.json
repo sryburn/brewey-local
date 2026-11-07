@@ -1,0 +1,57 @@
+{
+  "excluded": [
+    {
+      "id": "addon-CastleMaltsBrazil.bsmx",
+      "reason": "Translated/partial edition; English edition selected."
+    },
+    {
+      "id": "addon-CastleMaltFrench.bsmx",
+      "reason": "Translated/partial edition; English edition selected."
+    },
+    {
+      "id": "addon-CastleMaltGerman.bsmx",
+      "reason": "Translated/partial edition; English edition selected."
+    },
+    {
+      "id": "addon-CastleMaltItalian.bsmx",
+      "reason": "Translated/partial edition; English edition selected."
+    },
+    {
+      "id": "addon-CastleMaltPortuguese.bsmx",
+      "reason": "Translated/partial edition; English edition selected."
+    },
+    {
+      "id": "addon-CastleMaltSpanish.bsmx",
+      "reason": "Translated/partial edition; English edition selected."
+    },
+    {
+      "id": "addon-Bestmalz2022_GE.bsmx",
+      "reason": "Translated/partial edition; English edition selected."
+    },
+    {
+      "id": "yeastbay.bsmx",
+      "reason": "All identities covered by sources with equal/higher priority."
+    },
+    {
+      "id": "addon-Yeast-update.bsmx",
+      "reason": "All identities covered by sources with equal/higher priority."
+    },
+    {
+      "id": "piquiri-1PlkHSsVUOyafd1elDImVYRDrO5O60Dqr.bsmx",
+      "reason": "All identities covered by sources with equal/higher priority."
+    },
+    {
+      "id": "piquiri-1paj1AYOP1lDCNSLzWckdihUGAgymbXvY.bsmx",
+      "reason": "All identities covered by sources with equal/higher priority."
+    },
+    {
+      "id": "piquiri-1xWzhmdXP25tdk6xjECy8zKQq_oRxMPXx.bsmx",
+      "reason": "All identities covered by sources with equal/higher priority."
+    },
+    {
+      "id": "piquiri-1Raqq8ZIXaKTFErAMnjiCCzP6HpEbaMaB.bsmx",
+      "reason": "All identities covered by sources with equal/higher priority."
+    }
+  ],
+  "policy": "Prefer direct manufacturers; newer named brand packs; general updates; installer base; supplemental community packs. Skip translated editions. Missing optional files produce a partial build."
+}

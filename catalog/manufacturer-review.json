@@ -1,0 +1,378 @@
+{
+  "manufacturers": [
+    {
+      "evidence": [
+        "https://www.gladfieldmalt.co.nz/our-malts/base-malts",
+        "https://www.gladfieldmalt.co.nz/our-malts/specialty-malts"
+      ],
+      "findings": [
+        "All five base malts listed on the base page are represented.",
+        "Golden Oat and Crystal Wheat had copied barley notes; corrected with original concise summaries.",
+        "Golden Oat and Crystal Wheat colour, Crystal Wheat yield and Black Forest Rye colour updated from the manufacturer.",
+        "Other analytical differences between the source pack and website remain; batch ranges, typical values and fine/coarse or dry/as-is yield bases need explicit reconciliation before wholesale numeric updates."
+      ],
+      "manufacturer": "Gladfield",
+      "scope": "Current base and specialty pages compared with the manufacturer BSMX selection. Complementary/distilling ranges have not been exhaustively reverified.",
+      "status": "targeted corrections applied; full analytical reconciliation remains"
+    },
+    {
+      "evidence": [
+        "https://www.lallemandbrewing.com/en/global/products/brewing-yeast/",
+        "https://www.lallemandbrewing.com/en/global/products/brewing-yeast/?page=2",
+        "https://www.lallemandbrewing.com/en/global/products/belgian-wit-style-ale-yeast/",
+        "https://connect.lallemandbrewing.com/wp-content/uploads/2017/03/TDS_LPS_BREWINGYEAST_WIT_ENG_A4.pdf"
+      ],
+      "findings": [
+        "Eleven duplicate older ingredient identities merged into corresponding LalBrew entries; source aliases and retired IDs retained.",
+        "BRY-97, Munich Classic and Köln spelling corrected.",
+        "Wit minimum corrected to manufacturer 17 C; existing 25 C maximum and 78.5% attenuation midpoint of 75–82% already agree. Nottingham 10 C minimum confirmed.",
+        "Historical Munich and modern Wit remain separate pending explicit rename evidence; Munich Classic is a distinct product."
+      ],
+      "listed_products_checked": 19,
+      "manufacturer": "Lallemand",
+      "represented": 19,
+      "scope": "19 products displayed on the two current global brewing-yeast listing pages; wine strains, bacteria and co-branded ranges are outside this checklist.",
+      "status": "checked listing covered; selected numerical checks completed; historical Munich/Wit identity remains open"
+    },
+    {
+      "evidence": [
+        "https://fermentis.com/en/product/saflager-sh-45/"
+      ],
+      "manufacturer": "Fermentis",
+      "missing": [],
+      "previous_gaps": [
+        {
+          "form": "dry",
+          "name": "SafLager SH-45"
+        }
+      ],
+      "scope": "Targeted gap check against current manufacturer product pages, not an exhaustive all-products census.",
+      "status": "SH-45 gap filled with a reviewed factual supplement; full range census remains outside this check"
+    },
+    {
+      "census": {
+        "additional_catalogue_only_count": 4,
+        "beer_yeast_product_form_union": 32,
+        "brochure_additional_liquid_count": 4,
+        "inventory": [
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Saturated"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "LAX"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Einstein"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Haze Heaven"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "British Pub Ale"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Old English"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Apres Ski"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Mango Madness"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Pineapple Passion"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "High Voltage"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Banana Split"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast",
+            "form": "dry",
+            "name": "Voss Kveik"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Blitz Lager"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Hornindal"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Low Rider"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Farmhouse Vibes"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Belgian Haze"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Cerveza Campeón"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Fountainbridge"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Thiol Unleashed"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "Zero Hero"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/dry-brewing-yeast?page=2",
+            "form": "dry",
+            "name": "The Dubliner"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/liquid-brewing-yeast",
+            "form": "liquid",
+            "name": "Helles Fire Club"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/liquid-brewing-yeast",
+            "form": "liquid",
+            "name": "Saturated"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/liquid-brewing-yeast",
+            "form": "liquid",
+            "name": "Haze Heaven"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/liquid-brewing-yeast",
+            "form": "liquid",
+            "name": "Vermont Haze (formerly Sanders)"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/liquid-brewing-yeast",
+            "form": "liquid",
+            "name": "Einstein"
+          },
+          {
+            "evidence_url": "https://www.whclab.com/collections/liquid-brewing-yeast",
+            "form": "liquid",
+            "name": "Tropical Paradise"
+          },
+          {
+            "availability": "catalogue only",
+            "evidence_url": "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074",
+            "form": "liquid",
+            "name": "LAX",
+            "printed_page": 9
+          },
+          {
+            "availability": "catalogue only",
+            "evidence_url": "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074",
+            "form": "liquid",
+            "name": "Blitz Lager",
+            "printed_page": 11
+          },
+          {
+            "availability": "catalogue only",
+            "evidence_url": "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074",
+            "form": "liquid",
+            "name": "Thiol Theory",
+            "printed_page": 11
+          },
+          {
+            "availability": "catalogue only",
+            "evidence_url": "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074",
+            "form": "liquid",
+            "name": "Banana Split",
+            "printed_page": 11
+          }
+        ],
+        "limitations": [
+          "Complete for checked European collection pages and 2026 PDF, not all territories or unnamed/custom cultures.",
+          "Public listing does not establish in-stock availability or discontinuation of older unlisted cultures."
+        ],
+        "missing_current_shop_count": 12,
+        "scope": "Complete named product/form union of Europe dedicated dry/liquid brewing shop collections and 2026 catalogue brewing sections, checked against selected 21-record dry pack. All Europe general brewing collection products reviewed; its extra Lovely Bubbly and Hyperdrive already occur in selected catalogue. Bacteria, cider, wine, distilling, nutrients and unlisted custom propagation are outside this beer-yeast census.",
+        "shop_counts": {
+          "dedicated_dry_brewing": 22,
+          "dedicated_liquid_brewing": 6,
+          "general_brewing_including_champagne_and_seltzer": 30
+        }
+      },
+      "evidence": [
+        "https://cdn.shopify.com/s/files/1/0891/5124/2579/files/brewing-distilling-product-catalogue-2026-v1.0.pdf?v=1772640074",
+        "https://whclab.us/collections/new-products",
+        "https://www.whclab.com/cdn/shop/files/SPEC-P-65_Rev_1_Dry_TDS_-_Thiol_Unleashed_1.pdf?v=6502582224936891283",
+        "https://www.whclab.com/cdn/shop/files/SPEC-P-68_Rev_1_Dry_TDS_-_Cereveza_Campeon.pdf?v=15552721933983606808",
+        "https://www.whclab.com/cdn/shop/files/belgian-haze-dry-brewing-yeast-tds.pdf?v=14443815697263851960",
+        "https://www.whclab.com/cdn/shop/files/zero-hero-dry-brewing-yeast-tds.pdf?v=14666179570859637489",
+        "https://www.whclab.com/collections/brewing-yeast",
+        "https://www.whclab.com/collections/brewing-yeast?page=2",
+        "https://www.whclab.com/collections/brewing-yeast?page=3",
+        "https://www.whclab.com/products/belgian-haze-dry-brewing-yeast",
+        "https://www.whclab.com/products/cerveza-campeon-mexican-lager-yeast",
+        "https://www.whclab.com/products/einstein-german-lager-liquid-yeast",
+        "https://www.whclab.com/products/fountainbridge-ale-dry-yeast",
+        "https://www.whclab.com/products/haze-heaven",
+        "https://www.whclab.com/products/helles-fire-club-premium-fresh-liquid-lager-yeast",
+        "https://www.whclab.com/products/saturated-fresh-liquid-yeast-neipa-pouch",
+        "https://www.whclab.com/products/the-dubliner-irish-stout-yeast",
+        "https://www.whclab.com/products/thiol-unleashed-hybrid-non-gmo-dried-yeast",
+        "https://www.whclab.com/products/tropical-paradise-fresh-yeast-pouch",
+        "https://www.whclab.com/products/vermont-haze-modern-neipa-yeast-10hl-fresh-yeast-pouch",
+        "https://www.whclab.com/products/zero-hero-low-non-alcoholic-dry-yeast"
+      ],
+      "findings": [
+        "Twelve current shop gaps and four additional liquid entries independently listed in the 2026 manufacturer catalogue are now covered.",
+        "Four original liquid-to-dry migration substitutions now map to the same-brand liquid form. Helles Fire Club and Sanders are covered; manufacturer explicitly renamed Sanders to Vermont Haze.",
+        "Belgian Haze and Tropical Paradise have conflicting manufacturer statements; chosen technical specifications and qualifications are recorded per supplement record."
+      ],
+      "manufacturer": "WHC",
+      "missing": [],
+      "previous_gaps": [
+        {
+          "form": "dry",
+          "name": "Belgian Haze"
+        },
+        {
+          "form": "dry",
+          "name": "The Dubliner"
+        },
+        {
+          "form": "dry",
+          "name": "Thiol Unleashed"
+        },
+        {
+          "form": "dry",
+          "name": "Zero Hero"
+        },
+        {
+          "form": "liquid",
+          "name": "Helles Fire Club"
+        },
+        {
+          "form": "liquid",
+          "name": "Saturated"
+        },
+        {
+          "form": "liquid",
+          "name": "Haze Heaven"
+        },
+        {
+          "form": "liquid",
+          "name": "Vermont Haze (formerly Sanders)"
+        },
+        {
+          "form": "liquid",
+          "name": "Tropical Paradise"
+        }
+      ],
+      "scope": "Complete named product/form union of Europe dedicated dry/liquid brewing shop collections and 2026 catalogue brewing sections, checked against selected 21-record dry pack. All Europe general brewing collection products reviewed; its extra Lovely Bubbly and Hyperdrive already occur in selected catalogue. Bacteria, cider, wine, distilling, nutrients and unlisted custom propagation are outside this beer-yeast census.",
+      "status": "all 32 variants in the scoped current brewing census represented; 16 supplemented"
+    },
+    {
+      "evidence": [
+        "https://frothtech.co.nz/yeast",
+        "https://frothtech.co.nz/s/Froth-Tech-Yeast-Profiles-v2.bsmx"
+      ],
+      "findings": [
+        "The currently linked v2 BSMX still has eight liquid entries. Eight dry variants are now supplied by reviewed manufacturer facts.",
+        "KRISP FT50 is retained from the older pack but absent from the current public listing; no discontinuation claim is made."
+      ],
+      "listed_variants_checked": 15,
+      "manufacturer": "Froth",
+      "missing": [],
+      "previous_gaps": [
+        {
+          "form": "dry",
+          "name": "BUDDY",
+          "product_id": "FT01"
+        },
+        {
+          "form": "dry",
+          "name": "VAPE",
+          "product_id": "FT02"
+        },
+        {
+          "form": "dry",
+          "name": "HEFF",
+          "product_id": "FT10"
+        },
+        {
+          "form": "dry",
+          "name": "PROST",
+          "product_id": "FT11"
+        },
+        {
+          "form": "dry",
+          "name": "SESH",
+          "product_id": "FT52"
+        },
+        {
+          "form": "dry",
+          "name": "ALPEN",
+          "product_id": "FT53"
+        },
+        {
+          "form": "dry",
+          "name": "MYTHOS",
+          "product_id": "FT60"
+        },
+        {
+          "form": "dry",
+          "name": "NADA",
+          "product_id": "FT00"
+        }
+      ],
+      "represented": 15,
+      "scope": "13 named strains / 15 strain-and-form combinations on the current yeast page. The linked BSMX remains v2 with eight liquid entries. Nutrient supplement and custom unnamed cultures excluded.",
+      "status": "all 15 listed strain/form variants represented; eight dry variants added in the bundled supplement"
+    }
+  ],
+  "next_actions": [
+    "Maintain quarantine until reliable extract specifications become available; no guessed zeros are imported.",
+    "Resolve any open identity decisions in quality-decisions.json before merging those products.",
+    "Blank and long notes remain an editorial queue.",
+    "First-run installation, catalogue retry status and actual cloud import integration remain separate work."
+  ],
+  "reviewed_on": "2026-10-06",
+  "scope": "Targeted current-range review of Gladfield, Lallemand brewing yeasts, Fermentis, WHC and Froth. Other brands were screened mechanically only. This is not certification of all manufacturers or every numerical specification.",
+  "version": 1
+}

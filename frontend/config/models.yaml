@@ -1,0 +1,310 @@
+# Reviewed against official provider docs and OpenRouter Models API on 2026-10-01.
+# Stable text models with tool support; capabilities gate requests on the server.
+# Reasoning levels are intentionally limited to useful user choices.
+version: 2
+reviewedAt: 2026-10-01
+providers:
+  - id: openai
+    label: OpenAI
+    enabledWhenEnv: OPENAI_API_KEY
+    models:
+      - id: gpt-6.1-sol
+        label: GPT-6.1 Sol
+        slug: openai/gpt-6.1-sol
+        description: Balanced speed and capability for everyday brewing advice.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: true
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+          requiresResponses: true
+        ui:
+          defaults: {}
+      - id: gpt-6-luna
+        label: GPT-6 Luna
+        slug: openai/gpt-6-luna
+        description: Fast, economical answers for routine brewing questions.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: true
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+          requiresResponses: true
+        ui:
+          defaults: {}
+      - id: gpt-6-astra
+        label: GPT-6 Astra
+        slug: openai/gpt-6-astra
+        description: For difficult recipe design and detailed troubleshooting.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: true
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+          requiresResponses: true
+        ui:
+          defaults: {}
+  - id: openrouter
+    label: OpenRouter
+    enabledWhenEnv: OPENROUTER_API_KEY
+    models:
+      - id: gemini-3.8-flash
+        label: Gemini 3.8 Flash
+        slug: google/gemini-3.8-flash
+        description: Current stable Gemini for brewing advice and recipe work.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 65536
+          temperature: false
+          reasoningSummary: true
+        ui:
+          defaults: {}
+      - id: gemini-3.5-flash-lite
+        label: Gemini 3.5 Flash-Lite
+        slug: google/gemini-3.5-flash-lite
+        description: Lightweight Gemini for quick, lower-cost answers.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 65536
+          temperature: false
+          reasoningSummary: true
+        ui:
+          defaults: {}
+      - id: grok-4.7
+        label: Grok 4.7
+        slug: x-ai/grok-4.7
+        description: Current Grok model with reasoning and recipe tools.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          # xAI exposes encrypted reasoning, which cannot be displayed as a summary.
+          reasoningSummary: false
+        ui:
+          defaults: {}
+      - id: deepseek-v4.1-flash
+        label: DeepSeek V4.1 Flash
+        slug: deepseek/deepseek-v4.1-flash
+        description: Efficient general-purpose reasoning and tool use.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+        ui:
+          defaults: {}
+      - id: deepseek-v4-pro-0813
+        label: DeepSeek V4 Pro
+        slug: deepseek/deepseek-v4-pro-0813
+        description: Stronger DeepSeek option for complex recipe analysis.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+        ui:
+          defaults: {}
+      - id: qwen3.8-flash
+        label: Qwen3.8 Flash
+        slug: qwen/qwen3.8-flash
+        description: Fast Qwen for everyday brewing questions.
+        capabilities:
+          reasoningEffort: false
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+        ui:
+          defaults: {}
+      - id: qwen3.8-max-prime
+        label: Qwen3.8 Max Prime
+        slug: qwen/qwen3.8-max-prime
+        description: Most capable current Qwen option for complex tasks.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+        ui:
+          defaults: {}
+      - id: mistral-medium-3-5
+        label: Mistral Medium 3.5
+        slug: mistralai/mistral-medium-3-5
+        description: Current Mistral with reasoning and brewing tools.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+        ui:
+          defaults: {}
+      - id: mistral-large-2512
+        label: Mistral Large 3
+        slug: mistralai/mistral-large-2512
+        description: General-purpose Mistral with efficient tool use.
+        capabilities:
+          reasoningEffort: false
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: false
+        ui:
+          defaults: {}
+      - id: llama-4-maverick
+        label: Llama 4 Maverick
+        slug: meta-llama/llama-4-maverick
+        description: Current Llama option with recipe tools.
+        capabilities:
+          reasoningEffort: false
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 16384
+          temperature: false
+          reasoningSummary: false
+        ui:
+          defaults: {}
+  - id: anthropic
+    label: Anthropic
+    enabledWhenEnv: ANTHROPIC_API_KEY
+    models:
+      - id: claude-sonnet-5.5
+        label: Claude Sonnet 5.5
+        slug: anthropic/claude-sonnet-5-5
+        description: Balanced speed and quality; thinking adjusts automatically.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+          adaptiveThinking: true
+        ui:
+          defaults: {}
+      - id: claude-opus-5.5
+        label: Claude Opus 5.5
+        slug: anthropic/claude-opus-5-5
+        description: For complex brewing analysis; thinking adjusts automatically.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+          adaptiveThinking: true
+        ui:
+          defaults: {}
+      - id: claude-fable-5.1
+        label: Claude Fable 5.1
+        slug: anthropic/claude-fable-5-1
+        description: Premium option for the most demanding reasoning tasks.
+        capabilities:
+          reasoningEffort: true
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 128000
+          temperature: false
+          reasoningSummary: true
+          adaptiveThinking: true
+        ui:
+          defaults: {}
+      - id: claude-haiku-4.5
+        label: Claude Haiku 4.5
+        slug: anthropic/claude-haiku-4-5
+        description: Fast, economical Claude for everyday advice.
+        capabilities:
+          reasoningEffort: false
+          reasoningEffortLevels:
+            - low
+            - medium
+            - high
+          verbosity: false
+          maxTokens: true
+          maxOutputTokens: 64000
+          temperature: false
+          reasoningSummary: false
+        ui:
+          defaults: {}

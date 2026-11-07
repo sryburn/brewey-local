@@ -1,0 +1,41 @@
+name: Checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: frontend
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.15.0'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: python3 -m unittest discover -s ../scripts/__tests__ -v
+      - run: python3 ../scripts/check-catalog.py
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test -- --runInBand
+      - run: npm run test:storage
+      - run: node --test --test-isolation=none ../ops/__tests__/*.node.mjs
+      - run: node --test --test-isolation=none src/lib/harness/__tests__/*.node.mjs
+      - run: npm run build
+      - run: python3 ../scripts/check-build-boundary.py
+      - run: node ../scripts/check-installation.mjs

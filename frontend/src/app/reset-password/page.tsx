@@ -1,0 +1,2 @@
+import Link from 'next/link'
+export default function PasswordHelp() { return <main className="max-w-lg mx-auto p-8 space-y-4"><h1 className="text-2xl font-semibold">Local account passwords</h1><p>This installation does not send password reset emails. Ask its owner for help if you cannot sign in. You can change your password in Account settings when signed in.</p><Link href="/signin" className="text-amber-600">Back to sign in</Link></main> }

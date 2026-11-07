@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+/* ===== TAILWIND CONFIGURATION ===== */
+@theme {
+  /* Font families */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Consolas', 'Monaco', 'Courier New', monospace;
+
+  /* Transitions */
+  --default-transition-duration: 200ms;
+}
+
+/* Configure Tailwind CSS v4 dark mode */
+@variant dark (.dark &);
+
+/* ===== GLOBAL STYLES ===== */
+/* CSS custom properties for consistent theming */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* Neutral stroke halfway between text & background */
+  --neutral-stroke: color-mix(in srgb, var(--foreground) 50%, var(--background) 50%);
+}
+
+:root.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  /* Recompute neutral stroke in dark mode */
+  --neutral-stroke: color-mix(in srgb, var(--foreground) 50%, var(--background) 50%);
+}
+
+/* Fallback for system preference */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Base body styling */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Restore pointer cursor for buttons (overriding Tailwind's reset) */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+/* ===== ANIMATIONS ===== */
+/* Expandable ingredient animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Unique name avoids clashing with Tailwind animation utilities; forwards keeps final opacity after run */
+.animate-recipeFadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-recipeFadeIn {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ===== MOBILE TOUCH BEHAVIOR ===== */
+/* Ensure textarea can scroll independently on touch devices */
+.chat-input-scrollbar {
+  touch-action: pan-y; /* Allow vertical scrolling only */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* ===== SCROLLBAR STYLING ===== */
+/* Light mode scrollbars use browser defaults - no custom styling needed */
+
+/* Dark mode scrollbars - custom styling */
+:root.dark .chat-input-scrollbar::-webkit-scrollbar,
+:root.dark .chat-pane-scrollbar::-webkit-scrollbar,
+:root.dark .recipe-pane-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+:root.dark .chat-input-scrollbar::-webkit-scrollbar-track {
+  background: #292524; /* stone-800 */
+  border-radius: 4px;
+}
+
+:root.dark .chat-input-scrollbar::-webkit-scrollbar-thumb {
+  background: #57534e; /* stone-600 */
+  border-radius: 4px;
+}
+
+:root.dark .chat-input-scrollbar::-webkit-scrollbar-thumb:hover,
+:root.dark .chat-pane-scrollbar::-webkit-scrollbar-thumb:hover,
+:root.dark .recipe-pane-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #fbbf24; /* amber-400 */
+}
+
+/* Light mode chat pane scrollbar */
+.chat-pane-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-pane-scrollbar::-webkit-scrollbar-track {
+  background: #fff0c4; /* match light beer background */
+  border-radius: 4px;
+}
+
+.chat-pane-scrollbar::-webkit-scrollbar-thumb {
+  background: #afada4; /* grey scroll thumb */
+  border-radius: 4px;
+}
+
+.chat-pane-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8a8880; /* darker grey on hover */
+}
+
+/* Dark mode chat pane scrollbar */
+:root.dark .chat-pane-scrollbar::-webkit-scrollbar-track {
+  background: #0d0b0a; /* match dark stout background */
+  border-radius: 4px;
+}
+
+:root.dark .chat-pane-scrollbar::-webkit-scrollbar-thumb {
+  background: #665544; /* match bubble color */
+  border-radius: 4px;
+}
+
+:root.dark .recipe-pane-scrollbar::-webkit-scrollbar-track {
+  background: #111827; /* match recipe pane background */
+  border-radius: 4px;
+}
+
+:root.dark .recipe-pane-scrollbar::-webkit-scrollbar-thumb {
+  background: #4b5563; /* gray-600 */
+  border-radius: 4px;
+}
+
+/* Firefox scrollbar styling - dark mode only */
+:root.dark .chat-input-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #57534e #292524;
+}
+
+/* Firefox scrollbar styling - light mode chat pane */
+.chat-pane-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #afada4 #fff0c4;
+}
+
+/* Firefox scrollbar styling - dark mode chat pane */
+:root.dark .chat-pane-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #665544 #0d0b0a;
+}
+
+:root.dark .recipe-pane-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #111827;
+}
+
+/* ===== BACKGROUND PATTERNS ===== */
+/* Beer bubble rising animation - multiple layers for varied effect */
+/* Chat panel background with static decorative pattern */
+.chat-panel-bg {
+  background-color: #fff0c4;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='bubble' cx='30%25' cy='30%25'%3E%3Cstop offset='0%25' style='stop-color:%23fff;stop-opacity:0.6'/%3E%3Cstop offset='100%25' style='stop-color:%23f5c542;stop-opacity:0.3'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='12' cy='18' r='2.8' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='38' cy='52' r='1.4' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='67' cy='28' r='2.2' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='88' cy='75' r='1.1' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='25' cy='85' r='1.8' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='52' cy='8' r='1.3' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='82' cy='42' r='2.5' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='18' cy='62' r='1.6' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='48' cy='92' r='2.1' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='95' cy='15' r='1.5' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='60' cy='70' r='1.9' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='8' cy='45' r='1.2' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='72' cy='58' r='1.7' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='33' cy='32' r='2.4' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='91' cy='50' r='1.3' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='5' cy='78' r='2.0' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3Ccircle cx='45' cy='22' r='1.5' fill='url(%23bubble)' stroke='%23000000' stroke-width='0.15' stroke-opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Dark mode chat panel background with static decorative pattern */
+:root.dark .chat-panel-bg {
+  background-color: #0d0b0a;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3CradialGradient id='bubble-dark' cx='35%25' cy='35%25'%3E%3Cstop offset='0%25' style='stop-color:%23c99660;stop-opacity:0.25'/%3E%3Cstop offset='100%25' style='stop-color:%23443322;stop-opacity:0.15'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='12' cy='18' r='2.8' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='38' cy='52' r='1.4' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='67' cy='28' r='2.2' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='88' cy='75' r='1.1' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='25' cy='85' r='1.8' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='52' cy='8' r='1.3' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='82' cy='42' r='2.5' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='18' cy='62' r='1.6' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='48' cy='92' r='2.1' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='95' cy='15' r='1.5' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='60' cy='70' r='1.9' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='8' cy='45' r='1.2' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='72' cy='58' r='1.7' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='33' cy='32' r='2.4' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='91' cy='50' r='1.3' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='5' cy='78' r='2.0' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3Ccircle cx='45' cy='22' r='1.5' fill='url(%23bubble-dark)' stroke='%23ffffff' stroke-width='0.15' stroke-opacity='0.2'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* ===== SELECT DROPDOWN STYLING ===== */
+/* Style select dropdown options for proper contrast */
+select option {
+  background-color: white;
+  color: #111827;
+  /* text-gray-900 */
+  padding: 8px 12px;
+}
+
+/* Dark mode select dropdown options */
+:root.dark select option {
+  background-color: #1f2937;
+  /* gray-800 */
+  color: #f9fafb;
+  /* text-gray-50 */
+}
+
+/* Ensure select elements have proper styling when visible */
+select {
+  background-color: white;
+  color: #111827;
+  /* text-gray-900 */
+}
+
+:root.dark select {
+  background-color: #1f2937;
+  /* gray-800 */
+  color: #f9fafb;
+  /* text-gray-50 */
+}
+
+/* ===== AUTOFILL STYLING ===== */
+/* Fix browser autofill styling to work better with dark mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  /* Light mode autofill */
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #111827 !important;
+  /* text-gray-900 */
+}
+
+/* Dark mode autofill */
+:root.dark input:-webkit-autofill,
+:root.dark input:-webkit-autofill:hover,
+:root.dark input:-webkit-autofill:focus,
+:root.dark input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #44403c inset !important;
+  /* stone-700 */
+  -webkit-text-fill-color: #fafaf9 !important;
+  /* stone-100 */
+}
+
+/* Firefox autofill (limited support) */
+input:-moz-autofill {
+  background-color: transparent !important;
+}
+
+:root.dark input:-moz-autofill {
+  background-color: transparent !important;
+  color: #fafaf9 !important;
+  /* stone-100 */
+}
+

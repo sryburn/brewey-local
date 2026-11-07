@@ -1,0 +1,1134 @@
+[
+  {
+    "name": "empty",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60
+    }
+  },
+  {
+    "name": "extract-without-mash-efficiency",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 35,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 1,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 10,
+            "must_mash": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "zero-extract-and-color",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 2,
+          "grains": {
+            "extract_potential": 0,
+            "color_ebc": 0,
+            "must_mash": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "nullable-must-mash",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "efficiency-60",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 60,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "efficiency-75",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "efficiency-90",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 90,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "mixed-fermentables-and-yeasts",
+    "recipe": {
+      "batch_size_liters": 23,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        },
+        {
+          "amount_kg": 0.4,
+          "grains": {
+            "extract_potential": 0.74,
+            "color_ebc": 250,
+            "must_mash": true
+          }
+        },
+        {
+          "amount_kg": 0.5,
+          "grains": {
+            "extract_potential": 1,
+            "color_ebc": 0,
+            "must_mash": false
+          }
+        }
+      ],
+      "recipe_yeasts": [
+        {
+          "amount_units": 1,
+          "yeasts": {
+            "attenuation_percent": 72
+          }
+        },
+        {
+          "amount_units": 10,
+          "yeasts": {
+            "attenuation_percent": 84
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-duration-19",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 64,
+          "duration_minutes": 19
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-duration-20",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 64,
+          "duration_minutes": 20
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-duration-29",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 64,
+          "duration_minutes": 29
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-duration-30",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 64,
+          "duration_minutes": 30
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-duration-60",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 64,
+          "duration_minutes": 60
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-hot-clamp",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_yeasts": [
+        {
+          "amount_units": 1,
+          "yeasts": {
+            "attenuation_percent": 55
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 72,
+          "duration_minutes": 60
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-cold-clamp",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_yeasts": [
+        {
+          "amount_units": 1,
+          "yeasts": {
+            "attenuation_percent": 90
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 62,
+          "duration_minutes": 60
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-weighted-steps",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 62,
+          "duration_minutes": 20
+        },
+        {
+          "temperature_c": 72,
+          "duration_minutes": 40
+        }
+      ]
+    }
+  },
+  {
+    "name": "mash-outside-conversion-range",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 61.9,
+          "duration_minutes": 90
+        },
+        {
+          "temperature_c": 72.1,
+          "duration_minutes": 90
+        }
+      ]
+    }
+  },
+  {
+    "name": "yeast-attenuation-0",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_yeasts": [
+        {
+          "amount_units": 1,
+          "yeasts": {
+            "attenuation_percent": 0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "yeast-attenuation-99",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_yeasts": [
+        {
+          "amount_units": 1,
+          "yeasts": {
+            "attenuation_percent": 99
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-form-pellet",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-form-whole",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "whole"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-form-plug",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "plug"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-form-extract",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "extract"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-form-powder",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "powder"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-form-null",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "first-wort-uses-90-minute-boil",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 90,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 0,
+          "use_type": "first_wort",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "late-zero-minute-boil",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 0,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-alpha-override",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "alpha_acid_percent_override": 12.5
+        }
+      ]
+    }
+  },
+  {
+    "name": "hop-alpha-override-zero",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "alpha_acid_percent_override": 0
+        }
+      ]
+    }
+  },
+  {
+    "name": "dry-hop-and-mash-add-no-bitterness",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "dry_hop",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          }
+        },
+        {
+          "amount_grams": 30,
+          "time_minutes": 60,
+          "use_type": "mash",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-null",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": null
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-59.9",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 59.9
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-60",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 60
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-65",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 65
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-70",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 70
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-75",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 75
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-80",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 80
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-85",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 85
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-90",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 90
+        }
+      ]
+    }
+  },
+  {
+    "name": "whirlpool-temperature-95",
+    "recipe": {
+      "batch_size_liters": 20,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.5,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 30,
+          "time_minutes": 20,
+          "use_type": "whirlpool",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          },
+          "temperature_c": 95
+        }
+      ]
+    }
+  },
+  {
+    "name": "imperial-origin-metric-storage",
+    "recipe": {
+      "batch_size_liters": 18.93,
+      "efficiency_percent": 75,
+      "boil_time_minutes": 60,
+      "recipe_grains": [
+        {
+          "amount_kg": 4.536,
+          "grains": {
+            "extract_potential": 0.8,
+            "color_ebc": 4,
+            "must_mash": true
+          }
+        }
+      ],
+      "recipe_hops": [
+        {
+          "amount_grams": 28.35,
+          "time_minutes": 60,
+          "use_type": "boil",
+          "hops": {
+            "alpha_acid_percent": 8,
+            "form": "pellet"
+          }
+        }
+      ],
+      "recipe_mash_steps": [
+        {
+          "temperature_c": 66.7,
+          "duration_minutes": 60
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "name": "balanced-pale",
+    "water": {
+      "volume_liters": 20,
+      "ca_ppm": 48,
+      "base_ca_ppm": 22,
+      "mg_ppm": 2.7,
+      "base_mg_ppm": 2.7,
+      "na_ppm": 12,
+      "base_na_ppm": 12,
+      "so4_ppm": 60,
+      "base_so4_ppm": 6,
+      "cl_ppm": 40,
+      "base_cl_ppm": 14,
+      "hco3_ppm": 50,
+      "base_hco3_ppm": 50
+    }
+  },
+  {
+    "name": "balanced-pale-double-volume",
+    "water": {
+      "volume_liters": 40,
+      "ca_ppm": 48,
+      "base_ca_ppm": 22,
+      "mg_ppm": 2.7,
+      "base_mg_ppm": 2.7,
+      "na_ppm": 12,
+      "base_na_ppm": 12,
+      "so4_ppm": 60,
+      "base_so4_ppm": 6,
+      "cl_ppm": 40,
+      "base_cl_ppm": 14,
+      "hco3_ppm": 50,
+      "base_hco3_ppm": 50
+    }
+  },
+  {
+    "name": "all-zero-known-base",
+    "water": {
+      "volume_liters": 20,
+      "ca_ppm": 0,
+      "base_ca_ppm": 0,
+      "mg_ppm": 0,
+      "base_mg_ppm": 0,
+      "na_ppm": 0,
+      "base_na_ppm": 0,
+      "so4_ppm": 0,
+      "base_so4_ppm": 0,
+      "cl_ppm": 0,
+      "base_cl_ppm": 0,
+      "hco3_ppm": 0,
+      "base_hco3_ppm": 0
+    }
+  },
+  {
+    "name": "lower-than-base",
+    "water": {
+      "volume_liters": 20,
+      "ca_ppm": 0,
+      "base_ca_ppm": 50,
+      "mg_ppm": 0,
+      "base_mg_ppm": 10,
+      "na_ppm": 0,
+      "base_na_ppm": 20,
+      "so4_ppm": 0,
+      "base_so4_ppm": 80,
+      "cl_ppm": 0,
+      "base_cl_ppm": 60,
+      "hco3_ppm": 0,
+      "base_hco3_ppm": 120
+    }
+  },
+  {
+    "name": "bitter-from-ro",
+    "water": {
+      "volume_liters": 25,
+      "ca_ppm": 110,
+      "base_ca_ppm": 0,
+      "mg_ppm": 12,
+      "base_mg_ppm": 0,
+      "na_ppm": 20,
+      "base_na_ppm": 0,
+      "so4_ppm": 250,
+      "base_so4_ppm": 0,
+      "cl_ppm": 70,
+      "base_cl_ppm": 0,
+      "hco3_ppm": 20,
+      "base_hco3_ppm": 0
+    }
+  },
+  {
+    "name": "malty-from-ro",
+    "water": {
+      "volume_liters": 20,
+      "ca_ppm": 80,
+      "base_ca_ppm": 0,
+      "mg_ppm": 8,
+      "base_mg_ppm": 0,
+      "na_ppm": 20,
+      "base_na_ppm": 0,
+      "so4_ppm": 40,
+      "base_so4_ppm": 0,
+      "cl_ppm": 120,
+      "base_cl_ppm": 0,
+      "hco3_ppm": 80,
+      "base_hco3_ppm": 0
+    }
+  },
+  {
+    "name": "stout-alkalinity",
+    "water": {
+      "volume_liters": 30,
+      "ca_ppm": 100,
+      "base_ca_ppm": 30,
+      "mg_ppm": 15,
+      "base_mg_ppm": 5,
+      "na_ppm": 80,
+      "base_na_ppm": 10,
+      "so4_ppm": 80,
+      "base_so4_ppm": 20,
+      "cl_ppm": 100,
+      "base_cl_ppm": 20,
+      "hco3_ppm": 250,
+      "base_hco3_ppm": 40
+    }
+  },
+  {
+    "name": "precise-profile-rounded-salts",
+    "water": {
+      "volume_liters": 0.1,
+      "ca_ppm": 10,
+      "base_ca_ppm": 0,
+      "mg_ppm": 1,
+      "base_mg_ppm": 0,
+      "na_ppm": 3,
+      "base_na_ppm": 0,
+      "so4_ppm": 20,
+      "base_so4_ppm": 0,
+      "cl_ppm": 15,
+      "base_cl_ppm": 0,
+      "hco3_ppm": 10,
+      "base_hco3_ppm": 0
+    }
+  },
+  {
+    "name": "no-chloride-analysis",
+    "water": {
+      "volume_liters": 20,
+      "ca_ppm": 30,
+      "base_ca_ppm": 30,
+      "mg_ppm": 5,
+      "base_mg_ppm": 5,
+      "na_ppm": 10,
+      "base_na_ppm": 10,
+      "so4_ppm": 50,
+      "base_so4_ppm": 50,
+      "cl_ppm": 0,
+      "base_cl_ppm": 0,
+      "hco3_ppm": 80,
+      "base_hco3_ppm": 80
+    }
+  },
+  {
+    "name": "zero-volume-rejected",
+    "water": {
+      "volume_liters": 0,
+      "ca_ppm": 48,
+      "base_ca_ppm": 22,
+      "mg_ppm": 2.7,
+      "base_mg_ppm": 2.7,
+      "na_ppm": 12,
+      "base_na_ppm": 12,
+      "so4_ppm": 60,
+      "base_so4_ppm": 6,
+      "cl_ppm": 40,
+      "base_cl_ppm": 14,
+      "hco3_ppm": 50,
+      "base_hco3_ppm": 50
+    }
+  },
+  {
+    "name": "magnesium-range-rejected",
+    "water": {
+      "volume_liters": 20,
+      "ca_ppm": 48,
+      "base_ca_ppm": 22,
+      "mg_ppm": 201,
+      "base_mg_ppm": 2.7,
+      "na_ppm": 12,
+      "base_na_ppm": 12,
+      "so4_ppm": 60,
+      "base_so4_ppm": 6,
+      "cl_ppm": 40,
+      "base_cl_ppm": 14,
+      "hco3_ppm": 50,
+      "base_hco3_ppm": 50
+    }
+  }
+]
